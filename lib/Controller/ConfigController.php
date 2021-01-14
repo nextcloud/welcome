@@ -22,7 +22,9 @@ use Psr\Log\LoggerInterface;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\RedirectResponse;
 
-use OCP\AppFramework\Http\ContentSecurityPolicy;
+use OCP\Files\IRootFolder;
+use OCP\IUserManager;
+use OCP\Files\FileInfo;
 
 use OCP\IRequest;
 use OCP\AppFramework\Http\DataResponse;
@@ -42,6 +44,8 @@ class ConfigController extends Controller {
 								IConfig $config,
 								IAppData $appData,
 								IL10N $l,
+								IRootFolder $root,
+								IUserManager $userManager,
 								LoggerInterface $logger,
 								?string $userId) {
 		parent::__construct($AppName, $request);
@@ -51,6 +55,8 @@ class ConfigController extends Controller {
 		$this->serverContainer = $serverContainer;
 		$this->config = $config;
 		$this->logger = $logger;
+		$this->root = $root;
+		$this->userManager = $userManager;
 	}
 
 	/**
@@ -67,6 +73,20 @@ class ConfigController extends Controller {
 	}
 
 	public function getWidgetContent(): DataResponse {
-		return new DataResponse('plop content');
+		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath', '');
+		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
+		$userId = $this->config->getAppValue(Application::APP_ID, 'userId', '');
+
+		if ($filePath && $userName && $userId && $this->userManager->userExists($userId)) {
+			$userFolder = $this->root->getUserFolder($userId);
+			if ($userFolder->nodeExists($filePath)) {
+				$file = $userFolder->get($filePath);
+				if ($file->getType() === FileInfo::TYPE_FILE) {
+					$content = $file->getContent();
+					return new DataResponse($content);
+				}
+			}
+		}
+		return new DataResponse('not found', 400);
 	}
 }
