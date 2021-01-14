@@ -21,14 +21,14 @@
  *
  */
 
-namespace OCA\Gitlab\Dashboard;
+namespace OCA\Welcome\Dashboard;
 
 use OCP\Dashboard\IWidget;
 use OCP\IL10N;
 
-use OCA\Gitlab\AppInfo\Application;
+use OCA\Welcome\AppInfo\Application;
 
-class GitlabWidget implements IWidget {
+class WelcomeWidget implements IWidget {
 
 	/** @var IL10N */
 	private $l10n;
@@ -43,14 +43,14 @@ class GitlabWidget implements IWidget {
 	 * @inheritDoc
 	 */
 	public function getId(): string {
-		return 'gitlab_todos';
+		return 'welcome';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		return $this->l10n->t('GitLab todos');
+		return $this->l10n->t('Welcome');
 		}
 
 	/**
@@ -64,14 +64,14 @@ class GitlabWidget implements IWidget {
 	 * @inheritDoc
 	 */
 	public function getIconClass(): string {
-		return 'icon-gitlab';
+		return 'icon-welcome';
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function getUrl(): ?string {
-		return \OC::$server->getURLGenerator()->linkToRoute('settings.PersonalSettings.index', ['section' => 'connected-accounts']);
+		return \OC::$server->getURLGenerator()->linkToRoute('settings.AdminSettings.index', ['section' => 'theming']);
 	}
 
 	/**

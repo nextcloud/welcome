@@ -11,9 +11,8 @@ webpackConfig.stats = {
 }
 
 webpackConfig.entry = {
-    personalSettings: { import: path.join(__dirname, 'src', 'personalSettings.js'), filename: 'integration_gitlab-personalSettings.js' },
-    adminSettings: { import: path.join(__dirname, 'src', 'adminSettings.js'), filename: 'integration_gitlab-adminSettings.js' },
-    dashboard: { import: path.join(__dirname, 'src', 'dashboard.js'), filename: 'integration_gitlab-dashboard.js' },
+    adminSettings: { import: path.join(__dirname, 'src', 'adminSettings.js'), filename: 'welcome-adminSettings.js' },
+    dashboard: { import: path.join(__dirname, 'src', 'dashboard.js'), filename: 'welcome-dashboard.js' },
 }
 
 module.exports = webpackConfig

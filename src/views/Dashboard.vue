@@ -15,8 +15,8 @@
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 // import { DashboardWidget } from '@nextcloud/vue-dashboard'
-import { showError } from '@nextcloud/dialogs'
-import moment from '@nextcloud/moment'
+// import { showError } from '@nextcloud/dialogs'
+// import moment from '@nextcloud/moment'
 import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
 
 export default {

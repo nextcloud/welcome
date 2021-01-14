@@ -40,10 +40,14 @@ class Admin implements ISettings {
 	 * @return TemplateResponse
 	 */
 	public function getForm(): TemplateResponse {
-		$filePath = $this->config->getAppValue(Application::APP_ID, 'file_path', '');
+		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath', '');
+		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
+		$userId = $this->config->getAppValue(Application::APP_ID, 'userId', '');
 
 		$adminConfig = [
-			'file_path' => $filePath,
+			'filePath' => $filePath,
+			'userName' => $userName,
+			'userId' => $userId,
 		];
 		$this->initialStateService->provideInitialState($this->appName, 'admin-config', $adminConfig);
 		return new TemplateResponse(Application::APP_ID, 'adminSettings');
