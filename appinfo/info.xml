@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<info>
+    <id>welcome</id>
+    <name>Welcome</name>
+    <summary>Dashboard widget to display welcome content</summary>
+    <description><![CDATA[TODO]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author>Julien Veyssier</author>
+    <namespace>Welcome</namespace>
+    <documentation>
+        <developer>https://github.com/eneiluj/welcome</developer>
+    </documentation>
+    <category>integration</category>
+    <category>dashboard</category>
+    <website>https://github.com/eneiluj/welcome</website>
+    <bugs>https://github.com/eneiluj/welcome/issues</bugs>
+    <screenshot>https://github.com/eneiluj/welcome/raw/master/img/screenshot1.jpg</screenshot>
+    <dependencies>
+        <database min-version="9.4">pgsql</database>
+        <database>sqlite</database>
+        <database min-version="5.5">mysql</database>
+        <nextcloud min-version="20" max-version="21"/>
+    </dependencies>
+    <settings>
+        <admin>OCA\Welcome\Settings\Admin</admin>
+    </settings>
+</info>
