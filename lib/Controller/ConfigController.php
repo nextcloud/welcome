@@ -83,7 +83,8 @@ class ConfigController extends Controller {
 				$file = $userFolder->get($filePath);
 				if ($file->getType() === FileInfo::TYPE_FILE) {
 					$content = $file->getContent();
-					return new DataResponse($content);
+					// prepend a new line to avoid having the first line interpreted as code...
+					return new DataResponse("\n" . trim($content));
 				}
 			}
 		}
