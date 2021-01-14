@@ -1,5 +1,11 @@
 <template>
 	<div id="welcome-widget">
+		<a v-if="userId"
+			class="call-link"
+			:href="callUrl">
+			<Avatar :user="userId" />
+			<span>Call {{ userName }}</span>
+		</a>
 		<span v-if="loading" class="icon icon-loading" />
 		<VueMarkdown v-else-if="content"
 			class="markdown-content">
@@ -18,10 +24,8 @@
 <script>
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
-// import { DashboardWidget } from '@nextcloud/vue-dashboard'
-// import { showError } from '@nextcloud/dialogs'
-// import moment from '@nextcloud/moment'
 import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
+import Avatar from '@nextcloud/vue/dist/Components/Avatar'
 
 import VueMarkdown from 'vue-markdown'
 
@@ -32,6 +36,7 @@ export default {
 		// DashboardWidget,
 		EmptyContent,
 		VueMarkdown,
+		Avatar,
 	},
 
 	props: {
@@ -45,6 +50,8 @@ export default {
 		return {
 			loading: true,
 			content: '',
+			userId: null,
+			userName: null,
 		}
 	},
 
@@ -54,6 +61,9 @@ export default {
 		},
 		emptyContentIcon() {
 			return 'icon-close'
+		},
+		callUrl() {
+			return generateUrl('/apps/spreed/?callUser=' + this.userId)
 		},
 	},
 
@@ -68,7 +78,9 @@ export default {
 		getContent() {
 			const url = generateUrl('/apps/welcome/widget-content')
 			axios.get(url).then((response) => {
-				this.content = response.data
+				this.content = response.data.content
+				this.userId = response.data.userId
+				this.userName = response.data.userName
 				console.debug('"' + this.content + '"')
 			}).catch((error) => {
 				console.debug(error)
@@ -105,9 +117,19 @@ export default {
 }
 
 #welcome-widget {
+	overflow: scroll;
+	height: 100%;
+
 	.icon-loading {
 		display: block;
 		margin-top: 50%;
+	}
+
+	.call-link {
+		display: flex;
+		span {
+			margin: auto 0 auto 10px;
+		}
 	}
 }
 </style>
