@@ -82,7 +82,7 @@ export default {
 			axios.get(url).then((response) => {
 				this.content = response.data.content
 				// eslint-disable-next-line
-				this.content = this.content.replaceAll(/\!\[(.*)\]\(\/.*\?fileId=(\d+).*/g, (match, p1, p2) => {
+				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
 					return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=50&y=250&a=true') + ')'
 				})
 				this.userId = response.data.userId
