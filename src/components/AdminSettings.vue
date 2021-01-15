@@ -26,21 +26,45 @@
 				@click="clear">
 				<span class="icon icon-delete" />
 			</button>
+			<Multiselect ref="multiselect"
+				class="support-input"
+				label="displayName"
+				:clear-on-select="false"
+				:hide-selected="false"
+				:internal-search="false"
+				:loading="loadingUsers"
+				:options="formattedSuggestions"
+				:placeholder="t('welcome', 'Choose a support user')"
+				:preselect-first="false"
+				:preserve-search="true"
+				:searchable="true"
+				:user-select="true"
+				@search-change="asyncFind"
+				@select="supportUserSelected">
+				<template #noOptions>
+					{{ t('welcome', 'No recommendations. Start typing.') }}
+				</template>
+				<template #noResult>
+					{{ t('welcome', 'No result.') }}
+				</template>
+			</Multiselect>
 		</div>
 	</div>
 </template>
 
 <script>
 import { loadState } from '@nextcloud/initial-state'
-import { generateUrl } from '@nextcloud/router'
+import { generateUrl, generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { getCurrentUser } from '@nextcloud/auth'
 import { showSuccess, showError } from '@nextcloud/dialogs'
+import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
+		Multiselect,
 	},
 
 	props: [],
@@ -48,7 +72,9 @@ export default {
 	data() {
 		return {
 			state: loadState('welcome', 'admin-config'),
-			user: getCurrentUser(),
+			currentUser: getCurrentUser(),
+			loadingUsers: false,
+			suggestions: [],
 		}
 	},
 
@@ -57,6 +83,25 @@ export default {
 			return this.state.filePath
 				? this.state.userName + this.state.filePath
 				: ''
+		},
+		formattedSuggestions() {
+			const result = this.suggestions.map((s) => {
+				return {
+					user: s.id,
+					displayName: s.label,
+					icon: 'icon-user',
+					multiselectKey: s.id,
+				}
+			})
+			if (this.currentUser) {
+				result.push({
+					user: this.currentUser.uid,
+					displayName: this.currentUser.displayName,
+					icon: 'icon-user',
+					multiselectKey: this.currentUser.uid,
+				})
+			}
+			return result
 		},
 	},
 
@@ -101,8 +146,8 @@ export default {
 				t('welcome', 'Choose markdown welcome content file'),
 				(targetPath) => {
 					this.state.filePath = targetPath
-					this.state.userName = this.user.displayName
-					this.state.userId = this.user.uid
+					this.state.userName = this.currentUser.displayName
+					this.state.userId = this.currentUser.uid
 					this.saveOptions({
 						filePath: this.state.filePath,
 						userName: this.state.userName,
@@ -113,6 +158,34 @@ export default {
 				['text/markdown'],
 				true
 			)
+		},
+		asyncFind(query) {
+			if (query === '') {
+				this.suggestions = []
+				return
+			}
+			this.loadingUsers = true
+			console.debug(query)
+			const url = generateOcsUrl('core/autocomplete/get', 2).replace(/\/$/, '')
+			axios.get(url, {
+				params: {
+					format: 'json',
+					search: query,
+					itemType: ' ',
+					itemId: ' ',
+					shareTypes: [],
+				},
+			}).then((response) => {
+				console.debug(response)
+				this.suggestions = response.data.ocs.data
+			}).catch((error) => {
+				console.error(error)
+			}).then(() => {
+				this.loadingUsers = false
+			})
+		},
+		supportUserSelected(user) {
+			console.debug(user)
 		},
 	},
 }

@@ -43,11 +43,13 @@ class Admin implements ISettings {
 		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath', '');
 		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
 		$userId = $this->config->getAppValue(Application::APP_ID, 'userId', '');
+		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId', '');
 
 		$adminConfig = [
 			'filePath' => $filePath,
 			'userName' => $userName,
 			'userId' => $userId,
+			'supportUserId' => $supportUserId,
 		];
 		$this->initialStateService->provideInitialState($this->appName, 'admin-config', $adminConfig);
 		return new TemplateResponse(Application::APP_ID, 'adminSettings');
