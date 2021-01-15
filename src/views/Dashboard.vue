@@ -134,6 +134,7 @@ export default {
 #welcome-widget {
 	overflow: scroll;
 	height: 100%;
+	padding: 0 10px 0 10px;
 
 	.icon-loading {
 		display: block;
