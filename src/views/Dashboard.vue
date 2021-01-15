@@ -1,11 +1,5 @@
 <template>
 	<div id="welcome-widget">
-		<a v-if="userId"
-			class="call-link"
-			:href="callUrl">
-			<Avatar :user="userId" />
-			<span>Call {{ userName }}</span>
-		</a>
 		<span v-if="loading" class="icon icon-loading" />
 		<VueMarkdown v-else-if="content"
 			class="markdown-content">
@@ -18,6 +12,14 @@
 				{{ emptyContentMessage }}
 			</template>
 		</EmptyContent>
+		<a v-if="userId"
+			class="call-link"
+			:href="callUrl">
+			<Avatar
+				:user="userId"
+				:tooltip-message="userName" />
+			<span>{{ t('welcome', 'Call your support contact ({name})', { name: userName }) }}</span>
+		</a>
 	</div>
 </template>
 
@@ -79,6 +81,10 @@ export default {
 			const url = generateUrl('/apps/welcome/widget-content')
 			axios.get(url).then((response) => {
 				this.content = response.data.content
+				// eslint-disable-next-line
+				this.content = this.content.replaceAll(/\!\[(.*)\]\(\/.*\?fileId=(\d+).*/g, (match, p1, p2) => {
+					return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=50&y=250&a=true') + ')'
+				})
 				this.userId = response.data.userId
 				this.userName = response.data.userName
 				console.debug('"' + this.content + '"')
@@ -98,7 +104,10 @@ export default {
 		font-size: 40px;
 		font-weight: bold;
 		line-height: 40px;
-		margin-bottom: 10px;
+		margin: 12px 0 12px 0;
+	}
+	h2 {
+		margin: 12px 0 12px 0;
 	}
 	ul, ol {
 		list-style-type: none;
@@ -114,6 +123,12 @@ export default {
 		color: var(--color-text-lighter);
 		text-decoration: underline;
 	}
+	> p {
+		display: flex;
+		img {
+			margin: 0 auto 0 auto;
+		}
+	}
 }
 
 #welcome-widget {
@@ -127,8 +142,13 @@ export default {
 
 	.call-link {
 		display: flex;
+		margin-top: 25px;
+		border-radius: var(--border-radius-large);
 		span {
 			margin: auto 0 auto 10px;
+		}
+		&:hover {
+			background-color: var(--color-background-hover);
 		}
 	}
 }

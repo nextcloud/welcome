@@ -6,7 +6,7 @@
 		</h2>
 		<p class="settings-hint">
 			<span class="icon icon-details" />
-			{{ t('welcome', 'blabla') }}
+			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
 		</p>
 		<div class="grid-form">
 			<label for="welcome-file-path">
@@ -22,6 +22,10 @@
 				:readonly="true"
 				:placeholder="t('welcome', 'No file')"
 				@click="selectFile">
+			<button v-if="state.filePath"
+				@click="clear">
+				<span class="icon icon-delete" />
+			</button>
 		</div>
 	</div>
 </template>
@@ -82,6 +86,16 @@ export default {
 				.then(() => {
 				})
 		},
+		clear() {
+			this.state.filePath = ''
+			this.state.userName = ''
+			this.state.userId = ''
+			this.saveOptions({
+				filePath: '',
+				userName: '',
+				userId: '',
+			})
+		},
 		selectFile() {
 			OC.dialogs.filepicker(
 				t('welcome', 'Choose markdown welcome content file'),
@@ -105,6 +119,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#welcome_prefs .icon {
+	display: inline-block;
+	width: 32px;
+}
+
+#welcome_prefs .grid-form .icon {
+	margin-bottom: -3px;
+}
+
 .grid-form label {
 	line-height: 38px;
 }
@@ -116,21 +139,15 @@ export default {
 .grid-form {
 	max-width: 500px;
 	display: grid;
-	grid-template: 1fr / 1fr 44px 1fr;
+	grid-template: 1fr / 1fr 44px 1fr 44px;
 	margin-left: 30px;
 
 	button {
 		display: flex;
+		span {
+			margin-bottom: 0 !important;
+		}
 	}
-}
-
-#welcome_prefs .icon {
-	display: inline-block;
-	width: 32px;
-}
-
-#welcome_prefs .grid-form .icon {
-	margin-bottom: -3px;
 }
 
 .icon-welcome {

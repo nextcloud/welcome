@@ -42,7 +42,10 @@ class Application extends App implements IBootstrap {
 	}
 
 	public function register(IRegistrationContext $context): void {
-		$context->registerDashboardWidget(WelcomeWidget::class);
+		$filePath = $this->config->getAppValue(self::APP_ID, 'filePath', '');
+		if ($filePath) {
+			$context->registerDashboardWidget(WelcomeWidget::class);
+		}
 	}
 
 	public function boot(IBootContext $context): void {
