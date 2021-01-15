@@ -72,6 +72,9 @@ class ConfigController extends Controller {
 		return new DataResponse(1);
 	}
 
+	/**
+	 * @NoAdminRequired
+	 */
 	public function getWidgetContent(): DataResponse {
 		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath', '');
 		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
