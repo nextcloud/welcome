@@ -12,12 +12,12 @@
 				{{ emptyContentMessage }}
 			</template>
 		</EmptyContent>
-		<a v-if="userId"
+		<a v-if="supportUserId"
 			class="call-link"
 			:href="callUrl">
 			<Avatar
-				:user="userId"
-				:tooltip-message="userName" />
+				:user="supportUserId"
+				:tooltip-message="supportUserName" />
 			<span>{{ callSupportUserText }}</span>
 		</a>
 	</div>
