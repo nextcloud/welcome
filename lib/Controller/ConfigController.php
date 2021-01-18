@@ -79,6 +79,9 @@ class ConfigController extends Controller {
 		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath', '');
 		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
 		$userId = $this->config->getAppValue(Application::APP_ID, 'userId', '');
+		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName', '');
+		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId', '');
+		$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText', '');
 
 		if ($filePath && $userName && $userId && $this->userManager->userExists($userId)) {
 			$userFolder = $this->root->getUserFolder($userId);
@@ -91,6 +94,9 @@ class ConfigController extends Controller {
 						'content' => "\n" . trim($content),
 						'userId' => $userId,
 						'userName' => $userName,
+						'supportUserId' => $supportUserId,
+						'supportUserName' => $supportUserName,
+						'supportText' => $supportText,
 					]);
 				}
 			}

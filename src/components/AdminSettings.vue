@@ -10,44 +10,93 @@
 		</p>
 		<div class="grid-form">
 			<label for="welcome-file-path">
-				<a class="icon icon-file" />
+				<span class="icon icon-file" />
 				{{ t('welcome', 'Markdown content file') }}
 			</label>
-			<button @click="selectFile">
-				<span class="icon icon-folder" />
-			</button>
-			<input id="welcome-file-path"
+			<div>
+				<button @click="selectFile">
+					<span class="icon icon-folder" />
+				</button>
+				<input id="welcome-file-path"
+					type="text"
+					:value="fullFilePath"
+					:readonly="true"
+					:placeholder="t('welcome', 'No file')"
+					@click="selectFile">
+				<button v-if="state.filePath"
+					@click="clear">
+					<span class="icon icon-delete" />
+				</button>
+			</div>
+		</div>
+		<br>
+		<div v-if="state.filePath"
+			class="grid-form">
+			<label for="welcome-support">
+				<span class="icon icon-user" />
+				{{ t('welcome', 'Support contact') }}
+			</label>
+			<div v-if="state.supportUserId">
+				<Avatar
+					:size="40"
+					:user="state.supportUserId"
+					:tooltip-message="state.supportUserName" />
+				<span class="support-user-name">
+					{{ state.supportUserName }}
+				</span>
+				<button
+					@click="clearSupportContact">
+					<span class="icon icon-delete" />
+				</button>
+			</div>
+			<div v-else>
+				<Multiselect
+					ref="multiselect"
+					class="support-input"
+					label="displayName"
+					:clear-on-select="false"
+					:hide-selected="false"
+					:internal-search="false"
+					:loading="loadingUsers"
+					:options="formattedSuggestions"
+					:placeholder="t('welcome', 'Choose a support user')"
+					:preselect-first="false"
+					:preserve-search="true"
+					:searchable="true"
+					:user-select="true"
+					@search-change="asyncFind"
+					@select="supportContactSelected">
+					<template #option="{option}">
+						<Avatar
+							:user="option.user"
+							:show-user-status="false" />
+						<span>
+							{{ option.displayName }}
+						</span>
+					</template>
+					<template #noOptions>
+						{{ t('welcome', 'No recommendations. Start typing.') }}
+					</template>
+					<template #noResult>
+						{{ t('welcome', 'No result.') }}
+					</template>
+				</Multiselect>
+			</div>
+			<label for="welcome-support-text">
+				<span class="icon icon-file" />
+				{{ t('welcome', 'Support text') }}
+			</label>
+			<input id="welcome-support-text"
+				v-model="state.supportText"
 				type="text"
-				:value="fullFilePath"
-				:readonly="true"
-				:placeholder="t('welcome', 'No file')"
-				@click="selectFile">
-			<button v-if="state.filePath"
-				@click="clear">
-				<span class="icon icon-delete" />
-			</button>
-			<Multiselect ref="multiselect"
-				class="support-input"
-				label="displayName"
-				:clear-on-select="false"
-				:hide-selected="false"
-				:internal-search="false"
-				:loading="loadingUsers"
-				:options="formattedSuggestions"
-				:placeholder="t('welcome', 'Choose a support user')"
-				:preselect-first="false"
-				:preserve-search="true"
-				:searchable="true"
-				:user-select="true"
-				@search-change="asyncFind"
-				@select="supportUserSelected">
-				<template #noOptions>
-					{{ t('welcome', 'No recommendations. Start typing.') }}
-				</template>
-				<template #noResult>
-					{{ t('welcome', 'No result.') }}
-				</template>
-			</Multiselect>
+				:class="{ 'icon-loading-small': saving }"
+				:placeholder="t('welcome', 'Example: Call {name} to get help.')"
+				@input="onSupportTextChange">
+			<div />
+			<span class="settings-hint">
+				<span class="icon icon-details" />
+				{{ t('welcome', '{name} will be replaced by the support user name') }}
+			</span>
 		</div>
 	</div>
 </template>
@@ -59,12 +108,16 @@ import axios from '@nextcloud/axios'
 import { getCurrentUser } from '@nextcloud/auth'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
+import Avatar from '@nextcloud/vue/dist/Components/Avatar'
+
+import { delay } from '../utils'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
 		Multiselect,
+		Avatar,
 	},
 
 	props: [],
@@ -72,7 +125,9 @@ export default {
 	data() {
 		return {
 			state: loadState('welcome', 'admin-config'),
+			saving: false,
 			currentUser: getCurrentUser(),
+			query: '',
 			loadingUsers: false,
 			suggestions: [],
 		}
@@ -90,16 +145,20 @@ export default {
 					user: s.id,
 					displayName: s.label,
 					icon: 'icon-user',
-					multiselectKey: s.id,
+					multiselectKey: s.id + s.label,
 				}
 			})
 			if (this.currentUser) {
-				result.push({
-					user: this.currentUser.uid,
-					displayName: this.currentUser.displayName,
-					icon: 'icon-user',
-					multiselectKey: this.currentUser.uid,
-				})
+				const lowerCurrent = this.currentUser.displayName.toLowerCase()
+				const lowerQuery = this.query.toLowerCase()
+				if (this.query === '' || lowerCurrent.match(lowerQuery)) {
+					result.push({
+						user: this.currentUser.uid,
+						displayName: this.currentUser.displayName,
+						icon: 'icon-user',
+						multiselectKey: this.currentUser.uid + this.currentUser.displayName,
+					})
+				}
 			}
 			return result
 		},
@@ -113,6 +172,7 @@ export default {
 
 	methods: {
 		saveOptions(values) {
+			this.saving = true
 			const req = {
 				values,
 			}
@@ -129,6 +189,7 @@ export default {
 					console.debug(error)
 				})
 				.then(() => {
+					this.saving = false
 				})
 		},
 		clear() {
@@ -160,6 +221,7 @@ export default {
 			)
 		},
 		asyncFind(query) {
+			this.query = query
 			if (query === '') {
 				this.suggestions = []
 				return
@@ -184,8 +246,29 @@ export default {
 				this.loadingUsers = false
 			})
 		},
-		supportUserSelected(user) {
+		supportContactSelected(user) {
 			console.debug(user)
+			this.state.supportUserId = user.user
+			this.state.supportUserName = user.displayName
+			this.saveOptions({
+				supportUserId: this.state.supportUserId,
+				supportUserName: this.state.supportUserName,
+			})
+		},
+		clearSupportContact() {
+			this.state.supportUserId = ''
+			this.state.supportUserName = ''
+			this.state.supportText = ''
+			this.saveOptions({
+				supportUserId: '',
+				supportUserName: '',
+				supportText: '',
+			})
+		},
+		onSupportTextChange() {
+			delay(() => {
+				this.saveOptions({ supportText: this.state.supportText })
+			}, 2000)()
 		},
 	},
 }
@@ -212,14 +295,28 @@ export default {
 .grid-form {
 	max-width: 500px;
 	display: grid;
-	grid-template: 1fr / 1fr 44px 1fr 44px;
+	grid-template: 1fr / 1fr 1fr;
 	margin-left: 30px;
+
+	> div {
+		display: flex;
+	}
 
 	button {
 		display: flex;
+		width: 44px;
 		span {
 			margin-bottom: 0 !important;
 		}
+	}
+
+	.support-user-name {
+		line-height: 40px;
+		margin: 0 10px 0 10px;
+	}
+
+	.settings-hint {
+		margin: 0;
 	}
 }
 

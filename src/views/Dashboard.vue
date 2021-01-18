@@ -18,7 +18,7 @@
 			<Avatar
 				:user="userId"
 				:tooltip-message="userName" />
-			<span>{{ t('welcome', 'Call your support contact ({name})', { name: userName }) }}</span>
+			<span>{{ callSupportUserText }}</span>
 		</a>
 	</div>
 </template>
@@ -67,6 +67,11 @@ export default {
 		callUrl() {
 			return generateUrl('/apps/spreed/?callUser=' + this.userId)
 		},
+		callSupportUserText() {
+			return this.supportText
+				? this.supportText.replace('{name}', this.supportUserName)
+				: t('welcome', 'Talk to your support contact ({name})', { name: this.supportUserName })
+		},
 	},
 
 	beforeMount() {
@@ -87,6 +92,9 @@ export default {
 				})
 				this.userId = response.data.userId
 				this.userName = response.data.userName
+				this.supportUserId = response.data.supportUserId
+				this.supportUserName = response.data.supportUserName
+				this.supportText = response.data.supportText
 				console.debug('"' + this.content + '"')
 			}).catch((error) => {
 				console.debug(error)
