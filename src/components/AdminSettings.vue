@@ -259,11 +259,9 @@ export default {
 		clearSupportContact() {
 			this.state.supportUserId = ''
 			this.state.supportUserName = ''
-			this.state.supportText = ''
 			this.saveOptions({
 				supportUserId: '',
 				supportUserName: '',
-				supportText: '',
 			})
 		},
 		onSupportTextChange() {
