@@ -68,6 +68,7 @@
 					@select="supportContactSelected">
 					<template #option="{option}">
 						<Avatar
+							class="support-avatar-option"
 							:user="option.user"
 							:show-user-status="false" />
 						<span>
@@ -318,6 +319,10 @@ export default {
 	.settings-hint {
 		margin: 0;
 	}
+}
+
+::v-deep .support-avatar-option {
+	margin-right: 10px;
 }
 
 .icon-welcome {
