@@ -65,7 +65,7 @@ export default {
 			return 'icon-close'
 		},
 		callUrl() {
-			return generateUrl('/apps/spreed/?callUser=' + this.userId)
+			return generateUrl('/apps/spreed/?callUser=' + this.supportUserId)
 		},
 		callSupportUserText() {
 			return this.supportText
