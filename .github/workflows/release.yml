@@ -20,7 +20,7 @@ jobs:
         run: |
           git fetch --tags --force
           tag=$(git tag -l --points-at HEAD)
-          vtag=$(echo $tag | grep "v[0-9]\+\.[0-9]\+\.[0-9]\+" || echo "")
+          vtag=$(echo $tag | grep "^v[0-9]\+\.[0-9]\+\.[0-9]\+" || echo "")
           echo "##[set-output name=currenttag;]$vtag"
 
       - name: Build project
@@ -35,7 +35,7 @@ jobs:
           echo "###### install dependencies"
           export DEBIAN_FRONTEND=noninteractive
           sudo apt update -y
-          sudo apt upgrade -y
+          # sudo apt upgrade -y
           sudo apt install php-mbstring php-sqlite3 npm make openssl -y
           echo "###### installing nextcloud"
           mkdir ~/html
@@ -47,7 +47,7 @@ jobs:
           php ~/html/nextcloud/occ maintenance:mode --off
           cd ~/html/nextcloud/apps/${APP_ID}
           echo "###### npm install"
-          npm install
+          npm ci
           echo "###### npm run build"
           npm run build
           echo "###### make appstore"
