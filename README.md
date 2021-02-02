@@ -13,3 +13,8 @@
 🖼 Images are also supported
 
 💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)
+
+
+### Screenshot
+
+![Welcome widget example](img/screenshot1.jpg)
