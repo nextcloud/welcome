@@ -108,14 +108,29 @@ export default {
 
 <style scoped lang="scss">
 ::v-deep .markdown-content {
-	h1 {
-		font-size: 40px;
+	h1, h2, h3, h4, h5 {
 		font-weight: bold;
-		line-height: 40px;
 		margin: 12px 0 12px 0;
 	}
+	h1 {
+		font-size: 30px;
+		line-height: 30px;
+	}
 	h2 {
-		margin: 12px 0 12px 0;
+		font-size: 20px;
+		line-height: 20px;
+	}
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	h4 {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	h5 {
+		font-size: 12px;
+		line-height: 20px;
 	}
 	ul, ol {
 		list-style-type: none;
