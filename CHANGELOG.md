@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## 0.0.4 – 2021-02-18
+## 0.0.5 – 2021-02-18
 ### Changed
 - image size
 - section headings style
