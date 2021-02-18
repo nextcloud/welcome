@@ -88,7 +88,7 @@ export default {
 				this.content = response.data.content
 				// eslint-disable-next-line
 				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
-					return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=50&y=250&a=true') + ')'
+					return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=200&y=200&a=true') + ')'
 				})
 				this.userId = response.data.userId
 				this.userName = response.data.userName
@@ -135,6 +135,8 @@ export default {
 		display: flex;
 		img {
 			margin: 0 auto 0 auto;
+			height: 100px;
+			width: auto;
 		}
 	}
 }
