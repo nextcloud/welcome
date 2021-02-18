@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 0.0.4 – 2021-02-18
+### Changed
+- image size
+- section headings style
+
 ## 0.0.3 – 2021-02-16
 ### Added
 - appstore release
