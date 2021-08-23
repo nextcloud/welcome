@@ -141,6 +141,17 @@ export default {
 			content: '•';
 			padding-right: 8px;
 		}
+		ul, ol {
+			margin-left: 20px;
+			li:before {
+				content: '∘';
+			}
+			ul, ol {
+				li:before {
+					content: '⁃';
+				}
+			}
+		}
 	}
 	a {
 		color: var(--color-text-lighter);
