@@ -147,8 +147,8 @@ export default {
 		text-decoration: underline;
 	}
 	> p {
-		display: flex;
 		img {
+			display: block;
 			margin: 0 auto 0 auto;
 			height: 100px;
 			width: auto;
