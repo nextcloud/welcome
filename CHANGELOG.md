@@ -6,9 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 0.0.6 – 2021-08-23
 ### Changed
 - bump js libs
+- bump max NC version to 23
 - improve release action
+
+### Fixed
+- style of paragraphs and nested lists
+[#17](https://github.com/eneiluj/welcome/issues/17) @RussellNS
 
 ## 0.0.5 – 2021-02-18
 ### Changed
