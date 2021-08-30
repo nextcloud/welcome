@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## 1.0.0 – 2021-08-30
+### Changed
+- improve markdown rendering style for <p>, <a> and <ul>
+- update dependencies
 
 ## 0.0.6 – 2021-08-23
 ### Changed
