@@ -154,7 +154,7 @@ export default {
 		}
 	}
 	a {
-		color: var(--color-text-lighter);
+		color: var(--color-text-light);
 		text-decoration: underline;
 	}
 	> p {
