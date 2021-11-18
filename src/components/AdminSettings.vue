@@ -32,6 +32,16 @@
 		<br>
 		<div v-if="state.filePath"
 			class="grid-form">
+			<label for="welcome-widget-title">
+				<span class="icon icon-file" />
+				{{ t('welcome', 'Widget title') }}
+			</label>
+			<input id="welcome-widget-title"
+				v-model="state.widgetTitle"
+				type="text"
+				:class="{ 'icon-loading-small': saving }"
+				:placeholder="t('welcome', 'Welcome')"
+				@input="onTextChange">
 			<label for="welcome-support">
 				<span class="icon icon-user" />
 				{{ t('welcome', 'Support contact') }}
@@ -92,7 +102,7 @@
 				type="text"
 				:class="{ 'icon-loading-small': saving }"
 				:placeholder="t('welcome', 'Example: Call {name} to get help.')"
-				@input="onSupportTextChange">
+				@input="onTextChange">
 			<div />
 			<span class="settings-hint">
 				<span class="icon icon-details" />
@@ -264,9 +274,12 @@ export default {
 				supportUserName: '',
 			})
 		},
-		onSupportTextChange() {
+		onTextChange() {
 			delay(() => {
-				this.saveOptions({ supportText: this.state.supportText })
+				this.saveOptions({
+					supportText: this.state.supportText,
+					widgetTitle: this.state.widgetTitle,
+				})
 			}, 2000)()
 		},
 	},

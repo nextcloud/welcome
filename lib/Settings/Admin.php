@@ -6,31 +6,25 @@ use OCP\IRequest;
 use OCP\IL10N;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
-use OCP\Util;
 use OCP\IURLGenerator;
-use OCP\IInitialStateService;
+use OCP\AppFramework\Services\IInitialState;
 
 use OCA\Welcome\AppInfo\Application;
 
 class Admin implements ISettings {
 
-	private $request;
-	private $config;
-	private $dataDirPath;
-	private $urlGenerator;
-	private $l;
 
 	public function __construct(string $appName,
-								IL10N $l,
+								IL10N $l10n,
 								IRequest $request,
 								IConfig $config,
 								IURLGenerator $urlGenerator,
-								IInitialStateService $initialStateService,
+								IInitialState $initialStateService,
 								$userId) {
 		$this->appName = $appName;
 		$this->urlGenerator = $urlGenerator;
 		$this->request = $request;
-		$this->l = $l;
+		$this->l10n = $l10n;
 		$this->config = $config;
 		$this->initialStateService = $initialStateService;
 		$this->userId = $userId;
@@ -46,6 +40,7 @@ class Admin implements ISettings {
 		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId', '');
 		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName', '');
 		$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText', '');
+		$widgetTitle = $this->config->getAppValue(Application::APP_ID, 'widgetTitle', '');
 
 		$adminConfig = [
 			'filePath' => $filePath,
@@ -54,8 +49,9 @@ class Admin implements ISettings {
 			'supportUserId' => $supportUserId,
 			'supportUserName' => $supportUserName,
 			'supportText' => $supportText,
+			'widgetTitle' => $widgetTitle,
 		];
-		$this->initialStateService->provideInitialState($this->appName, 'admin-config', $adminConfig);
+		$this->initialStateService->provideInitialState('admin-config', $adminConfig);
 		return new TemplateResponse(Application::APP_ID, 'adminSettings');
 	}
 

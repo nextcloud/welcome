@@ -24,7 +24,10 @@
 namespace OCA\Welcome\Dashboard;
 
 use OCP\Dashboard\IWidget;
+use OCP\IConfig;
 use OCP\IL10N;
+use OCP\IURLGenerator;
+use OCP\Util;
 
 use OCA\Welcome\AppInfo\Application;
 
@@ -32,11 +35,21 @@ class WelcomeWidget implements IWidget {
 
 	/** @var IL10N */
 	private $l10n;
+	/**
+	 * @var IConfig
+	 */
+	private $config;
+	/**
+	 * @var IURLGenerator
+	 */
+	private $url;
 
-	public function __construct(
-		IL10N $l10n
-	) {
+	public function __construct(IL10N $l10n,
+								IURLGenerator $url,
+								IConfig $config) {
 		$this->l10n = $l10n;
+		$this->config = $config;
+		$this->url = $url;
 	}
 
 	/**
@@ -50,8 +63,9 @@ class WelcomeWidget implements IWidget {
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		return $this->l10n->t('Welcome');
-		}
+		$widgetTitle = $this->config->getAppValue(Application::APP_ID, 'widgetTitle', $this->l10n->t('Welcome'));
+		return $widgetTitle ?: $this->l10n->t('Welcome');
+	}
 
 	/**
 	 * @inheritDoc
@@ -71,14 +85,14 @@ class WelcomeWidget implements IWidget {
 	 * @inheritDoc
 	 */
 	public function getUrl(): ?string {
-		return \OC::$server->getURLGenerator()->linkToRoute('settings.AdminSettings.index', ['section' => 'theming']);
+		return $this->url->linkToRoute('settings.AdminSettings.index', ['section' => 'theming']);
 	}
 
 	/**
 	 * @inheritDoc
 	 */
 	public function load(): void {
-		\OC_Util::addScript(Application::APP_ID, Application::APP_ID . '-dashboard');
-		\OC_Util::addStyle(Application::APP_ID, 'dashboard');
+		Util::addScript(Application::APP_ID, Application::APP_ID . '-dashboard');
+		Util::addStyle(Application::APP_ID, 'dashboard');
 	}
 }
