@@ -5,6 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+## 1.0.1 – 2021-11-18
+### Added
+- now possible to set the widget title
+  [#19](https://github.com/eneiluj/welcome/issues/19) @42ske
+- tooltip on support contact call link
+
+### Changed
+- clarify package.json
+- get rid of deprecated stuff in server side code
+- bump min NC version to 22
+
 ## 1.0.0 – 2021-08-30
 ### Changed
 - improve markdown rendering style for <p>, <a> and <ul>
