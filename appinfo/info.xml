@@ -18,7 +18,7 @@
 
 💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)
     ]]></description>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <licence>agpl</licence>
     <author>Julien Veyssier</author>
     <namespace>Welcome</namespace>
@@ -31,10 +31,7 @@
     <bugs>https://github.com/eneiluj/welcome/issues</bugs>
     <screenshot>https://github.com/eneiluj/welcome/raw/master/img/screenshot1.jpg</screenshot>
     <dependencies>
-        <database min-version="9.4">pgsql</database>
-        <database>sqlite</database>
-        <database min-version="5.5">mysql</database>
-        <nextcloud min-version="20" max-version="23"/>
+        <nextcloud min-version="20" max-version="24"/>
     </dependencies>
     <settings>
         <admin>OCA\Welcome\Settings\Admin</admin>
