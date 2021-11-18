@@ -13,6 +13,7 @@
 			</template>
 		</EmptyContent>
 		<a v-if="supportUserId"
+			v-tooltip.top="{ content: callSupportUserTooltip }"
 			class="call-link"
 			:href="callUrl">
 			<Avatar
@@ -28,8 +29,12 @@ import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
 import Avatar from '@nextcloud/vue/dist/Components/Avatar'
+import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip'
 
 import VueMarkdown from 'vue-markdown'
+
+import Vue from 'vue'
+Vue.directive('tooltip', Tooltip)
 
 export default {
 	name: 'Dashboard',
@@ -71,6 +76,9 @@ export default {
 			return this.supportText
 				? this.supportText.replace('{name}', this.supportUserName)
 				: t('welcome', 'Talk to your support contact ({name})', { name: this.supportUserName })
+		},
+		callSupportUserTooltip() {
+			return t('welcome', 'Talk to {name}', { name: this.supportUserName })
 		},
 	},
 
