@@ -5,19 +5,17 @@
 			class="markdown-content">
 			{{ content }}
 		</VueMarkdown>
-		<EmptyContent
-			v-else
+		<NcEmptyContent v-else
 			:icon="emptyContentIcon">
 			<template #desc>
 				{{ emptyContentMessage }}
 			</template>
-		</EmptyContent>
+		</NcEmptyContent>
 		<a v-if="supportUserId"
 			v-tooltip.top="{ content: callSupportUserTooltip }"
 			class="call-link"
 			:href="callUrl">
-			<Avatar
-				:user="supportUserId"
+			<NcAvatar :user="supportUserId"
 				:tooltip-message="supportUserName" />
 			<span>{{ callSupportUserText }}</span>
 		</a>
@@ -27,9 +25,10 @@
 <script>
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
-import EmptyContent from '@nextcloud/vue/dist/Components/EmptyContent'
-import Avatar from '@nextcloud/vue/dist/Components/Avatar'
-import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip'
+
+import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
+import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
+import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
 
 import VueMarkdown from 'vue-markdown'
 
@@ -41,9 +40,9 @@ export default {
 
 	components: {
 		// DashboardWidget,
-		EmptyContent,
+		NcEmptyContent,
 		VueMarkdown,
-		Avatar,
+		NcAvatar,
 	},
 
 	props: {

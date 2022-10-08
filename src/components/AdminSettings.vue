@@ -14,19 +14,23 @@
 				{{ t('welcome', 'Markdown content file') }}
 			</label>
 			<div>
-				<button @click="selectFile">
-					<FolderIcon :size="20" class="icon" />
-				</button>
+				<NcButton @click="selectFile">
+					<template #icon>
+						<FolderIcon :size="20" />
+					</template>
+				</NcButton>
 				<input id="welcome-file-path"
 					type="text"
 					:value="fullFilePath"
 					:readonly="true"
 					:placeholder="t('welcome', 'No file')"
 					@click="selectFile">
-				<button v-if="state.filePath"
+				<NcButton v-if="state.filePath"
 					@click="clear">
-					<DeleteIcon :size="20" class="icon" />
-				</button>
+					<template #icon>
+						<DeleteIcon :size="20" />
+					</template>
+				</NcButton>
 			</div>
 		</div>
 		<br>
@@ -49,20 +53,22 @@
 					{{ t('welcome', 'Support contact') }}
 				</label>
 				<div v-if="state.supportUserId">
-					<Avatar
+					<NcAvatar
 						:size="40"
 						:user="state.supportUserId"
 						:tooltip-message="state.supportUserName" />
 					<span class="support-user-name">
 						{{ state.supportUserName }}
 					</span>
-					<button
+					<NcButton
 						@click="clearSupportContact">
-						<DeleteIcon :size="20" class="icon" />
-					</button>
+						<template #icon>
+							<DeleteIcon :size="20" />
+						</template>
+					</NcButton>
 				</div>
 				<div v-else>
-					<Multiselect
+					<NcMultiselect
 						ref="multiselect"
 						class="support-input"
 						label="displayName"
@@ -79,7 +85,7 @@
 						@search-change="asyncFind"
 						@select="supportContactSelected">
 						<template #option="{option}">
-							<Avatar
+							<NcAvatar
 								class="support-avatar-option"
 								:user="option.user"
 								:show-user-status="false" />
@@ -93,7 +99,7 @@
 						<template #noResult>
 							{{ t('welcome', 'No result.') }}
 						</template>
-					</Multiselect>
+					</NcMultiselect>
 				</div>
 			</div>
 			<div class="line">
@@ -128,19 +134,22 @@ import { generateUrl, generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { getCurrentUser } from '@nextcloud/auth'
 import { showSuccess, showError } from '@nextcloud/dialogs'
-import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
-import Avatar from '@nextcloud/vue/dist/Components/Avatar'
 
-import { delay } from '../utils'
-import WelcomeIcon from './icons/WelcomeIcon'
+import NcMultiselect from '@nextcloud/vue/dist/Components/NcMultiselect.js'
+import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
+import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+
+import { delay } from '../utils.js'
+import WelcomeIcon from './icons/WelcomeIcon.vue'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
 		WelcomeIcon,
-		Multiselect,
-		Avatar,
+		NcMultiselect,
+		NcButton,
+		NcAvatar,
 		DeleteIcon,
 		FolderIcon,
 		AccountIcon,
