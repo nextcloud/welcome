@@ -1,21 +1,21 @@
 <template>
 	<div id="welcome_prefs" class="section">
 		<h2>
-			<a class="icon icon-welcome" />
+			<WelcomeIcon :size="24" class="icon" />
 			{{ t('welcome', 'Welcome widget') }}
 		</h2>
 		<p class="settings-hint">
-			<span class="icon icon-details" />
+			<InformationOutlineIcon :size="20" class="icon" />
 			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
 		</p>
-		<div class="grid-form">
+		<div class="line">
 			<label for="welcome-file-path">
-				<span class="icon icon-file" />
+				<FileIcon :size="20" class="icon" />
 				{{ t('welcome', 'Markdown content file') }}
 			</label>
 			<div>
 				<button @click="selectFile">
-					<span class="icon icon-folder" />
+					<FolderIcon :size="20" class="icon" />
 				</button>
 				<input id="welcome-file-path"
 					type="text"
@@ -25,94 +25,104 @@
 					@click="selectFile">
 				<button v-if="state.filePath"
 					@click="clear">
-					<span class="icon icon-delete" />
+					<DeleteIcon :size="20" class="icon" />
 				</button>
 			</div>
 		</div>
 		<br>
-		<div v-if="state.filePath"
-			class="grid-form">
-			<label for="welcome-widget-title">
-				<span class="icon icon-file" />
-				{{ t('welcome', 'Widget title') }}
-			</label>
-			<input id="welcome-widget-title"
-				v-model="state.widgetTitle"
-				type="text"
-				:class="{ 'icon-loading-small': saving }"
-				:placeholder="t('welcome', 'Welcome')"
-				@input="onTextChange">
-			<label for="welcome-support">
-				<span class="icon icon-user" />
-				{{ t('welcome', 'Support contact') }}
-			</label>
-			<div v-if="state.supportUserId">
-				<Avatar
-					:size="40"
-					:user="state.supportUserId"
-					:tooltip-message="state.supportUserName" />
-				<span class="support-user-name">
-					{{ state.supportUserName }}
+		<div v-if="state.filePath">
+			<div class="line">
+				<label for="welcome-widget-title">
+					<FileIcon :size="20" class="icon" />
+					{{ t('welcome', 'Widget title') }}
+				</label>
+				<input id="welcome-widget-title"
+					v-model="state.widgetTitle"
+					type="text"
+					:class="{ 'icon-loading-small': saving }"
+					:placeholder="t('welcome', 'Welcome')"
+					@input="onTextChange">
+			</div>
+			<div class="line">
+				<label for="welcome-support">
+					<AccountIcon :size="20" class="icon" />
+					{{ t('welcome', 'Support contact') }}
+				</label>
+				<div v-if="state.supportUserId">
+					<Avatar
+						:size="40"
+						:user="state.supportUserId"
+						:tooltip-message="state.supportUserName" />
+					<span class="support-user-name">
+						{{ state.supportUserName }}
+					</span>
+					<button
+						@click="clearSupportContact">
+						<DeleteIcon :size="20" class="icon" />
+					</button>
+				</div>
+				<div v-else>
+					<Multiselect
+						ref="multiselect"
+						class="support-input"
+						label="displayName"
+						:clear-on-select="false"
+						:hide-selected="false"
+						:internal-search="false"
+						:loading="loadingUsers"
+						:options="formattedSuggestions"
+						:placeholder="t('welcome', 'Choose a support user')"
+						:preselect-first="false"
+						:preserve-search="true"
+						:searchable="true"
+						:user-select="true"
+						@search-change="asyncFind"
+						@select="supportContactSelected">
+						<template #option="{option}">
+							<Avatar
+								class="support-avatar-option"
+								:user="option.user"
+								:show-user-status="false" />
+							<span>
+								{{ option.displayName }}
+							</span>
+						</template>
+						<template #noOptions>
+							{{ t('welcome', 'No recommendations. Start typing.') }}
+						</template>
+						<template #noResult>
+							{{ t('welcome', 'No result.') }}
+						</template>
+					</Multiselect>
+				</div>
+			</div>
+			<div class="line">
+				<label for="welcome-support-text">
+					<FileIcon :size="20" class="icon" />
+					{{ t('welcome', 'Support text') }}
+				</label>
+				<input id="welcome-support-text"
+					v-model="state.supportText"
+					type="text"
+					:class="{ 'icon-loading-small': saving }"
+					:placeholder="t('welcome', 'Example: Call {name} to get help.')"
+					@input="onTextChange">
+				<span class="settings-hint">
+					<InformationOutlineIcon :size="20" class="icon" />
+					{{ t('welcome', '{name} will be replaced by the support user name') }}
 				</span>
-				<button
-					@click="clearSupportContact">
-					<span class="icon icon-delete" />
-				</button>
 			</div>
-			<div v-else>
-				<Multiselect
-					ref="multiselect"
-					class="support-input"
-					label="displayName"
-					:clear-on-select="false"
-					:hide-selected="false"
-					:internal-search="false"
-					:loading="loadingUsers"
-					:options="formattedSuggestions"
-					:placeholder="t('welcome', 'Choose a support user')"
-					:preselect-first="false"
-					:preserve-search="true"
-					:searchable="true"
-					:user-select="true"
-					@search-change="asyncFind"
-					@select="supportContactSelected">
-					<template #option="{option}">
-						<Avatar
-							class="support-avatar-option"
-							:user="option.user"
-							:show-user-status="false" />
-						<span>
-							{{ option.displayName }}
-						</span>
-					</template>
-					<template #noOptions>
-						{{ t('welcome', 'No recommendations. Start typing.') }}
-					</template>
-					<template #noResult>
-						{{ t('welcome', 'No result.') }}
-					</template>
-				</Multiselect>
-			</div>
-			<label for="welcome-support-text">
-				<span class="icon icon-file" />
-				{{ t('welcome', 'Support text') }}
-			</label>
-			<input id="welcome-support-text"
-				v-model="state.supportText"
-				type="text"
-				:class="{ 'icon-loading-small': saving }"
-				:placeholder="t('welcome', 'Example: Call {name} to get help.')"
-				@input="onTextChange">
-			<div />
-			<span class="settings-hint">
-				<span class="icon icon-details" />
-				{{ t('welcome', '{name} will be replaced by the support user name') }}
-			</span>
 		</div>
 	</div>
 </template>
 
 <script>
+import FileIcon from 'vue-material-design-icons/File.vue'
+import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
+import AccountIcon from 'vue-material-design-icons/Account.vue'
+import DeleteIcon from 'vue-material-design-icons/Delete.vue'
+import FolderIcon from 'vue-material-design-icons/Folder.vue'
+
 import { loadState } from '@nextcloud/initial-state'
 import { generateUrl, generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
@@ -122,13 +132,20 @@ import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
 import Avatar from '@nextcloud/vue/dist/Components/Avatar'
 
 import { delay } from '../utils'
+import WelcomeIcon from "./icons/WelcomeIcon";
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
+		WelcomeIcon,
 		Multiselect,
 		Avatar,
+		DeleteIcon,
+		FolderIcon,
+		AccountIcon,
+		InformationOutlineIcon,
+		FileIcon,
 	},
 
 	props: [],
@@ -287,64 +304,64 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#welcome_prefs .icon {
-	display: inline-block;
-	width: 32px;
-}
-
-#welcome_prefs .grid-form .icon {
-	margin-bottom: -3px;
-}
-
-.grid-form label {
-	line-height: 38px;
-}
-
-.grid-form input {
-	width: 100%;
-}
-
-.grid-form {
-	max-width: 500px;
-	display: grid;
-	grid-template: 1fr / 1fr 1fr;
-	margin-left: 30px;
-
-	> div {
+#welcome_prefs {
+	h2 {
 		display: flex;
+		align-items: center;
+	}
+	.icon {
+		margin-right: 8px;
 	}
 
-	button {
+	.line {
 		display: flex;
-		width: 44px;
-		span {
-			margin-bottom: 0 !important;
+		align-items: center;
+		margin-left: 30px;
+
+		label {
+			display: flex;
+			align-items: center;
+			line-height: 38px;
+			width: 250px;
+			.icon {
+				margin-right: 4px;
+			}
+		}
+
+		input {
+			width: 300px;
+		}
+
+		> div {
+			display: flex;
+		}
+
+		button {
+			display: flex;
+			width: 44px;
+
+			span {
+				margin-bottom: 0 !important;
+			}
+		}
+
+		.support-user-name {
+			line-height: 40px;
+			margin: 0 10px 0 10px;
 		}
 	}
+}
 
-	.support-user-name {
-		line-height: 40px;
-		margin: 0 10px 0 10px;
-	}
-
-	.settings-hint {
-		margin: 0;
+.settings-hint {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	.icon {
+		margin-right: 4px !important;
 	}
 }
 
 ::v-deep .support-avatar-option {
 	margin-right: 10px;
 }
-
-.icon-welcome {
-	background-image: url(./../../img/app-dark.svg);
-	background-size: 23px 23px;
-	height: 23px;
-	margin-bottom: -4px;
-}
-
-body.theme--dark .icon-welcome {
-	background-image: url(./../../img/app.svg);
-}
-
 </style>
