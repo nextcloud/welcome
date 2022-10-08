@@ -132,7 +132,7 @@ import Multiselect from '@nextcloud/vue/dist/Components/Multiselect'
 import Avatar from '@nextcloud/vue/dist/Components/Avatar'
 
 import { delay } from '../utils'
-import WelcomeIcon from "./icons/WelcomeIcon";
+import WelcomeIcon from './icons/WelcomeIcon'
 
 export default {
 	name: 'AdminSettings',
