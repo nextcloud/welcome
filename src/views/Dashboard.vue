@@ -1,10 +1,10 @@
 <template>
 	<div id="welcome-widget">
 		<span v-if="loading" class="icon icon-loading" />
-		<VueMarkdown v-else-if="content"
-			class="markdown-content">
-			{{ content }}
-		</VueMarkdown>
+		<RichText v-else-if="content"
+			class="markdown-content"
+			:text="content"
+			:use-markdown="true" />
 		<NcEmptyContent v-else
 			:icon="emptyContentIcon">
 			<template #desc>
@@ -30,7 +30,7 @@ import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
 import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
 
-import VueMarkdown from 'vue-markdown'
+import { RichText } from '@nextcloud/vue-richtext'
 
 import Vue from 'vue'
 Vue.directive('tooltip', Tooltip)
@@ -41,8 +41,8 @@ export default {
 	components: {
 		// DashboardWidget,
 		NcEmptyContent,
-		VueMarkdown,
 		NcAvatar,
+		RichText,
 	},
 
 	props: {
@@ -114,7 +114,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-::v-deep .markdown-content {
+:deep(.markdown-content) {
 	h1, h2, h3, h4, h5 {
 		font-weight: bold;
 		margin: 12px 0 12px 0;

@@ -45,10 +45,10 @@
 		"@nextcloud/router": "^2.0.0",
 		"@nextcloud/vue": "^7.0.0-beta.7",
 		"@nextcloud/vue-dashboard": "^2.0.1",
+		"@nextcloud/vue-richtext": "^2.0.4",
 		"eslint-webpack-plugin": "^3.2.0",
 		"stylelint-webpack-plugin": "^3.3.0",
 		"vue": "^2.6.11",
-		"vue-markdown": "^2.2.4",
 		"vue-material-design-icons": "^5.1.2"
 	},
 	"devDependencies": {
