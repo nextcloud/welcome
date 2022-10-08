@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## 1.0.2 – 2022-10-08
+### Changed
+- use @nextcloud/vue-richtext instead of vue-markdown
+- bump js libs
+- make things work and look nice on NC 25/26
+
 ## 1.0.1 – 2021-11-18
 ### Added
 - now possible to set the widget title
