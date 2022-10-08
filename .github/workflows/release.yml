@@ -12,16 +12,13 @@ jobs:
       APP_ID: welcome
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: User Node 14
+      - name: Use Node 16
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: 16
 
       - name: Set up npm
-        run: npm i -g npm
+        run: npm i -g npm@^8.0.0
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -31,6 +28,9 @@ jobs:
           ini-values: post_max_size=256M, max_execution_time=180
           coverage: xdebug
           tools: php-cs-fixer, phpunit
+
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Get current tag
         id: tag
@@ -52,7 +52,6 @@ jobs:
           echo "###### install dependencies"
           export DEBIAN_FRONTEND=noninteractive
           sudo apt update -y
-          # sudo apt upgrade -y
           sudo apt install make openssl -y
           echo "###### installing nextcloud"
           mkdir ~/html
