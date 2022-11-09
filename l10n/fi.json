@@ -1,0 +1,6 @@
+{ "translations": {
+    "Welcome" : "Tervetuloa",
+    "No recommendations. Start typing." : "Ei suosituksia. Aloita kirjoittaminen.",
+    "No result." : "Ei tulosta."
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

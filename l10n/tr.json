@@ -1,0 +1,6 @@
+{ "translations": {
+    "Welcome" : "Hoş geldiniz",
+    "No recommendations. Start typing." : "Herhangi bir öneri yok. Yazmaya başlayın.",
+    "No result." : "Herhangi bir sonuç yok."
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}

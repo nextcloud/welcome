@@ -1,0 +1,6 @@
+{ "translations": {
+    "Welcome" : "Bem-vindo",
+    "No recommendations. Start typing." : "Sem recomendações. Começe a digitar.",
+    "No result." : "Sem resultado."
+},"pluralForm" :"nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
+}

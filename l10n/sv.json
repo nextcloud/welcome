@@ -1,0 +1,6 @@
+{ "translations": {
+    "Welcome" : "Välkommen",
+    "No recommendations. Start typing." : "Inga rekommendationer. Börja skriva.",
+    "No result." : "Inga resultat."
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
