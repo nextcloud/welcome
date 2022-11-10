@@ -1,0 +1,6 @@
+{ "translations": {
+    "Welcome" : "Добре дошли",
+    "No recommendations. Start typing." : "Няма препоръки. Започнете да пишете.",
+    "No result." : "Няма резултат."
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
