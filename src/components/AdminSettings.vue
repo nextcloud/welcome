@@ -6,7 +6,7 @@
 		</h2>
 		<p class="settings-hint">
 			<InformationOutlineIcon :size="20" class="icon" />
-			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
+			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a Markdown file.') }}
 		</p>
 		<div class="line">
 			<label for="welcome-file-path">
@@ -241,7 +241,7 @@ export default {
 		},
 		selectFile() {
 			OC.dialogs.filepicker(
-				t('welcome', 'Choose markdown welcome content file'),
+				t('welcome', 'Choose Markdown welcome content file'),
 				(targetPath) => {
 					this.state.filePath = targetPath
 					this.state.userName = this.currentUser.displayName
