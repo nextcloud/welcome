@@ -1,6 +1,23 @@
 { "translations": {
-    "Welcome" : "Hoş geldiniz",
+    "Welcome" : "Karşılama",
+    "Dashboard widget to display welcome content" : "Karşılama içeriğinin bulunduğu pano bileşeni",
+    "Welcome widget" : "Karşılama pano bileşeni",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Karşılama pano bileşeni, yalnızca bir markdown dosyası seçtiğinizde tüm kullanıcılara görüntülenir.",
+    "Markdown content file" : "Markdown içerik dosyası",
+    "No file" : "Dosya yok",
+    "Widget title" : "Pano bileşeni başlığı",
+    "Support contact" : "Destek sorumlusu",
+    "Choose a support user" : "Bir destek kullanıcısı seçin",
     "No recommendations. Start typing." : "Herhangi bir öneri yok. Yazmaya başlayın.",
-    "No result." : "Herhangi bir sonuç yok."
+    "No result." : "Herhangi bir sonuç yok.",
+    "Support text" : "Destek metni.",
+    "Example: Call {name} to get help." : "Örnek: Yardım almak için {name} ile görüşün.",
+    "{name} will be replaced by the support user name" : "{name} yerinde destek sorumlusu olan kullanıcının adı görüntülenir",
+    "Welcome admin options saved" : "Karşılama yönetici ayarları kaydedildi",
+    "Failed to save welcome admin options" : "Karşılama yönetici ayarları kaydedilemedi",
+    "Choose markdown welcome content file" : "Karşılama içeriklerinin bulunduğu markdown dosyasını seçin",
+    "No welcome content" : "Herhangi bir karşılama içeriği yok",
+    "Talk to your support contact ({name})" : "Destek sorumlunuz ile görüşün ({name})",
+    "Talk to {name}" : "{name} ile görüşün"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }
