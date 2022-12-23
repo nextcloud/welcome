@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.3 – 2022-12-24
+### Added
+- support for http markdown image target
+
+### Changed
+- update npm pkgs
+
+### Fixed
+- support for image links inserted by Text
+
 ## 1.0.2 – 2022-10-08
 ### Changed
 - use @nextcloud/vue-richtext instead of vue-markdown

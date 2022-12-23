@@ -39,7 +39,6 @@ export default {
 	name: 'Dashboard',
 
 	components: {
-		// DashboardWidget,
 		NcEmptyContent,
 		NcAvatar,
 		RichText,
