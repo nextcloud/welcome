@@ -2,11 +2,8 @@
 namespace OCA\Welcome\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
-use OCP\IRequest;
-use OCP\IL10N;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
-use OCP\IURLGenerator;
 use OCP\AppFramework\Services\IInitialState;
 
 use OCA\Welcome\AppInfo\Application;
@@ -14,17 +11,23 @@ use OCA\Welcome\AppInfo\Application;
 class Admin implements ISettings {
 
 
-	public function __construct(string $appName,
-								IL10N $l10n,
-								IRequest $request,
-								IConfig $config,
-								IURLGenerator $urlGenerator,
+	/**
+	 * @var IConfig
+	 */
+	private $config;
+	/**
+	 * @var IInitialState
+	 */
+	private $initialStateService;
+	/**
+	 * @var string|null
+	 */
+	private $userId;
+
+	public function __construct(string        $appName,
+								IConfig       $config,
 								IInitialState $initialStateService,
-								$userId) {
-		$this->appName = $appName;
-		$this->urlGenerator = $urlGenerator;
-		$this->request = $request;
-		$this->l10n = $l10n;
+								?string       $userId) {
 		$this->config = $config;
 		$this->initialStateService = $initialStateService;
 		$this->userId = $userId;

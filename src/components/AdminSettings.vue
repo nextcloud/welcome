@@ -223,7 +223,7 @@ export default {
 						t('welcome', 'Failed to save welcome admin options')
 						+ ': ' + (error.response?.request?.responseText ?? '')
 					)
-					console.debug(error)
+					console.error(error)
 				})
 				.then(() => {
 					this.saving = false
@@ -264,7 +264,6 @@ export default {
 				return
 			}
 			this.loadingUsers = true
-			console.debug(query)
 			const url = generateOcsUrl('core/autocomplete/get', 2).replace(/\/$/, '')
 			axios.get(url, {
 				params: {
@@ -275,7 +274,6 @@ export default {
 					shareTypes: [],
 				},
 			}).then((response) => {
-				console.debug(response)
 				this.suggestions = response.data.ocs.data
 			}).catch((error) => {
 				console.error(error)

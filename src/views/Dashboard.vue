@@ -58,6 +58,7 @@ export default {
 			content: '',
 			userId: null,
 			userName: null,
+			supportUserId: null,
 		}
 	},
 
@@ -163,12 +164,12 @@ export default {
 		color: var(--color-text-light);
 		text-decoration: underline;
 	}
-	> p {
-		img {
+	p {
+		> img {
 			display: block;
 			margin: 0 auto 0 auto;
-			height: 100px;
-			width: auto;
+			max-height: 150px;
+			max-width: 250px;
 		}
 	}
 }
