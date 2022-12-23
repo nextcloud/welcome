@@ -11,6 +11,8 @@
 
 namespace OCA\Welcome\Controller;
 
+use OC\Files\Node\File;
+use OCP\Files\Folder;
 use OCP\Files\IAppData;
 use OCP\AppFramework\Http\DataDisplayResponse;
 
@@ -32,11 +34,15 @@ use OCP\AppFramework\Controller;
 
 use OCA\Welcome\AppInfo\Application;
 
+function startsWith(string $haystack, string $needle): bool {
+	$length = strlen($needle);
+	return (substr($haystack, 0, $length) === $needle);
+}
+
 class ConfigController extends Controller {
 
 	private $userId;
 	private $config;
-	private $dbtype;
 
 	public function __construct($AppName,
 								IRequest $request,
@@ -89,6 +95,7 @@ class ConfigController extends Controller {
 				$file = $userFolder->get($filePath);
 				if ($file->getType() === FileInfo::TYPE_FILE) {
 					$content = $file->getContent();
+					$content = $this->replaceImagePaths($content, $file->getParent());
 					// prepend a new line to avoid having the first line interpreted as code...
 					return new DataResponse([
 						'content' => "\n" . trim($content),
@@ -102,5 +109,30 @@ class ConfigController extends Controller {
 			}
 		}
 		return new DataResponse('not found', 400);
+	}
+
+	private function replaceImagePaths(string $content, Folder $folder): string {
+		preg_match_all(
+			'/\!\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[\])*\])*\])*\])*\])*\])*\]\(([^)&]+)\)/',
+			$content,
+			$matches,
+			PREG_SET_ORDER
+		);
+		$paths = array_map(static function (array $match) {
+			return urldecode($match[1]);
+		}, $matches);
+
+		foreach ($matches as $match) {
+			$path = $match[1];
+			if (!startsWith($path, 'http://') && !startsWith($path, 'https://') && $folder->nodeExists($path)) {
+				$file = $folder->get($path);
+				if ($file instanceof File) {
+					$fullMatch = $match[0];
+					$newLink = str_replace($path, 'a?fileId=' . $file->getId(), $fullMatch);
+					$content = str_replace($fullMatch, $newLink, $content);
+				}
+			}
+		}
+		return $content;
 	}
 }

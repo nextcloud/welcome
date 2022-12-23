@@ -102,9 +102,8 @@ export default {
 				this.supportUserId = response.data.supportUserId
 				this.supportUserName = response.data.supportUserName
 				this.supportText = response.data.supportText
-				console.debug('"' + this.content + '"')
 			}).catch((error) => {
-				console.debug(error)
+				console.error(error)
 			}).then(() => {
 				this.loading = false
 			})
