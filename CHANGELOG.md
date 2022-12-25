@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.4 – 2022-12-25
+### Fixed
+- fix compat with php < 8
+
 ## 1.0.3 – 2022-12-24
 ### Added
 - support for http markdown image target

@@ -40,8 +40,7 @@ class CSPListener implements IEventListener {
 	private $fileService;
 
 	public function __construct(IRequest $request,
-								FileService $fileService,
-	) {
+								FileService $fileService) {
 		$this->request = $request;
 		$this->fileService = $fileService;
 	}
