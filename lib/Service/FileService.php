@@ -150,8 +150,9 @@ class FileService {
 
 		foreach ($matches as $match) {
 			$path = $match[1];
-			if (!startsWith($path, 'http://') && !startsWith($path, 'https://') && $folder->nodeExists($path)) {
-				$file = $folder->get($path);
+			$decodedPath = urldecode($path);
+			if (!startsWith($path, 'http://') && !startsWith($path, 'https://') && $folder->nodeExists($decodedPath)) {
+				$file = $folder->get($decodedPath);
 				if ($file instanceof File) {
 					$fullMatch = $match[0];
 					$newLink = str_replace($path, 'a?fileId=' . $file->getId(), $fullMatch);
