@@ -11,13 +11,20 @@
 
 namespace OCA\Welcome\Controller;
 
+use OC\User\NoUserException;
 use OCA\Welcome\Service\FileService;
+use OCP\AppFramework\Http;
+use OCP\AppFramework\Http\DataDisplayResponse;
+use OCP\Files\InvalidPathException;
+use OCP\Files\NotFoundException;
+use OCP\Files\NotPermittedException;
 use OCP\IConfig;
 use OCP\IRequest;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Controller;
 
 use OCA\Welcome\AppInfo\Application;
+use OCP\Lock\LockedException;
 
 class ConfigController extends Controller {
 
@@ -62,5 +69,31 @@ class ConfigController extends Controller {
 			return new DataResponse($content);
 		}
 		return new DataResponse('not found', 404);
+	}
+
+	/**
+	 * @NoAdminRequired
+	 * @NoCSRFRequired
+	 *
+	 * @param int $fileId
+	 * @return DataDisplayResponse The image content
+	 * @throws InvalidPathException
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 * @throws LockedException
+	 * @throws NoUserException
+	 */
+	public function getWidgetImage(int $fileId): DataDisplayResponse {
+		$image = $this->fileService->getImage($fileId);
+		if ($image !== null) {
+			$response = new DataDisplayResponse(
+				$image->getContent(),
+				Http::STATUS_OK,
+				['Content-Type' => $image->getMimeType()]
+			);
+			$response->cacheFor(60 * 60 * 24, false, true);
+			return $response;
+		}
+		return new DataDisplayResponse('', Http::STATUS_NOT_FOUND);
 	}
 }

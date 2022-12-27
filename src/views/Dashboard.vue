@@ -95,7 +95,9 @@ export default {
 				this.content = response.data.content
 				// eslint-disable-next-line
 				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
-					return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=200&y=200&a=true') + ')'
+					// return '![' + p1 + '](' + generateUrl('/core/preview?fileId=' + p2 + '&x=200&y=200&a=true') + ')'
+					// we get the image we an app-specific endpoint
+					return '![' + p1 + '](' + generateUrl('/apps/welcome/widget/image/{fileId}', { fileId: p2 }) + ')'
 				})
 				this.userId = response.data.userId
 				this.userName = response.data.userName

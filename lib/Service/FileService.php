@@ -107,6 +107,33 @@ class FileService {
 	}
 
 	/**
+	 * @param int $fileId
+	 * @return File|null
+	 * @throws InvalidPathException
+	 * @throws NoUserException
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 */
+	public function getImage(int $fileId): ?File {
+		$widgetFile = $this->getWidgetFile();
+		$parent = $widgetFile->getParent();
+		$attachmentFolderName = '.attachments.' . $widgetFile->getId();
+		if ($parent->nodeExists($attachmentFolderName)) {
+			$attachmentFolder = $parent->get($attachmentFolderName);
+			if ($attachmentFolder instanceof Folder) {
+				$attachment = $attachmentFolder->getById($fileId);
+				if (is_array($attachment) && !empty($attachment)) {
+					$candidate = $attachment[0];
+					if ($candidate instanceof File) {
+						return $candidate;
+					}
+				}
+			}
+		}
+		return null;
+	}
+
+	/**
 	 * @param string $content
 	 * @param Folder $folder
 	 * @return string
