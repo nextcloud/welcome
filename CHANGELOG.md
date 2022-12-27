@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.5 – 2022-12-27
+### Fixed
+- Use a Welcome endpoint to get images from file ID. Images are only returned if they are in the markdown file's attachment folder
+
 ## 1.0.4 – 2022-12-25
 ### Fixed
 - fix compat with php < 8
