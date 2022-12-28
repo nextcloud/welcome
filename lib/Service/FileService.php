@@ -21,6 +21,7 @@ use OCP\Files\IRootFolder;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
 use OCP\IConfig;
+use OCP\IURLGenerator;
 use OCP\IUserManager;
 
 function startsWith(string $haystack, string $needle): bool {
@@ -42,13 +43,19 @@ class FileService {
 	 * @var IUserManager
 	 */
 	private $userManager;
+	/**
+	 * @var IURLGenerator
+	 */
+	private $urlGenerator;
 
 	public function __construct (IRootFolder $root,
 								IConfig $config,
+								IURLGenerator $urlGenerator,
 								IUserManager $userManager) {
 		$this->root = $root;
 		$this->config = $config;
 		$this->userManager = $userManager;
+		$this->urlGenerator = $urlGenerator;
 	}
 
 	/**
@@ -155,7 +162,8 @@ class FileService {
 				$file = $folder->get($decodedPath);
 				if ($file instanceof File) {
 					$fullMatch = $match[0];
-					$newLink = str_replace($path, 'a?fileId=' . $file->getId(), $fullMatch);
+					$welcomeImageUrl = $this->urlGenerator->linkToRoute(Application::APP_ID . '.config.getWidgetImage', ['fileId' => $file->getId()]);
+					$newLink = str_replace($path, $welcomeImageUrl, $fullMatch);
 					$content = str_replace($fullMatch, $newLink, $content);
 				}
 			}
