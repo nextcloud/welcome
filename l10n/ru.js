@@ -2,6 +2,11 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Добро пожаловать",
+    "Dashboard widget to display welcome content" : "Виджет панели инструментов для отображения приветственного контента",
+    "Welcome widget" : "Приветственный виджет",
+    "No file" : "Нет файла",
+    "Widget title" : "Заголовок виджета",
+    "Support contact" : "Контакты поддержки",
     "No recommendations. Start typing." : "Начните вводить имя...",
     "No result." : "Нет результатов"
 },
