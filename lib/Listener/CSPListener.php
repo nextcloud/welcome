@@ -54,12 +54,13 @@ class CSPListener implements IEventListener {
 
 		$urls = $this->fileService->getWidgetHttpImageUrls();
 
-		$policy = new EmptyContentSecurityPolicy();
-		foreach ($urls as $url) {
-			$policy->addAllowedImageDomain($url);
+		if ($urls !== null) {
+			$policy = new EmptyContentSecurityPolicy();
+			foreach ($urls as $url) {
+				$policy->addAllowedImageDomain($url);
+			}
+			$event->addPolicy($policy);
 		}
-
-		$event->addPolicy($policy);
 	}
 
 	private function isDashboardPageLoad(): bool {

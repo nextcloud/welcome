@@ -12,6 +12,7 @@
 
 namespace OCA\Welcome\Service;
 
+use Exception;
 use OC\Files\Node\File;
 use OC\User\NoUserException;
 use OCA\Welcome\AppInfo\Application;
@@ -23,6 +24,8 @@ use OCP\Files\NotPermittedException;
 use OCP\IConfig;
 use OCP\IURLGenerator;
 use OCP\IUserManager;
+use Psr\Log\LoggerInterface;
+use Throwable;
 
 function startsWith(string $haystack, string $needle): bool {
 	$length = strlen($needle);
@@ -47,15 +50,21 @@ class FileService {
 	 * @var IURLGenerator
 	 */
 	private $urlGenerator;
+	/**
+	 * @var LoggerInterface
+	 */
+	private $logger;
 
 	public function __construct (IRootFolder $root,
 								IConfig $config,
 								IURLGenerator $urlGenerator,
+								LoggerInterface $logger,
 								IUserManager $userManager) {
 		$this->root = $root;
 		$this->config = $config;
 		$this->userManager = $userManager;
 		$this->urlGenerator = $urlGenerator;
+		$this->logger = $logger;
 	}
 
 	/**
@@ -172,24 +181,28 @@ class FileService {
 	}
 
 	public function getWidgetHttpImageUrls(): ?array {
-		$file = $this->getWidgetFile();
-		if ($file !== null) {
-			$content = $file->getContent();
+		try {
+			$file = $this->getWidgetFile();
+			if ($file !== null) {
+				$content = $file->getContent();
 
-			preg_match_all(
-				'/\!\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[\])*\])*\])*\])*\])*\])*\]\((https?:\/\/[^)&]+)\)/',
-				$content,
-				$matches,
-				PREG_SET_ORDER
-			);
+				preg_match_all(
+					'/\!\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[\])*\])*\])*\])*\])*\])*\]\((https?:\/\/[^)&]+)\)/',
+					$content,
+					$matches,
+					PREG_SET_ORDER
+				);
 
-			if ($matches === null) {
-				return null;
+				if ($matches === null) {
+					return null;
+				}
+
+				return array_map(static function (array $match) {
+					return urldecode($match[1]);
+				}, $matches);
 			}
-
-			return array_map(static function (array $match) {
-				return urldecode($match[1]);
-			}, $matches);
+		} catch (Exception | Throwable $e) {
+			$this->logger->warning('Failed to get widget http image URLs', ['app' => Application::APP_ID, 'exception' => $e]);
 		}
 		return null;
 	}
