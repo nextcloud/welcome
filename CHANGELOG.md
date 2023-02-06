@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## 1.0.7 – 2023-02-06
+## 1.0.8 – 2023-02-06
 ### Fixed
 - safer FileService::getWidgetHttpImageUrls
 
