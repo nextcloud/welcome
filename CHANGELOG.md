@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.7 – 2023-02-06
+### Fixed
+- safer FileService::getWidgetHttpImageUrls
+
 ## 1.0.6 – 2022-12-28
 ### Fixed
 - Use a Welcome endpoint to get images from file ID. Images are only returned if they are in the markdown file's attachment folder
