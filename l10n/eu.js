@@ -9,6 +9,7 @@ OC.L10N.register(
     "Widget title" : "Trepetaren izenburua",
     "No recommendations. Start typing." : "Gomendiorik ez. Hasi idazten.",
     "No result." : "Emaitzarik ez.",
+    "Support text" : "Laguntza-testua",
     "Talk to {name}" : "Hitz egin {name}-(r)ekin"
 },
 "nplurals=2; plural=(n != 1);");
