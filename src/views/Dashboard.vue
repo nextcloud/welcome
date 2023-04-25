@@ -1,7 +1,7 @@
 <template>
 	<div id="welcome-widget">
 		<span v-if="loading" class="icon icon-loading" />
-		<RichText v-else-if="content"
+		<NcRichText v-else-if="content"
 			class="markdown-content"
 			:text="content"
 			:use-markdown="true" />
@@ -32,7 +32,7 @@ import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
 import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
 
-import { RichText } from '@nextcloud/vue-richtext'
+import { NcRichText } from '@nextcloud/vue/dist/Components/NcRichText.js'
 
 import Vue from 'vue'
 Vue.directive('tooltip', Tooltip)
@@ -43,7 +43,7 @@ export default {
 	components: {
 		NcEmptyContent,
 		NcAvatar,
-		RichText,
+		NcRichText,
 		CloseIcon,
 	},
 
