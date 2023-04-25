@@ -6,9 +6,9 @@
 			:text="content"
 			:use-markdown="true" />
 		<NcEmptyContent v-else
-			:icon="emptyContentIcon">
-			<template #desc>
-				{{ emptyContentMessage }}
+			:description="emptyContentMessage">
+			<template #icon>
+				<CloseIcon />
 			</template>
 		</NcEmptyContent>
 		<a v-if="supportUserId"
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import CloseIcon from 'vue-material-design-icons/Close.vue'
+
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 
@@ -42,6 +44,7 @@ export default {
 		NcEmptyContent,
 		NcAvatar,
 		RichText,
+		CloseIcon,
 	},
 
 	props: {
@@ -64,9 +67,6 @@ export default {
 	computed: {
 		emptyContentMessage() {
 			return t('welcome', 'No welcome content')
-		},
-		emptyContentIcon() {
-			return 'icon-close'
 		},
 		callUrl() {
 			return generateUrl('/apps/spreed/?callUser=' + this.supportUserId)

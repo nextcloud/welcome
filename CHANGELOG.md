@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## 1.0.1 – 2021-11-18
 ### Added
 - now possible to set the widget title
-  [#19](https://github.com/eneiluj/welcome/issues/19) @42ske
+  [#19](https://github.com/julien-nc/welcome/issues/19) @42ske
 - tooltip on support contact call link
 
 ### Changed
@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - style of paragraphs and nested lists
-[#17](https://github.com/eneiluj/welcome/issues/17) @RussellNS
+[#17](https://github.com/julien-nc/welcome/issues/17) @RussellNS
 
 ## 0.0.5 – 2021-02-18
 ### Changed

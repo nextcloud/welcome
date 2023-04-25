@@ -87,6 +87,7 @@ class FileService {
 				}
 			}
 		}
+		$this->logger->debug('Failed to get file "' . $filePath . '" of user "' . $userId . '"', ['app' => Application::APP_ID]);
 		return null;
 	}
 
@@ -99,15 +100,15 @@ class FileService {
 	public function getWidgetContent(): ?array {
 		$this->getWidgetHttpImageUrls();
 
-		$userName = $this->config->getAppValue(Application::APP_ID, 'userName', '');
-		$userId = $this->config->getAppValue(Application::APP_ID, 'userId', '');
-		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName', '');
-		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId', '');
-		$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText', '');
+		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
+		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
+		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName');
+		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId');
+		$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText');
 
 		$file = $this->getWidgetFile();
-		$content = $file->getContent();
-		if ($content !== null) {
+		if ($file !== null) {
+			$content = $file->getContent();
 			$content = $this->replaceImagePaths($content, $file->getParent());
 			// prepend a new line to avoid having the first line interpreted as code...
 			return [
