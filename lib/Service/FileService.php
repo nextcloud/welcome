@@ -27,44 +27,13 @@ use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
-function startsWith(string $haystack, string $needle): bool {
-	$length = strlen($needle);
-	return (substr($haystack, 0, $length) === $needle);
-}
-
 class FileService {
 
-	/**
-	 * @var IRootFolder
-	 */
-	private $root;
-	/**
-	 * @var IConfig
-	 */
-	private $config;
-	/**
-	 * @var IUserManager
-	 */
-	private $userManager;
-	/**
-	 * @var IURLGenerator
-	 */
-	private $urlGenerator;
-	/**
-	 * @var LoggerInterface
-	 */
-	private $logger;
-
-	public function __construct (IRootFolder $root,
-								IConfig $config,
-								IURLGenerator $urlGenerator,
-								LoggerInterface $logger,
-								IUserManager $userManager) {
-		$this->root = $root;
-		$this->config = $config;
-		$this->userManager = $userManager;
-		$this->urlGenerator = $urlGenerator;
-		$this->logger = $logger;
+	public function __construct (private IRootFolder $root,
+								 private IConfig $config,
+								 private IURLGenerator $urlGenerator,
+								 private LoggerInterface $logger,
+								 private IUserManager $userManager) {
 	}
 
 	/**
@@ -168,7 +137,7 @@ class FileService {
 		foreach ($matches as $match) {
 			$path = $match[1];
 			$decodedPath = urldecode($path);
-			if (!startsWith($path, 'http://') && !startsWith($path, 'https://') && $folder->nodeExists($decodedPath)) {
+			if (!str_starts_with($path, 'http://') && !str_starts_with($path, 'https://') && $folder->nodeExists($decodedPath)) {
 				$file = $folder->get($decodedPath);
 				if ($file instanceof File) {
 					$fullMatch = $match[0];

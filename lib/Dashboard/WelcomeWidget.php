@@ -33,23 +33,9 @@ use OCA\Welcome\AppInfo\Application;
 
 class WelcomeWidget implements IWidget {
 
-	/** @var IL10N */
-	private $l10n;
-	/**
-	 * @var IConfig
-	 */
-	private $config;
-	/**
-	 * @var IURLGenerator
-	 */
-	private $url;
-
-	public function __construct(IL10N $l10n,
-								IURLGenerator $url,
-								IConfig $config) {
-		$this->l10n = $l10n;
-		$this->config = $config;
-		$this->url = $url;
+	public function __construct(private IL10N $l10n,
+								private IURLGenerator $url,
+								private IConfig $config) {
 	}
 
 	/**

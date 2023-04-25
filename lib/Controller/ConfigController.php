@@ -28,23 +28,12 @@ use OCP\Lock\LockedException;
 
 class ConfigController extends Controller {
 
-	/**
-	 * @var IConfig
-	 */
-	private $config;
-	/**
-	 * @var FileService
-	 */
-	private $fileService;
-
 	public function __construct($appName,
 								IRequest $request,
-								IConfig $config,
-								FileService $fileService,
+								private IConfig $config,
+								private FileService $fileService,
 								?string $userId) {
 		parent::__construct($appName, $request);
-		$this->config = $config;
-		$this->fileService = $fileService;
 	}
 
 	/**
