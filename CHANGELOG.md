@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.9 – 2023-04-26
+### Changed
+- update npm pkgs, use NcRichText from `@nextcloud/vue`, remove `@nextcloud/vue-richtext` @julien-nc
+
+### Fixed
+- safer check that markdown file exists @julien-nc
+
 ## 1.0.8 – 2023-02-06
 ### Fixed
 - safer FileService::getWidgetHttpImageUrls

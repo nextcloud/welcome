@@ -18,18 +18,18 @@
 
 💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)
     ]]></description>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <licence>agpl</licence>
     <author>Julien Veyssier</author>
     <namespace>Welcome</namespace>
     <documentation>
-        <developer>https://github.com/julien-nc/welcome</developer>
+        <developer>https://github.com/nextcloud/welcome</developer>
     </documentation>
     <category>integration</category>
     <category>dashboard</category>
-    <website>https://github.com/julien-nc/welcome</website>
-    <bugs>https://github.com/julien-nc/welcome/issues</bugs>
-    <screenshot>https://github.com/julien-nc/welcome/raw/main/img/screenshot1.jpg</screenshot>
+    <website>https://github.com/nextcloud/welcome</website>
+    <bugs>https://github.com/nextcloud/welcome/issues</bugs>
+    <screenshot>https://github.com/nextcloud/welcome/raw/main/img/screenshot1.jpg</screenshot>
     <dependencies>
         <nextcloud min-version="26" max-version="27"/>
     </dependencies>
