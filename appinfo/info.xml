@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <info>
-    <id>welcome</id>
-    <name>Welcome</name>
-    <summary>Dashboard widget to display welcome content</summary>
-    <description><![CDATA[
+	<id>welcome</id>
+	<name>Welcome</name>
+	<summary>Dashboard widget to display welcome content</summary>
+	<description><![CDATA[
 ℹ A Markdown rendering Dashboard widget to welcome all users.
 
 ⚙ Configure via `Settings > Administration > Theming > Welcome widget`
@@ -18,22 +18,22 @@
 
 💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)
     ]]></description>
-    <version>1.0.9</version>
-    <licence>agpl</licence>
-    <author>Julien Veyssier</author>
-    <namespace>Welcome</namespace>
-    <documentation>
-        <developer>https://github.com/nextcloud/welcome</developer>
-    </documentation>
-    <category>integration</category>
-    <category>dashboard</category>
-    <website>https://github.com/nextcloud/welcome</website>
-    <bugs>https://github.com/nextcloud/welcome/issues</bugs>
-    <screenshot>https://github.com/nextcloud/welcome/raw/main/img/screenshot1.jpg</screenshot>
-    <dependencies>
-        <nextcloud min-version="26" max-version="27"/>
-    </dependencies>
-    <settings>
-        <admin>OCA\Welcome\Settings\Admin</admin>
-    </settings>
+	<version>1.0.9</version>
+	<licence>agpl</licence>
+	<author>Julien Veyssier</author>
+	<namespace>Welcome</namespace>
+	<documentation>
+		<developer>https://github.com/nextcloud/welcome</developer>
+	</documentation>
+	<category>integration</category>
+	<category>dashboard</category>
+	<website>https://github.com/nextcloud/welcome</website>
+	<bugs>https://github.com/nextcloud/welcome/issues</bugs>
+	<screenshot>https://github.com/nextcloud/welcome/raw/main/img/screenshot1.jpg</screenshot>
+	<dependencies>
+		<nextcloud min-version="26" max-version="28"/>
+	</dependencies>
+	<settings>
+		<admin>OCA\Welcome\Settings\Admin</admin>
+	</settings>
 </info>
