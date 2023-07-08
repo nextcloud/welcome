@@ -14,7 +14,7 @@ OC.L10N.register(
     "No recommendations. Start typing." : "Non hai recomendacións. Comece a escribir.",
     "No result." : "Sen resultados.",
     "Support text" : "Texto de soporte",
-    "Example: Call {name} to get help." : "Exemplo: Chama a {nome} para obter axuda.",
+    "Example: Call {name} to get help." : "Exemplo: Chama a {name} para obter axuda.",
     "{name} will be replaced by the support user name" : "{name} substituirase polo nome de usuario de asistencia técnica",
     "Welcome admin options saved" : "Gardáronse as opcións de administrador de benvida",
     "Failed to save welcome admin options" : "Non foi posíbel gardar as opcións do administrador de benvida",
