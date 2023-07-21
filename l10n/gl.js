@@ -16,7 +16,7 @@ OC.L10N.register(
     "Support text" : "Texto de soporte",
     "Example: Call {name} to get help." : "Exemplo: Chama a {name} para obter axuda.",
     "{name} will be replaced by the support user name" : "{name} substituirase polo nome de usuario de asistencia técnica",
-    "Welcome admin options saved" : "Gardáronse as opcións de administrador de benvida",
+    "Welcome admin options saved" : "Gardáronse as opcións de administración de benvida",
     "Failed to save welcome admin options" : "Produciuse un fallo ao gardar as opcións de benvida da administración da instancia",
     "Choose markdown welcome content file" : "Escolla o ficheiro markdown co contido de benvida",
     "No welcome content" : "Non hai contido de benvida",
