@@ -8,7 +8,7 @@
     "No file" : "Sen ficheiro",
     "Widget title" : "Título do widget",
     "Support contact" : "Contacto de soporte",
-    "Choose a support user" : "Escolle un usuario de soporte",
+    "Choose a support user" : "Escoller un usuario de asistencia",
     "No recommendations. Start typing." : "Non hai recomendacións. Comece a escribir.",
     "No result." : "Sen resultados.",
     "Support text" : "Texto de soporte",
@@ -18,7 +18,7 @@
     "Failed to save welcome admin options" : "Produciuse un fallo ao gardar as opcións de benvida da administración da instancia",
     "Choose markdown welcome content file" : "Escolla o ficheiro markdown co contido de benvida",
     "No welcome content" : "Non hai contido de benvida",
-    "Talk to your support contact ({name})" : "Fale co teu contacto de asistencia ({name})",
-    "Talk to {name}" : "Fala con {name}"
+    "Talk to your support contact ({name})" : "Fale co seu contacto de asistencia ({name})",
+    "Talk to {name}" : "Falar con {name}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
