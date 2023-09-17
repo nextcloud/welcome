@@ -133,7 +133,7 @@ import { loadState } from '@nextcloud/initial-state'
 import { generateUrl, generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { getCurrentUser } from '@nextcloud/auth'
-import { showSuccess, showError } from '@nextcloud/dialogs'
+import { showSuccess, showError, getFilePickerBuilder } from '@nextcloud/dialogs'
 
 import NcMultiselect from '@nextcloud/vue/dist/Components/NcMultiselect.js'
 import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
@@ -240,22 +240,22 @@ export default {
 			})
 		},
 		selectFile() {
-			OC.dialogs.filepicker(
-				t('welcome', 'Choose markdown welcome content file'),
-				(targetPath) => {
-					this.state.filePath = targetPath
-					this.state.userName = this.currentUser.displayName
-					this.state.userId = this.currentUser.uid
-					this.saveOptions({
-						filePath: this.state.filePath,
-						userName: this.state.userName,
-						userId: this.state.userId,
-					})
-				},
-				false,
-				['text/markdown'],
-				true
-			)
+			const filepicker = getFilePickerBuilder(t('welcome', 'Choose markdown welcome content file'))
+				.addMimeTypeFilter('text/markdown')
+				.setMultiSelect(false)
+				.allowDirectories(false)
+				.build()
+
+			filepicker.pick().then(targetPath => {
+				this.state.filePath = targetPath
+				this.state.userName = this.currentUser.displayName
+				this.state.userId = this.currentUser.uid
+				this.saveOptions({
+					filePath: this.state.filePath,
+					userName: this.state.userName,
+					userId: this.state.userId,
+				})
+			})
 		},
 		asyncFind(query) {
 			this.query = query
