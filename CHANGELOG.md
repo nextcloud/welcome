@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.0.10 – 2023-09-17
+### Changed
+- bump max NC version to 28 @julien-nc
+- add PR feedback GH action @julien-nc
+
+### Fixed
+- update deprecated query of config class @kyteinsky
+- build file picker with @nextcloud/dialogs @julien-nc
+
 ## 1.0.9 – 2023-04-26
 ### Changed
 - update npm pkgs, use NcRichText from `@nextcloud/vue`, remove `@nextcloud/vue-richtext` @julien-nc
