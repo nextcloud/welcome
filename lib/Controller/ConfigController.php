@@ -24,15 +24,20 @@ use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Controller;
 
 use OCA\Welcome\AppInfo\Application;
+use OCP\IUser;
+use OCP\IUserManager;
 use OCP\Lock\LockedException;
 
 class ConfigController extends Controller {
 
-	public function __construct($appName,
-								IRequest $request,
-								private IConfig $config,
-								private FileService $fileService,
-								?string $userId) {
+	public function __construct(
+		string $appName,
+		IRequest $request,
+		private IConfig $config,
+		private FileService $fileService,
+		private IUserManager $userManager,
+		?string $userId
+	) {
 		parent::__construct($appName, $request);
 	}
 
@@ -84,5 +89,25 @@ class ConfigController extends Controller {
 			return $response;
 		}
 		return new DataDisplayResponse('', Http::STATUS_NOT_FOUND);
+	}
+
+	public function enableWidget(): DataResponse {
+		try {
+			$this->userManager->callForAllUsers(function (IUser $user) {
+				$this->enableUserWidget($user->getUID());
+			});
+			return new DataResponse([]);
+		} catch (\Exception | \Throwable $e) {
+			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
+		}
+	}
+
+	private function enableUserWidget(string $userId): void {
+		$rawValue = $this->config->getUserValue($userId, 'dashboard', 'layout', 'recommendations,spreed,mail,calendar');
+		$layout = explode(',', $rawValue);
+		if (!in_array('welcome', $layout, true)) {
+			$layout[] = 'welcome';
+			$this->config->setUserValue($userId, 'dashboard', 'layout', implode(',', $layout));
+		}
 	}
 }
