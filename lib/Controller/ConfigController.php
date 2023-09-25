@@ -91,7 +91,7 @@ class ConfigController extends Controller {
 		return new DataDisplayResponse('', Http::STATUS_NOT_FOUND);
 	}
 
-	public function enableWidget(): DataResponse {
+	public function enableWidgetForAllUsers(): DataResponse {
 		try {
 			$this->userManager->callForAllUsers(function (IUser $user) {
 				$this->enableUserWidget($user->getUID());

@@ -14,6 +14,6 @@ return [
         ['name' => 'config#setAdminConfig', 'url' => '/admin-config', 'verb' => 'PUT'],
         ['name' => 'config#getWidgetContent', 'url' => '/widget-content', 'verb' => 'GET'],
 		['name' => 'config#getWidgetImage', 'url' => '/widget/image/{fileId}', 'verb' => 'GET'],
-		['name' => 'config#enableWidget', 'url' => '/enable-widget', 'verb' => 'PUT'],
+		['name' => 'config#enableWidgetForAllUsers', 'url' => '/enable-widget', 'verb' => 'PUT'],
 	]
 ];
