@@ -118,11 +118,20 @@
 					{{ t('welcome', '{name} will be replaced by the support user name') }}
 				</span>
 			</div>
+			<NcButton
+				class="line"
+				@click="enableWidget">
+				<template #icon>
+					<ViewDashboardIcon />
+				</template>
+				{{ t('welcome', 'Enable the widget for all users') }}
+			</NcButton>
 		</div>
 	</div>
 </template>
 
 <script>
+import ViewDashboardIcon from 'vue-material-design-icons/ViewDashboard.vue'
 import FileIcon from 'vue-material-design-icons/File.vue'
 import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
 import AccountIcon from 'vue-material-design-icons/Account.vue'
@@ -155,6 +164,7 @@ export default {
 		AccountIcon,
 		InformationOutlineIcon,
 		FileIcon,
+		ViewDashboardIcon,
 	},
 
 	props: [],
@@ -305,6 +315,25 @@ export default {
 					widgetTitle: this.state.widgetTitle,
 				})
 			}, 2000)()
+		},
+		enableWidget() {
+			this.saving = true
+			const req = {}
+			const url = generateUrl('/apps/welcome/enable-widget')
+			axios.put(url, req)
+				.then((response) => {
+					showSuccess(t('welcome', 'The Welcome widget is now enabled for all active users'))
+				})
+				.catch((error) => {
+					showError(
+						t('welcome', 'Failed to enable the Welcome widget')
+						+ ': ' + (error.response?.error ?? '')
+					)
+					console.error(error)
+				})
+				.then(() => {
+					this.saving = false
+				})
 		},
 	},
 }
