@@ -16,9 +16,12 @@ OC.L10N.register(
     "Support text" : "支援文字",
     "Example: Call {name} to get help." : "範例：打給 {name} 以取得協助。",
     "{name} will be replaced by the support user name" : "{name} 將會以支援用戶名稱取代",
+    "Enable the widget for all users" : "為所有用戶啟用小部件",
     "Welcome admin options saved" : "歡迎管理員選項已保存",
     "Failed to save welcome admin options" : "儲存歡迎管理員選項失敗",
     "Choose markdown welcome content file" : "選擇 Markdown 歡迎內容檔案",
+    "The Welcome widget is now enabled for all active users" : "歡迎小部件現已為所有活躍用戶啟用",
+    "Failed to enable the Welcome widget" : "無法啟用歡迎小部件",
     "No welcome content" : "無歡迎內容",
     "Talk to your support contact ({name})" : "與您的支援聯絡人（{name}） 聊天",
     "Talk to {name}" : "與 {name} 聊天"

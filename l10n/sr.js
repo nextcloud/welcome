@@ -16,9 +16,12 @@ OC.L10N.register(
     "Support text" : "Текст подршке",
     "Example: Call {name} to get help." : "Пример: Позивите {name} ако вам је потребна помоћ.",
     "{name} will be replaced by the support user name" : "{name} ће се заменити корисничким именом корисника изабраног за подршку",
+    "Enable the widget for all users" : "Укључи виџет за све кориснике",
     "Welcome admin options saved" : "Админ опције добродошлице су сачуване",
     "Failed to save welcome admin options" : "Није успело чување админ опција добродошлице",
     "Choose markdown welcome content file" : "Изаберите фајл са markdown садржајем добродошлице",
+    "The Welcome widget is now enabled for all active users" : "Виџет добродошлице је сада укључен свим активним корисницима",
+    "Failed to enable the Welcome widget" : "Виџет добродошлице није успео да се укључи",
     "No welcome content" : "Нема садржаја добродошлице",
     "Talk to your support contact ({name})" : "Разговарајте са контактом за подршку ({name})",
     "Talk to {name}" : "Разговарајте са {name}"

@@ -16,9 +16,12 @@ OC.L10N.register(
     "Support text" : "Support text",
     "Example: Call {name} to get help." : "Example: Call {name} to get help.",
     "{name} will be replaced by the support user name" : "{name} will be replaced by the support user name",
+    "Enable the widget for all users" : "Enable the widget for all users",
     "Welcome admin options saved" : "Welcome admin options saved",
     "Failed to save welcome admin options" : "Failed to save welcome admin options",
     "Choose markdown welcome content file" : "Choose markdown welcome content file",
+    "The Welcome widget is now enabled for all active users" : "The Welcome widget is now enabled for all active users",
+    "Failed to enable the Welcome widget" : "Failed to enable the Welcome widget",
     "No welcome content" : "No welcome content",
     "Talk to your support contact ({name})" : "Talk to your support contact ({name})",
     "Talk to {name}" : "Talk to {name}"
