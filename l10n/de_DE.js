@@ -21,7 +21,7 @@ OC.L10N.register(
     "Failed to save welcome admin options" : "Willkommens-Admin-Optionen konnten nicht gespeichert werden",
     "Choose markdown welcome content file" : "Markdown-Willkommensinhaltsdatei auswählen",
     "The Welcome widget is now enabled for all active users" : "Das Willkommens-Widget wurde für alle Benutzer aktiviert",
-    "Failed to enable the Welcome widget" : "Fehler beim Aktivieren des Willkommens-Widget",
+    "Failed to enable the Welcome widget" : "Fehler beim Aktivieren des Willkommens-Widgets",
     "No welcome content" : "Kein Willkommensinhalt",
     "Talk to your support contact ({name})" : "Sprechen Sie mit Ihrem Support-Kontakt ({name})",
     "Talk to {name}" : "Sprechen Sie mit {name}"
