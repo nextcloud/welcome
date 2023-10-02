@@ -14,9 +14,12 @@
     "Support text" : "Text podpory",
     "Example: Call {name} to get help." : "Příklad: ohledně podpory volejte {name}.",
     "{name} will be replaced by the support user name" : "{name} bude nahrazeno jménem uživatele, poskytujícího podporu",
+    "Enable the widget for all users" : "Zapnout ovládací prvek pro všechny uživatele",
     "Welcome admin options saved" : "Předvolby pro správu Uvítání uloženy",
     "Failed to save welcome admin options" : "Nepodařilo se uložit předvolby správy pro uvítání",
     "Choose markdown welcome content file" : "Zvolte soubor s uvítacím obsahem v markdown",
+    "The Welcome widget is now enabled for all active users" : "Prvek Uvítání je nyní zapnut pro všechny aktivní uživatele",
+    "Failed to enable the Welcome widget" : "Nepodařilo se zapnout ovládací prvek Uvítání",
     "No welcome content" : "Bez uvítacího textu",
     "Talk to your support contact ({name})" : "Talk s kontaktem podpory ({name})",
     "Talk to {name}" : "Talk s {name}"
