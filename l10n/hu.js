@@ -16,9 +16,11 @@ OC.L10N.register(
     "Support text" : "Támogatási szöveg",
     "Example: Call {name} to get help." : "Példáult: Segítségért hívja {name} telefonszámát.",
     "{name} will be replaced by the support user name" : "A {name} a támogatási felhasználó felhasználónevére lesz cserélve",
+    "Enable the widget for all users" : "Widget engedélyezése minden felhasználó számára",
     "Welcome admin options saved" : "Az Üdvözlés rendszergazdai beállításai mentve",
     "Failed to save welcome admin options" : "Az Üdvözlés rendszergazdai beállításainak mentése sikertelen",
     "Choose markdown welcome content file" : "Válassza ki az üdvözlés Markdown tartalomfájlját",
+    "Failed to enable the Welcome widget" : "Üdvözlő widget engedélyezése sikertelen",
     "No welcome content" : "Nincs üdvözlő tartalom",
     "Talk to your support contact ({name})" : "Beszélgetés a támogatási kapcsolattal ({name})",
     "Talk to {name}" : "Beszélgetés vele: {name}"
