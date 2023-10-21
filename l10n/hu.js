@@ -20,6 +20,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Az Üdvözlés rendszergazdai beállításai mentve",
     "Failed to save welcome admin options" : "Az Üdvözlés rendszergazdai beállításainak mentése sikertelen",
     "Choose markdown welcome content file" : "Válassza ki az üdvözlés Markdown tartalomfájlját",
+    "The Welcome widget is now enabled for all active users" : "Az üdvözlő widget minden felhasználó számára engedélyezve lett",
     "Failed to enable the Welcome widget" : "Üdvözlő widget engedélyezése sikertelen",
     "No welcome content" : "Nincs üdvözlő tartalom",
     "Talk to your support contact ({name})" : "Beszélgetés a támogatási kapcsolattal ({name})",
