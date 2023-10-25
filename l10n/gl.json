@@ -14,9 +14,12 @@
     "Support text" : "Texto de soporte",
     "Example: Call {name} to get help." : "Exemplo: Chama a {name} para obter axuda.",
     "{name} will be replaced by the support user name" : "{name} substituirase polo nome de usuario de asistencia técnica",
+    "Enable the widget for all users" : "Activar o trebello para todos os usuarios",
     "Welcome admin options saved" : "Gardáronse as opcións de administración de benvida",
     "Failed to save welcome admin options" : "Produciuse un fallo ao gardar as opcións de benvida da administración da instancia",
     "Choose markdown welcome content file" : "Escolla o ficheiro markdown co contido de benvida",
+    "The Welcome widget is now enabled for all active users" : "O trebello de benvida agora está activado para todos os usuarios activos",
+    "Failed to enable the Welcome widget" : "Produciuse un fallo ao activar o trebello de benvida",
     "No welcome content" : "Non hai contido de benvida",
     "Talk to your support contact ({name})" : "Fale co seu contacto de asistencia ({name})",
     "Talk to {name}" : "Falar con {name}"
