@@ -14,9 +14,12 @@
     "Support text" : "Texte d'assistance",
     "Example: Call {name} to get help." : "Exemple : Appelez {name} pour obtenir de l'aide.",
     "{name} will be replaced by the support user name" : "{name} sera remplacé par le nom de l'utilisateur pour l'assistance",
+    "Enable the widget for all users" : "Activer le composant pour tous les utilisateurs",
     "Welcome admin options saved" : "Options d'administration Bienvenue enregistrées",
     "Failed to save welcome admin options" : "Échec de l'enregistrement des options d'administration Bienvenue",
     "Choose markdown welcome content file" : "Choisir le fichier Markdown de contenu de bienvenue",
+    "The Welcome widget is now enabled for all active users" : "Le composant Bienvenue est maintenant activé pour tous les utilisateurs actifs",
+    "Failed to enable the Welcome widget" : "Échec de l'activation du composant Bienvenue",
     "No welcome content" : "Pas de contenu de bienvenue",
     "Talk to your support contact ({name})" : "Discuter avec votre contact d'assistance ({name})",
     "Talk to {name}" : "Parler avec {name}"
