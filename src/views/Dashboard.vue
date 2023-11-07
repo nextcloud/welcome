@@ -1,5 +1,5 @@
 <template>
-	<div id="welcome-widget">
+	<div id="welcome2-widget">
 		<span v-if="loading" class="icon icon-loading" />
 		<RichText v-else-if="content"
 			class="markdown-content"
@@ -63,7 +63,7 @@ export default {
 
 	computed: {
 		emptyContentMessage() {
-			return t('welcome', 'No welcome content')
+			return t('welcome2', 'No welcome2 content')
 		},
 		emptyContentIcon() {
 			return 'icon-close'
@@ -74,10 +74,10 @@ export default {
 		callSupportUserText() {
 			return this.supportText
 				? this.supportText.replace('{name}', this.supportUserName)
-				: t('welcome', 'Talk to your support contact ({name})', { name: this.supportUserName })
+				: t('welcome2', 'Talk to your support contact ({name})', { name: this.supportUserName })
 		},
 		callSupportUserTooltip() {
-			return t('welcome', 'Talk to {name}', { name: this.supportUserName })
+			return t('welcome2', 'Talk to {name}', { name: this.supportUserName })
 		},
 	},
 
@@ -90,13 +90,13 @@ export default {
 
 	methods: {
 		getContent() {
-			const url = generateUrl('/apps/welcome/widget-content')
+			const url = generateUrl('/apps/welcome2/widget-content')
 			axios.get(url).then((response) => {
 				this.content = response.data.content
 				// eslint-disable-next-line
 				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
 					// we get the image we an app-specific endpoint
-					return '![' + p1 + '](' + generateUrl('/apps/welcome/widget/image/{fileId}', { fileId: p2 }) + ')'
+					return '![' + p1 + '](' + generateUrl('/apps/welcome2/widget/image/{fileId}', { fileId: p2 }) + ')'
 				})
 				this.userId = response.data.userId
 				this.userName = response.data.userName
@@ -174,7 +174,7 @@ export default {
 	}
 }
 
-#welcome-widget {
+#welcome2-widget {
 	overflow: scroll;
 	height: 100%;
 	padding: 0 10px 0 10px;

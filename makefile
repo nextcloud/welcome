@@ -1,4 +1,4 @@
-app_name=welcome
+app_name=welcome2
 app_version=$(version)
 project_dir=.
 build_dir=/tmp/build

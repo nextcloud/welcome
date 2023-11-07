@@ -1,7 +1,7 @@
 OC.L10N.register(
-    "welcome",
+    "welcome2",
     {
-    "Welcome" : "Καλώς ήλθατε",
+    "Welcome2" : "Καλώς ήλθατε",
     "No recommendations. Start typing." : "Δεν υπάρχουν συστάσεις. Αρχίστε να πληκτρολογείτε.",
     "No result." : "Κανένα αποτέλεσμα."
 },

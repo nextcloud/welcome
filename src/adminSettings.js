@@ -1,7 +1,7 @@
 /* jshint esversion: 6 */
 
 /**
- * Nextcloud - welcome
+ * Nextcloud - welcome2
  *
  *
  * This file is licensed under the Affero General Public License version 3 or
@@ -16,4 +16,4 @@ import './bootstrap.js'
 import AdminSettings from './components/AdminSettings.vue'
 
 const View = Vue.extend(AdminSettings)
-new View().$mount('#welcome_prefs')
+new View().$mount('#welcome2_prefs')

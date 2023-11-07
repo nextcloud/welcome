@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <info>
-    <id>welcome</id>
-    <name>Welcome</name>
-    <summary>Dashboard widget to display welcome content</summary>
+    <id>welcome2</id>
+    <name>Welcome2</name>
+    <summary>Dashboard widget to display welcome2 content</summary>
     <description><![CDATA[
-ℹ A Markdown rendering Dashboard widget to welcome all users.
+ℹ A Markdown rendering Dashboard widget to welcome2 all users.
 
-⚙ Configure via `Settings > Administration > Theming > Welcome widget`
+⚙ Configure via `Settings > Administration > Theming > Welcome2 widget`
 
 📄 Pick a Markdown document to be rendered in the widget
 
@@ -21,19 +21,19 @@
     <version>1.0.8</version>
     <licence>agpl</licence>
     <author>Julien Veyssier</author>
-    <namespace>Welcome</namespace>
+    <namespace>Welcome2</namespace>
     <documentation>
-        <developer>https://github.com/eneiluj/welcome</developer>
+        <developer>https://github.com/eneiluj/welcome2</developer>
     </documentation>
     <category>integration</category>
     <category>dashboard</category>
-    <website>https://github.com/eneiluj/welcome</website>
-    <bugs>https://github.com/eneiluj/welcome/issues</bugs>
-    <screenshot>https://github.com/eneiluj/welcome/raw/master/img/screenshot1.jpg</screenshot>
+    <website>https://github.com/eneiluj/welcome2</website>
+    <bugs>https://github.com/eneiluj/welcome2/issues</bugs>
+    <screenshot>https://github.com/eneiluj/welcome2/raw/master/img/screenshot1.jpg</screenshot>
     <dependencies>
         <nextcloud min-version="22" max-version="26"/>
     </dependencies>
     <settings>
-        <admin>OCA\Welcome\Settings\Admin</admin>
+        <admin>OCA\Welcome2\Settings\Admin</admin>
     </settings>
 </info>

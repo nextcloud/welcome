@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 1.0.6 – 2022-12-28
 ### Fixed
-- Use a Welcome endpoint to get images from file ID. Images are only returned if they are in the markdown file's attachment folder
+- Use a Welcome2 endpoint to get images from file ID. Images are only returned if they are in the markdown file's attachment folder
 - bug when decoded and encoded image path (in image link) are different
 
 ## 1.0.4 – 2022-12-25
@@ -38,7 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## 1.0.1 – 2021-11-18
 ### Added
 - now possible to set the widget title
-  [#19](https://github.com/eneiluj/welcome/issues/19) @42ske
+  [#19](https://github.com/eneiluj/welcome2/issues/19) @42ske
 - tooltip on support contact call link
 
 ### Changed
@@ -59,7 +59,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - style of paragraphs and nested lists
-[#17](https://github.com/eneiluj/welcome/issues/17) @RussellNS
+[#17](https://github.com/eneiluj/welcome2/issues/17) @RussellNS
 
 ## 0.0.5 – 2021-02-18
 ### Changed

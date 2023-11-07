@@ -1,17 +1,17 @@
 <template>
-	<div id="welcome_prefs" class="section">
+	<div id="welcome2_prefs" class="section">
 		<h2>
-			<WelcomeIcon :size="24" class="icon" />
-			{{ t('welcome', 'Welcome widget') }}
+			<Welcome2Icon :size="24" class="icon" />
+			{{ t('welcome2', 'Welcome2 widget') }}
 		</h2>
 		<p class="settings-hint">
 			<InformationOutlineIcon :size="20" class="icon" />
-			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
+			{{ t('welcome2', 'The dashboard welcome2 widget will be displayed for all users only if you choose a markdown file.') }}
 		</p>
 		<div class="line">
-			<label for="welcome-file-path">
+			<label for="welcome2-file-path">
 				<FileIcon :size="20" class="icon" />
-				{{ t('welcome', 'Markdown content file') }}
+				{{ t('welcome2', 'Markdown content file') }}
 			</label>
 			<div>
 				<NcButton @click="selectFile">
@@ -19,11 +19,11 @@
 						<FolderIcon :size="20" />
 					</template>
 				</NcButton>
-				<input id="welcome-file-path"
+				<input id="welcome2-file-path"
 					type="text"
 					:value="fullFilePath"
 					:readonly="true"
-					:placeholder="t('welcome', 'No file')"
+					:placeholder="t('welcome2', 'No file')"
 					@click="selectFile">
 				<NcButton v-if="state.filePath"
 					@click="clear">
@@ -36,21 +36,21 @@
 		<br>
 		<div v-if="state.filePath">
 			<div class="line">
-				<label for="welcome-widget-title">
+				<label for="welcome2-widget-title">
 					<FileIcon :size="20" class="icon" />
-					{{ t('welcome', 'Widget title') }}
+					{{ t('welcome2', 'Widget title') }}
 				</label>
-				<input id="welcome-widget-title"
+				<input id="welcome2-widget-title"
 					v-model="state.widgetTitle"
 					type="text"
 					:class="{ 'icon-loading-small': saving }"
-					:placeholder="t('welcome', 'Welcome')"
+					:placeholder="t('welcome2', 'Welcome2')"
 					@input="onTextChange">
 			</div>
 			<div class="line">
-				<label for="welcome-support">
+				<label for="welcome2-support">
 					<AccountIcon :size="20" class="icon" />
-					{{ t('welcome', 'Support contact') }}
+					{{ t('welcome2', 'Support contact') }}
 				</label>
 				<div v-if="state.supportUserId">
 					<NcAvatar
@@ -77,7 +77,7 @@
 						:internal-search="false"
 						:loading="loadingUsers"
 						:options="formattedSuggestions"
-						:placeholder="t('welcome', 'Choose a support user')"
+						:placeholder="t('welcome2', 'Choose a support user')"
 						:preselect-first="false"
 						:preserve-search="true"
 						:searchable="true"
@@ -94,28 +94,28 @@
 							</span>
 						</template>
 						<template #noOptions>
-							{{ t('welcome', 'No recommendations. Start typing.') }}
+							{{ t('welcome2', 'No recommendations. Start typing.') }}
 						</template>
 						<template #noResult>
-							{{ t('welcome', 'No result.') }}
+							{{ t('welcome2', 'No result.') }}
 						</template>
 					</NcMultiselect>
 				</div>
 			</div>
 			<div class="line">
-				<label for="welcome-support-text">
+				<label for="welcome2-support-text">
 					<FileIcon :size="20" class="icon" />
-					{{ t('welcome', 'Support text') }}
+					{{ t('welcome2', 'Support text') }}
 				</label>
-				<input id="welcome-support-text"
+				<input id="welcome2-support-text"
 					v-model="state.supportText"
 					type="text"
 					:class="{ 'icon-loading-small': saving }"
-					:placeholder="t('welcome', 'Example: Call {name} to get help.')"
+					:placeholder="t('welcome2', 'Example: Call {name} to get help.')"
 					@input="onTextChange">
 				<span class="settings-hint">
 					<InformationOutlineIcon :size="20" class="icon" />
-					{{ t('welcome', '{name} will be replaced by the support user name') }}
+					{{ t('welcome2', '{name} will be replaced by the support user name') }}
 				</span>
 			</div>
 		</div>
@@ -140,13 +140,13 @@ import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
 
 import { delay } from '../utils.js'
-import WelcomeIcon from './icons/WelcomeIcon.vue'
+import Welcome2Icon from './icons/Welcome2Icon.vue'
 
 export default {
 	name: 'AdminSettings',
 
 	components: {
-		WelcomeIcon,
+		Welcome2Icon,
 		NcMultiselect,
 		NcButton,
 		NcAvatar,
@@ -161,7 +161,7 @@ export default {
 
 	data() {
 		return {
-			state: loadState('welcome', 'admin-config'),
+			state: loadState('welcome2', 'admin-config'),
 			saving: false,
 			currentUser: getCurrentUser(),
 			query: '',
@@ -213,14 +213,14 @@ export default {
 			const req = {
 				values,
 			}
-			const url = generateUrl('/apps/welcome/admin-config')
+			const url = generateUrl('/apps/welcome2/admin-config')
 			axios.put(url, req)
 				.then((response) => {
-					showSuccess(t('welcome', 'Welcome admin options saved'))
+					showSuccess(t('welcome2', 'Welcome2 admin options saved'))
 				})
 				.catch((error) => {
 					showError(
-						t('welcome', 'Failed to save welcome admin options')
+						t('welcome2', 'Failed to save welcome2 admin options')
 						+ ': ' + (error.response?.request?.responseText ?? '')
 					)
 					console.error(error)
@@ -241,7 +241,7 @@ export default {
 		},
 		selectFile() {
 			OC.dialogs.filepicker(
-				t('welcome', 'Choose markdown welcome content file'),
+				t('welcome2', 'Choose markdown welcome2 content file'),
 				(targetPath) => {
 					this.state.filePath = targetPath
 					this.state.userName = this.currentUser.displayName
@@ -311,7 +311,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#welcome_prefs {
+#welcome2_prefs {
 	h2 {
 		display: flex;
 		align-items: center;

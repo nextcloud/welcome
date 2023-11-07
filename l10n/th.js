@@ -1,7 +1,7 @@
 OC.L10N.register(
-    "welcome",
+    "welcome2",
     {
-    "Welcome" : "ยินดีต้อนรับ",
+    "Welcome2" : "ยินดีต้อนรับ",
     "No recommendations. Start typing." : "ไม่มีคำแนะนำ เริ่มพิมพ์เลย"
 },
 "nplurals=1; plural=0;");

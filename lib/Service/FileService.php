@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Nextcloud - Welcome
+ * Nextcloud - Welcome2
  *
  * This file is licensed under the Affero General Public License version 3 or
  * later. See the COPYING file.
@@ -10,12 +10,12 @@
  * @copyright Julien Veyssier 2022
  */
 
-namespace OCA\Welcome\Service;
+namespace OCA\Welcome2\Service;
 
 use Exception;
 use OC\Files\Node\File;
 use OC\User\NoUserException;
-use OCA\Welcome\AppInfo\Application;
+use OCA\Welcome2\AppInfo\Application;
 use OCP\Files\Folder;
 use OCP\Files\InvalidPathException;
 use OCP\Files\IRootFolder;
@@ -171,8 +171,8 @@ class FileService {
 				$file = $folder->get($decodedPath);
 				if ($file instanceof File) {
 					$fullMatch = $match[0];
-					$welcomeImageUrl = $this->urlGenerator->linkToRoute(Application::APP_ID . '.config.getWidgetImage', ['fileId' => $file->getId()]);
-					$newLink = str_replace($path, $welcomeImageUrl, $fullMatch);
+					$welcome2ImageUrl = $this->urlGenerator->linkToRoute(Application::APP_ID . '.config.getWidgetImage', ['fileId' => $file->getId()]);
+					$newLink = str_replace($path, $welcome2ImageUrl, $fullMatch);
 					$content = str_replace($fullMatch, $newLink, $content);
 				}
 			}

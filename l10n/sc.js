@@ -1,7 +1,7 @@
 OC.L10N.register(
-    "welcome",
+    "welcome2",
     {
-    "Welcome" : "Ti donamus sa benebènnida",
+    "Welcome2" : "Ti donamus sa benebènnida",
     "No recommendations. Start typing." : "Peruna racumandatzione. Cumintza a iscrìere.",
     "No result." : "Perunu resultadu."
 },

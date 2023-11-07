@@ -1,7 +1,7 @@
 OC.L10N.register(
-    "welcome",
+    "welcome2",
     {
-    "Welcome" : "Welkom",
+    "Welcome2" : "Welkom",
     "No recommendations. Start typing." : "Geen aanbevelingen. Begin te typen.",
     "No result." : "Geen resultaat."
 },

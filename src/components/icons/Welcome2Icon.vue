@@ -1,7 +1,7 @@
 <template>
 	<span :aria-hidden="!title"
 		:aria-label="title"
-		class="material-design-icon welcome-icon"
+		class="material-design-icon welcome2-icon"
 		role="img"
 		v-bind="$attrs"
 		@click="$emit('click', $event)">
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-	name: 'WelcomeIcon',
+	name: 'Welcome2Icon',
 	props: {
 		title: {
 			type: String,

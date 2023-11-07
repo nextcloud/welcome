@@ -1,7 +1,7 @@
 {
-	"name": "welcome",
+	"name": "welcome2",
 	"version": "0.0.1",
-	"description": "Welcome widget",
+	"description": "Welcome2 widget",
 	"main": "index.js",
 	"directories": {
 		"test": "tests"
@@ -17,17 +17,17 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/eneiluj/welcome"
+		"url": "https://github.com/eneiluj/welcome2"
 	},
 	"keywords": [
-		"welcome"
+		"welcome2"
 	],
 	"author": "Julien Veyssier",
 	"license": "AGPL-3.0",
 	"bugs": {
-		"url": "https://github.com/eneiluj/welcome/issues"
+		"url": "https://github.com/eneiluj/welcome2/issues"
 	},
-	"homepage": "https://github.com/eneiluj/welcome",
+	"homepage": "https://github.com/eneiluj/welcome2",
 	"browserslist": [
 		"extends @nextcloud/browserslist-config"
 	],

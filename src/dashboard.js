@@ -1,5 +1,5 @@
 /**
- * Nextcloud - welcome
+ * Nextcloud - welcome2
  *
  *
  * This file is licensed under the Affero General Public License version 3 or
@@ -15,7 +15,7 @@ import Dashboard from './views/Dashboard.vue'
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	OCA.Dashboard.register('welcome', (el, { widget }) => {
+	OCA.Dashboard.register('welcome2', (el, { widget }) => {
 		const View = Vue.extend(Dashboard)
 		new View({
 			propsData: { title: widget.title },

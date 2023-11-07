@@ -1,7 +1,7 @@
 OC.L10N.register(
-    "welcome",
+    "welcome2",
     {
-    "Welcome" : "ברוך בואך",
+    "Welcome2" : "ברוך בואך",
     "No recommendations. Start typing." : "אין המלצות. נא להתחיל להקליד.",
     "No result." : "אין תוצאות."
 },

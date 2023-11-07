@@ -21,9 +21,9 @@ declare(strict_types=1);
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
-namespace OCA\Welcome\Listener;
+namespace OCA\Welcome2\Listener;
 
-use OCA\Welcome\Service\FileService;
+use OCA\Welcome2\Service\FileService;
 use OCP\AppFramework\Http\EmptyContentSecurityPolicy;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;

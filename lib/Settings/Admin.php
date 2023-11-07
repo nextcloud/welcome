@@ -1,12 +1,12 @@
 <?php
-namespace OCA\Welcome\Settings;
+namespace OCA\Welcome2\Settings;
 
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
 use OCP\AppFramework\Services\IInitialState;
 
-use OCA\Welcome\AppInfo\Application;
+use OCA\Welcome2\AppInfo\Application;
 
 class Admin implements ISettings {
 
