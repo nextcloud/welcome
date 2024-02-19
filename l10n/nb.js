@@ -3,6 +3,7 @@ OC.L10N.register(
     {
     "Welcome" : "Velkommen",
     "Dashboard widget to display welcome content" : "Dashbord-element for å vise velkomstinnhold",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ En Markdown-gjengivelse kontrollpanel-widget for å ønske alle brukere velkommen.\n\n⚙ Konfigurer via `Innstillinger > Administrasjon > Tema > Velkommen-widget`\n\n📄 Velg et Markdown-dokument som skal gjengis i widgeten\n\n💡 Hvis du ikke velger noe dokument, vises ikke widgeten\n\n📝 Rediger Markdown-dokumentet for å oppdatere widgeten i sanntid\n\n🖼 Bilder støttes også\n\n💬 Konfigurer en kontaktperson til å starte en chat direkte med (krever at [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) installeres)",
     "Welcome widget" : "Velkomstelement",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Dashbord-velkomstelementet vil bare vises for alle brukere hvis du velger en markdown-fil.",
     "Markdown content file" : "Innholdsfil i markdown",
@@ -15,9 +16,12 @@ OC.L10N.register(
     "Support text" : "Brukerstøtte-tekst",
     "Example: Call {name} to get help." : "Eksempel: Ring {name} for å få hjelp.",
     "{name} will be replaced by the support user name" : "{name} vil bli erstattet av brukernavnet for brukerstøtte",
+    "Enable the widget for all users" : "Aktiver widgeten for alle brukere",
     "Welcome admin options saved" : "Velkommen-administratoralternativer lagret",
     "Failed to save welcome admin options" : "Kunne ikke lagre velkommen-administratoralternativer",
     "Choose markdown welcome content file" : "Velg velkomst-innholdsfil i markdown",
+    "The Welcome widget is now enabled for all active users" : "Velkommen-widgeten er nå aktivert for alle aktive brukere",
+    "Failed to enable the Welcome widget" : "Aktivering av Velkommen-widgeten feilet",
     "No welcome content" : "Ikke noe velkomstinnhold",
     "Talk to your support contact ({name})" : "Snakk med brukerstøttekontakten din ({name})",
     "Talk to {name}" : "Snakk med {name}"
