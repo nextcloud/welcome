@@ -23,19 +23,19 @@
 
 namespace OCA\Welcome\Dashboard;
 
+use OCA\Welcome\AppInfo\Application;
 use OCP\Dashboard\IWidget;
 use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\Util;
 
-use OCA\Welcome\AppInfo\Application;
-
 class WelcomeWidget implements IWidget {
 
 	public function __construct(private IL10N $l10n,
-								private IURLGenerator $url,
-								private IConfig $config) {
+		private IURLGenerator $url,
+		private IConfig $config,
+	) {
 	}
 
 	/**

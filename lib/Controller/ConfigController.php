@@ -12,18 +12,17 @@
 namespace OCA\Welcome\Controller;
 
 use OC\User\NoUserException;
+use OCA\Welcome\AppInfo\Application;
 use OCA\Welcome\Service\FileService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataDisplayResponse;
+use OCP\AppFramework\Http\DataResponse;
 use OCP\Files\InvalidPathException;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
 use OCP\IConfig;
 use OCP\IRequest;
-use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\Controller;
-
-use OCA\Welcome\AppInfo\Application;
 use OCP\IUser;
 use OCP\IUserManager;
 use OCP\Lock\LockedException;
@@ -36,7 +35,6 @@ class ConfigController extends Controller {
 		private IConfig $config,
 		private FileService $fileService,
 		private IUserManager $userManager,
-		?string $userId
 	) {
 		parent::__construct($appName, $request);
 	}

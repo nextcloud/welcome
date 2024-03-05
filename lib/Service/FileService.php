@@ -13,9 +13,9 @@
 namespace OCA\Welcome\Service;
 
 use Exception;
-use OC\Files\Node\File;
 use OC\User\NoUserException;
 use OCA\Welcome\AppInfo\Application;
+use OCP\Files\File;
 use OCP\Files\Folder;
 use OCP\Files\InvalidPathException;
 use OCP\Files\IRootFolder;
@@ -29,11 +29,11 @@ use Throwable;
 
 class FileService {
 
-	public function __construct (private IRootFolder $root,
-								 private IConfig $config,
-								 private IURLGenerator $urlGenerator,
-								 private LoggerInterface $logger,
-								 private IUserManager $userManager) {
+	public function __construct(private IRootFolder $root,
+		private IConfig $config,
+		private IURLGenerator $urlGenerator,
+		private LoggerInterface $logger,
+		private IUserManager $userManager) {
 	}
 
 	/**
@@ -67,8 +67,6 @@ class FileService {
 	 * @throws NoUserException
 	 */
 	public function getWidgetContent(): ?array {
-		$this->getWidgetHttpImageUrls();
-
 		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
 		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
 		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName');
@@ -131,7 +129,7 @@ class FileService {
 			'/\!\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[\])*\])*\])*\])*\])*\])*\]\(([^)&]+)\)/',
 			$content,
 			$matches,
-			PREG_SET_ORDER
+			PREG_SET_ORDER,
 		);
 
 		foreach ($matches as $match) {
@@ -156,14 +154,14 @@ class FileService {
 			if ($file !== null) {
 				$content = $file->getContent();
 
-				preg_match_all(
+				$matchCount = preg_match_all(
 					'/\!\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[(?>[^\[\]]+|\[\])*\])*\])*\])*\])*\])*\]\((https?:\/\/[^)&]+)\)/',
 					$content,
 					$matches,
-					PREG_SET_ORDER
+					PREG_SET_ORDER,
 				);
 
-				if ($matches === null) {
+				if ($matchCount === 0 || $matchCount === false) {
 					return null;
 				}
 

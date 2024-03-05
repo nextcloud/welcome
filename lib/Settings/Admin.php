@@ -1,19 +1,20 @@
 <?php
+
 namespace OCA\Welcome\Settings;
 
+use OCA\Welcome\AppInfo\Application;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IInitialState;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
-use OCP\AppFramework\Services\IInitialState;
-
-use OCA\Welcome\AppInfo\Application;
 
 class Admin implements ISettings {
 
-	public function __construct(string        $appName,
-								private IConfig       $config,
-								private IInitialState $initialStateService,
-								?string       $userId) {
+	public function __construct(
+		string $appName,
+		private IConfig $config,
+		private IInitialState $initialStateService,
+	) {
 	}
 
 	/**
