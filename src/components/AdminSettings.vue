@@ -68,38 +68,17 @@
 					</NcButton>
 				</div>
 				<div v-else>
-					<NcMultiselect
-						ref="multiselect"
+					<NcSelect
 						class="support-input"
 						label="displayName"
-						:clear-on-select="false"
-						:hide-selected="false"
-						:internal-search="false"
+						:clear-search-on-select="false"
 						:loading="loadingUsers"
 						:options="formattedSuggestions"
 						:placeholder="t('welcome', 'Choose a support user')"
-						:preselect-first="false"
 						:preserve-search="true"
-						:searchable="true"
 						:user-select="true"
-						@search-change="asyncFind"
-						@select="supportContactSelected">
-						<template #option="{option}">
-							<NcAvatar
-								class="support-avatar-option"
-								:user="option.user"
-								:show-user-status="false" />
-							<span>
-								{{ option.displayName }}
-							</span>
-						</template>
-						<template #noOptions>
-							{{ t('welcome', 'No recommendations. Start typing.') }}
-						</template>
-						<template #noResult>
-							{{ t('welcome', 'No result.') }}
-						</template>
-					</NcMultiselect>
+						@search="asyncFind"
+						@input="supportContactSelected" />
 				</div>
 			</div>
 			<div class="line">
@@ -118,6 +97,7 @@
 					{{ t('welcome', '{name} will be replaced by the support user name') }}
 				</span>
 			</div>
+			<br>
 			<NcButton
 				class="line"
 				@click="enableWidget">
@@ -131,22 +111,22 @@
 </template>
 
 <script>
-import ViewDashboardIcon from 'vue-material-design-icons/ViewDashboard.vue'
-import FileIcon from 'vue-material-design-icons/File.vue'
-import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
 import AccountIcon from 'vue-material-design-icons/Account.vue'
 import DeleteIcon from 'vue-material-design-icons/Delete.vue'
+import FileIcon from 'vue-material-design-icons/File.vue'
 import FolderIcon from 'vue-material-design-icons/Folder.vue'
+import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
+import ViewDashboardIcon from 'vue-material-design-icons/ViewDashboard.vue'
 
-import { loadState } from '@nextcloud/initial-state'
-import { generateUrl, generateOcsUrl } from '@nextcloud/router'
-import axios from '@nextcloud/axios'
 import { getCurrentUser } from '@nextcloud/auth'
-import { showSuccess, showError, getFilePickerBuilder } from '@nextcloud/dialogs'
+import axios from '@nextcloud/axios'
+import { getFilePickerBuilder, showError, showSuccess } from '@nextcloud/dialogs'
+import { loadState } from '@nextcloud/initial-state'
+import { generateOcsUrl, generateUrl } from '@nextcloud/router'
 
-import NcMultiselect from '@nextcloud/vue/dist/Components/NcMultiselect.js'
 import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
 import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
+import NcSelect from '@nextcloud/vue/dist/Components/NcSelect.js'
 
 import { delay } from '../utils.js'
 import WelcomeIcon from './icons/WelcomeIcon.vue'
@@ -156,7 +136,7 @@ export default {
 
 	components: {
 		WelcomeIcon,
-		NcMultiselect,
+		NcSelect,
 		NcButton,
 		NcAvatar,
 		DeleteIcon,
@@ -231,7 +211,7 @@ export default {
 				.catch((error) => {
 					showError(
 						t('welcome', 'Failed to save welcome admin options')
-						+ ': ' + (error.response?.request?.responseText ?? '')
+						+ ': ' + (error.response?.request?.responseText ?? ''),
 					)
 					console.error(error)
 				})
@@ -327,7 +307,7 @@ export default {
 				.catch((error) => {
 					showError(
 						t('welcome', 'Failed to enable the Welcome widget')
-						+ ': ' + (error.response?.error ?? '')
+						+ ': ' + (error.response?.error ?? ''),
 					)
 					console.error(error)
 				})
@@ -364,7 +344,7 @@ export default {
 			}
 		}
 
-		input {
+		input, .support-input {
 			width: 300px;
 		}
 
