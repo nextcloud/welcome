@@ -2,8 +2,6 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Velkommen",
-    "No file" : "Ingen fil",
-    "No recommendations. Start typing." : "Ingen anbefalinger. Begynd at skrive.",
-    "No result." : "Intet resultat"
+    "No file" : "Ingen fil"
 },
 "nplurals=2; plural=(n != 1);");

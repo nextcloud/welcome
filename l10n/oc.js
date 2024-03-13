@@ -1,7 +1,6 @@
 OC.L10N.register(
     "welcome",
     {
-    "Welcome" : "La benvenguda",
-    "No result." : "Cap de resultat."
+    "Welcome" : "La benvenguda"
 },
 "nplurals=2; plural=(n > 1);");

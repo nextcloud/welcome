@@ -9,8 +9,6 @@
     "Widget title" : "Título do trebello",
     "Support contact" : "Contacto de axuda",
     "Choose a support user" : "Escoller un usuario de asistencia",
-    "No recommendations. Start typing." : "Non hai recomendacións. Comece a escribir.",
-    "No result." : "Sen resultados.",
     "Support text" : "Texto de axuda",
     "Example: Call {name} to get help." : "Exemplo: Chama a {name} para obter axuda.",
     "{name} will be replaced by the support user name" : "{name} substituirase polo nome de usuario de asistencia técnica",

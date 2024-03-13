@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Tytuł widżetu",
     "Support contact" : "Kontakt z pomocą techniczną",
     "Choose a support user" : "Wybierz użytkownika pomocy technicznej",
-    "No recommendations. Start typing." : "Brak rekomendacji. Możesz napisać.",
-    "No result." : "Brak wyników.",
     "Support text" : "Tekst pomocy technicznej",
     "Example: Call {name} to get help." : "Przykład: Zadzwoń do {name}, aby uzyskać pomoc techniczną.",
     "{name} will be replaced by the support user name" : "{name} zostanie zastąpiony nazwą użytkownika pomocy technicznej",

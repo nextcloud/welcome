@@ -1,6 +1,4 @@
 { "translations": {
-    "Welcome" : "Selamat datang",
-    "No recommendations. Start typing." : "Tidak ada saran. Mulai mengetik.",
-    "No result." : "Tidak ada hasil."
+    "Welcome" : "Selamat datang"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

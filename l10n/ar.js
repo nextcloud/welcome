@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "عنوان الوِدْجَة ",
     "Support contact" : "بيانات اتصال جهة توفير الدعم الفني",
     "Choose a support user" : "إختر مستخدماً لتوفير الدعم",
-    "No recommendations. Start typing." : "لا توجد توصيات. ابدأ بالكتابة.",
-    "No result." : "لا يوجد نتيجة",
     "Support text" : "نص الدعم",
     "Example: Call {name} to get help." : "مثال: تحادث مع {name} للحصول على المساعدة",
     "{name} will be replaced by the support user name" : "{name} سيستبدل باسم الشخص الذي سيوفر الدعم",

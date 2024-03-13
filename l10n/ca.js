@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Títol del giny",
     "Support contact" : "Contacte d'assistència",
     "Choose a support user" : "Trieu un usuari d'assistència",
-    "No recommendations. Start typing." : "No hi ha recomanacions. Comenceu a escriure.",
-    "No result." : "No hi ha resultats.",
     "Support text" : "Text d’assistència",
     "Example: Call {name} to get help." : "Exemple: truqueu a {name} per obtenir ajuda.",
     "{name} will be replaced by the support user name" : "{name} se substituirà pel nom d'usuari d'assistència",

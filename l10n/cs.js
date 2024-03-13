@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Nadpis prvku",
     "Support contact" : "Kontakt na podporu",
     "Choose a support user" : "Vyberte uživatele podpory",
-    "No recommendations. Start typing." : "Žádná doporučení. Pište.",
-    "No result." : "Bez výsledku.",
     "Support text" : "Text podpory",
     "Example: Call {name} to get help." : "Příklad: ohledně podpory volejte {name}.",
     "{name} will be replaced by the support user name" : "{name} bude nahrazeno jménem uživatele, poskytujícího podporu",

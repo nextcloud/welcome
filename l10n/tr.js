@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Pano bileşeni başlığı",
     "Support contact" : "Destek sorumlusu",
     "Choose a support user" : "Bir destek kullanıcısı seçin",
-    "No recommendations. Start typing." : "Herhangi bir öneri yok. Yazmaya başlayın.",
-    "No result." : "Herhangi bir sonuç yok.",
     "Support text" : "Destek metni.",
     "Example: Call {name} to get help." : "Örnek: Yardım almak için {name} ile görüşün.",
     "{name} will be replaced by the support user name" : "{name} yerinde destek sorumlusu olan kullanıcının adı görüntülenir",

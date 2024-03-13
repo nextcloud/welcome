@@ -4,8 +4,6 @@
     "No file" : "Ei tiedostoa",
     "Support contact" : "Tuen yhteystieto",
     "Choose a support user" : "Valitse tukea tarjoava käyttäjä",
-    "No recommendations. Start typing." : "Ei suosituksia. Aloita kirjoittaminen.",
-    "No result." : "Ei tulosta.",
     "Support text" : "Tukiteksti",
     "Example: Call {name} to get help." : "Esimerkki: Soita henkilölle {name} saadaksesi apua.",
     "{name} will be replaced by the support user name" : "{name} korvataan tukea tarjoavan käyttäjän nimellä",

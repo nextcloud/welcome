@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Modul címe",
     "Support contact" : "Támogatási kapcsolat",
     "Choose a support user" : "Válasszon egy támogatási felhasználót",
-    "No recommendations. Start typing." : "Nincs javaslat. Kezdjen gépelni.",
-    "No result." : "Nincs találat.",
     "Support text" : "Támogatási szöveg",
     "Example: Call {name} to get help." : "Példáult: Segítségért hívja {name} telefonszámát.",
     "{name} will be replaced by the support user name" : "A {name} a támogatási felhasználó felhasználónevére lesz cserélve",

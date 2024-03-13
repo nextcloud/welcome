@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "小工具標題",
     "Support contact" : "支援聯絡",
     "Choose a support user" : "選擇支援用戶",
-    "No recommendations. Start typing." : "沒有建議。開始輸入。",
-    "No result." : "無結果。",
     "Support text" : "支援文字",
     "Example: Call {name} to get help." : "範例：打給 {name} 以取得協助。",
     "{name} will be replaced by the support user name" : "{name} 將會以支援用戶名稱取代",

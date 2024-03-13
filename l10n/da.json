@@ -1,7 +1,5 @@
 { "translations": {
     "Welcome" : "Velkommen",
-    "No file" : "Ingen fil",
-    "No recommendations. Start typing." : "Ingen anbefalinger. Begynd at skrive.",
-    "No result." : "Intet resultat"
+    "No file" : "Ingen fil"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

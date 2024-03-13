@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Заголовок виджета",
     "Support contact" : "Контакты поддержки",
     "Choose a support user" : "Выберите пользователя службы поддержки",
-    "No recommendations. Start typing." : "Начните вводить имя...",
-    "No result." : "Нет результатов",
     "Example: Call {name} to get help." : "Пример: Позвоните {name}, чтобы получить помощь.",
     "Choose markdown welcome content file" : "Выберите Markdown файл приветствия",
     "No welcome content" : "Нет контента для приветствия",

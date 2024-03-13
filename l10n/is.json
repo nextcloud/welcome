@@ -9,8 +9,6 @@
     "Widget title" : "Titill viðmótshluta",
     "Support contact" : "Tengiliður fyrir aðstoðarbeiðnir",
     "Choose a support user" : "Veldu notanda sem veitir aðstoð",
-    "No recommendations. Start typing." : "Engar tillögur. Byrjaðu að skrifa.",
-    "No result." : "Engar niðurstöður.",
     "Support text" : "Texti aðstoðarbeiðnar",
     "Example: Call {name} to get help." : "Dæmi: Hringja í {name} til að fá aðstoð.",
     "{name} will be replaced by the support user name" : "{name} verður skipt út með nafni aðstoðarfulltrúans",

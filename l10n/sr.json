@@ -9,8 +9,6 @@
     "Widget title" : "Наслов виџета",
     "Support contact" : "Контакт за подршку",
     "Choose a support user" : "Изаберите корисника за подршку",
-    "No recommendations. Start typing." : "Нема препорука. Започните куцање.",
-    "No result." : "Нема резултата.",
     "Support text" : "Текст подршке",
     "Example: Call {name} to get help." : "Пример: Позивите {name} ако вам је потребна помоћ.",
     "{name} will be replaced by the support user name" : "{name} ће се заменити корисничким именом корисника изабраног за подршку",

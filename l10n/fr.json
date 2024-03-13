@@ -9,8 +9,6 @@
     "Widget title" : "Titre du composant",
     "Support contact" : "Contact d'assistance",
     "Choose a support user" : "Choisir un utilisateur pour l'assistance",
-    "No recommendations. Start typing." : "Pas de suggestion. Commencez à écrire.",
-    "No result." : "Aucun résultat.",
     "Support text" : "Texte d'assistance",
     "Example: Call {name} to get help." : "Exemple : Appelez {name} pour obtenir de l'aide.",
     "{name} will be replaced by the support user name" : "{name} sera remplacé par le nom de l'utilisateur pour l'assistance",

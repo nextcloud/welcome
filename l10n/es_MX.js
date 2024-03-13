@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Título del widget",
     "Support contact" : "Contacto de soporte",
     "Choose a support user" : "Escoja un usuario de soporte",
-    "No recommendations. Start typing." : "Sin recomendaciones. Empiece a escribir.",
-    "No result." : "Sin resultado.",
     "Support text" : "Texto de ayuda",
     "Example: Call {name} to get help." : "Ejemplo: Llamar a (nombre) para obtener ayuda.",
     "{name} will be replaced by the support user name" : "(nombre) será reemplazado por el nombre de usuario de soporte",

@@ -10,8 +10,6 @@ OC.L10N.register(
     "Widget title" : "Назва віджета",
     "Support contact" : "Контакт служби підтримки",
     "Choose a support user" : "Виберіть користувача служби підтримки",
-    "No recommendations. Start typing." : "Відсутні рекомендації. Будь ласка, додайте.",
-    "No result." : "Жодного результату.",
     "Support text" : "Текст підтримки",
     "Example: Call {name} to get help." : "Приклад: зателефонуйте {name}, щоб отримати допомогу.",
     "{name} will be replaced by the support user name" : "{name} буде замінено іменем користувача служби підтримки",

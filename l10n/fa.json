@@ -9,8 +9,6 @@
     "Widget title" : "عنوان ابزارک",
     "Support contact" : "مخاطب پشتیبانی",
     "Choose a support user" : "انتخاب یک کاربر برای پشتیبانی",
-    "No recommendations. Start typing." : "هیچ پیشنهادی نیست شروع به تایپ کنید.",
-    "No result." : "بدون نتیجه.",
     "Support text" : "متن پشتیبانی",
     "Example: Call {name} to get help." : "به عنوان نمونه: جهت دریافت راهنمایی با {name} تماس بگیرید.",
     "{name} will be replaced by the support user name" : "{name} با نام کاربری کاربر پشتیبان شما جایگزین خواهد شد.",

@@ -9,8 +9,6 @@
     "Widget title" : "Título del widget",
     "Support contact" : "Contacto de soporte",
     "Choose a support user" : "Elije un usuario de soporte",
-    "No recommendations. Start typing." : "No hay recomendaciones. Comienza a escribir.",
-    "No result." : "Sin resultados.",
     "Support text" : "Texto de soporte",
     "Example: Call {name} to get help." : "Ejemplo: Llama a {name} para obtener ayuda.",
     "{name} will be replaced by the support user name" : "{name} será reemplazado por el nombre del usuario de soporte",

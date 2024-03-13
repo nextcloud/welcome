@@ -11,8 +11,6 @@ OC.L10N.register(
     "Widget title" : "Заглавие на изпълним модул",
     "Support contact" : "Контакт за поддръжка",
     "Choose a support user" : "Избор на потребител за поддръжка",
-    "No recommendations. Start typing." : "Няма препоръки. Започнете да пишете.",
-    "No result." : "Няма резултат.",
     "Support text" : "Текст за поддръжка",
     "Example: Call {name} to get help." : "Пример: Обадете се на {name}, за да получите помощ.",
     "{name} will be replaced by the support user name" : "{name} ще бъде заменено с потребителското име на поддръжката",
