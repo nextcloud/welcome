@@ -92,10 +92,12 @@
 					:class="{ 'icon-loading-small': saving }"
 					:placeholder="t('welcome', 'Example: Call {name} to get help.')"
 					@input="onTextChange">
-				<span class="settings-hint">
+			</div>
+			<div class="line">
+				<div class="settings-hint">
 					<InformationOutlineIcon :size="20" class="icon" />
 					{{ t('welcome', '{name} will be replaced by the support user name') }}
-				</span>
+				</div>
 			</div>
 			<br>
 			<NcButton
@@ -147,8 +149,6 @@ export default {
 		ViewDashboardIcon,
 	},
 
-	props: [],
-
 	data() {
 		return {
 			state: loadState('welcome', 'admin-config'),
@@ -191,12 +191,6 @@ export default {
 		},
 	},
 
-	watch: {
-	},
-
-	mounted() {
-	},
-
 	methods: {
 		saveOptions(values) {
 			this.saving = true
@@ -229,23 +223,31 @@ export default {
 				userId: '',
 			})
 		},
-		selectFile() {
+		async selectFile() {
 			const filepicker = getFilePickerBuilder(t('welcome', 'Choose markdown welcome content file'))
 				.addMimeTypeFilter('text/markdown')
 				.setMultiSelect(false)
 				.allowDirectories(false)
+				.addButton({
+					label: t('welcome', 'Choose'),
+					type: 'primary',
+					callback: (nodes) => {
+						console.debug('File picked:', nodes[0])
+						const file = nodes[0]
+
+						this.state.filePath = file.path
+						this.state.userName = this.currentUser.displayName
+						this.state.userId = this.currentUser.uid
+						this.saveOptions({
+							filePath: this.state.filePath,
+							userName: this.state.userName,
+							userId: this.state.userId,
+						})
+					},
+				})
 				.build()
 
-			filepicker.pick().then(targetPath => {
-				this.state.filePath = targetPath
-				this.state.userName = this.currentUser.displayName
-				this.state.userId = this.currentUser.uid
-				this.saveOptions({
-					filePath: this.state.filePath,
-					userName: this.state.userName,
-					userId: this.state.userId,
-				})
-			})
+			await filepicker.pick()
 		},
 		asyncFind(query) {
 			this.query = query
@@ -333,6 +335,7 @@ export default {
 		display: flex;
 		align-items: center;
 		margin-left: 30px;
+		margin-top: 4px;
 
 		label {
 			display: flex;

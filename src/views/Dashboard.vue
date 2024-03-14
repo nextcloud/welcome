@@ -28,8 +28,8 @@ import CloseIcon from 'vue-material-design-icons/Close.vue'
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 
-import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
+import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
 import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
 
 import { NcRichText } from '@nextcloud/vue/dist/Components/NcRichText.js'
@@ -188,6 +188,7 @@ export default {
 		display: flex;
 		margin-top: 25px;
 		border-radius: var(--border-radius-large);
+		padding: 8px 0;
 		span {
 			margin: auto 0 auto 10px;
 		}
