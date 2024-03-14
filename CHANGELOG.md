@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.1.0 – 2024-03-14
+### Changed
+- Update node pkgs (mainly nc/vue8) @kyteinsky
+
+### Fixed
+- add missing config property in OCA\Welcome\AppInfo\Application @tcitworld
+- use NcSelect instead of the NcMultiselect vue component @kyteinsky
+- fix file picker on nc/vue8 and style fixes @kyteinsky
+
+### Added
+- add button in settings to enable the widget for all active users @julien-nc
+- composer setup and gh workflow addition @kyteinsky
+
 ## 1.0.10 – 2023-09-17
 ### Changed
 - bump max NC version to 28 @julien-nc
