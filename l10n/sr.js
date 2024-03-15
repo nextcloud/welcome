@@ -18,6 +18,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Админ опције добродошлице су сачуване",
     "Failed to save welcome admin options" : "Није успело чување админ опција добродошлице",
     "Choose markdown welcome content file" : "Изаберите фајл са markdown садржајем добродошлице",
+    "Choose" : "Изаберите",
     "The Welcome widget is now enabled for all active users" : "Виџет добродошлице је сада укључен свим активним корисницима",
     "Failed to enable the Welcome widget" : "Виџет добродошлице није успео да се укључи",
     "No welcome content" : "Нема садржаја добродошлице",

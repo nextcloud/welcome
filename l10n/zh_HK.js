@@ -18,6 +18,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "歡迎管理員選項已保存",
     "Failed to save welcome admin options" : "儲存歡迎管理員選項失敗",
     "Choose markdown welcome content file" : "選擇 Markdown 歡迎內容檔案",
+    "Choose" : "選擇",
     "The Welcome widget is now enabled for all active users" : "歡迎小部件現已為所有活躍用戶啟用",
     "Failed to enable the Welcome widget" : "無法啟用歡迎小部件",
     "No welcome content" : "無歡迎內容",

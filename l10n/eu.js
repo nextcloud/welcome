@@ -8,6 +8,7 @@ OC.L10N.register(
     "No file" : "Fitxategirik ez",
     "Widget title" : "Trepetaren izenburua",
     "Support text" : "Laguntza-testua",
+    "Choose" : "Aukeratu",
     "Talk to {name}" : "Hitz egin {name}-(r)ekin"
 },
 "nplurals=2; plural=(n != 1);");

@@ -12,6 +12,7 @@
     "Support text" : "Testo del supporto",
     "Example: Call {name} to get help." : "Esempio: Chiama {name} per ricevere aiuto.",
     "{name} will be replaced by the support user name" : "{name} verrà sostituito con il nome utente di supporto",
+    "Choose" : "Scegli",
     "No welcome content" : "Nessun contenuto di benvenuto",
     "Talk to your support contact ({name})" : "Parla con il contatto del supporto ({name})",
     "Talk to {name}" : "Parla con {name}"

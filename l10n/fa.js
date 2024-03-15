@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "گزینه‌های خوش‌امد‌گویی مدیر ذخیره شد",
     "Failed to save welcome admin options" : "مشکل در ذخیره گزینه‌های خوش‌آمدگویی مدیر",
     "Choose markdown welcome content file" : "پرونده مارک‌داون محتوای خوش‌آمدگیی را انتخاب کنید",
+    "Choose" : "انتخاب کنید",
     "No welcome content" : "هیچ محتوای خوش‌آمدگویی وجود ندارد",
     "Talk to your support contact ({name})" : "گفت‌و‌گو با مخاطب پشتیبان ({name})",
     "Talk to {name}" : "گفت‌و‌گو با {name}"

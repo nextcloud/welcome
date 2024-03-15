@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Zapisano opcje powitania administratora",
     "Failed to save welcome admin options" : "Nie udało się zapisać opcji powitania administratora",
     "Choose markdown welcome content file" : "Wybierz plik powitalny Markdown",
+    "Choose" : "Wybierz",
     "No welcome content" : "Brak treści powitalnej",
     "Talk to your support contact ({name})" : "Porozmawiaj z osobą z pomocy technicznej ({name})",
     "Talk to {name}" : "Porozmawiaj z {name}"

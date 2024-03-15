@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Gardáronse as opcións de administración de benvida",
     "Failed to save welcome admin options" : "Produciuse un fallo ao gardar as opcións de benvida da administración da instancia",
     "Choose markdown welcome content file" : "Escolla o ficheiro markdown co contido de benvida",
+    "Choose" : "Escoller",
     "The Welcome widget is now enabled for all active users" : "O trebello de benvida agora está activado para todos os usuarios activos",
     "Failed to enable the Welcome widget" : "Produciuse un fallo ao activar o trebello de benvida",
     "No welcome content" : "Non hai contido de benvida",

@@ -9,6 +9,7 @@ OC.L10N.register(
     "Support text" : "Tekst za podršku",
     "Example: Call {name} to get help." : "Primjer: Nazovite {ime} za pomoć.",
     "{name} will be replaced by the support user name" : "{ime} će biti zamijenjeno imenom korisnika za podršku.",
+    "Choose" : "Odaberite",
     "Talk to your support contact ({name})" : "Obratite se vašem kontaktu za podršku ({ime})",
     "Talk to {name}" : "Obratite se osobi {ime}"
 },

@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "歡迎管理員選項已儲存",
     "Failed to save welcome admin options" : "儲存歡迎管理員選項失敗",
     "Choose markdown welcome content file" : "選擇 Markdown 歡迎內容檔案",
+    "Choose" : "選擇",
     "The Welcome widget is now enabled for all active users" : "歡迎小工具現在已為所有活躍使用者啟用",
     "Failed to enable the Welcome widget" : "啟用歡迎小工具失敗",
     "No welcome content" : "無歡迎內容",

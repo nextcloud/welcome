@@ -11,6 +11,7 @@ OC.L10N.register(
     "Choose a support user" : "Kies een supportgebruiker",
     "Support text" : "Support tekst",
     "Example: Call {name} to get help." : "Voorbeeld: Bel {name} voor hulp.",
-    "{name} will be replaced by the support user name" : "{name} wordt vervangen door de naam van de support gebruiker"
+    "{name} will be replaced by the support user name" : "{name} wordt vervangen door de naam van de support gebruiker",
+    "Choose" : "Kies"
 },
 "nplurals=2; plural=(n != 1);");

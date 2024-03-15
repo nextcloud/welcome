@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Opções administrativas de Bem-vindo salvas",
     "Failed to save welcome admin options" : "Falha ao salvar opções administrativas de Bem-vindo",
     "Choose markdown welcome content file" : "Escolha o conteúdo do arquivo Markdown de Bem-vindo",
+    "Choose" : "Escolher",
     "The Welcome widget is now enabled for all active users" : "O widget de boas-vindas agora está habilitado para todos os usuários ativos",
     "Failed to enable the Welcome widget" : "Falha ao ativar o widget de boas-vindas",
     "No welcome content" : "Sem conteúdo de Bem-vindo",

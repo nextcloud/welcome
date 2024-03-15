@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Параметри адміністратора привітання збережено",
     "Failed to save welcome admin options" : "Не вдалося зберегти адміністративні налаштування вітального повідомлення",
     "Choose markdown welcome content file" : "Виберіть файл із привітанням",
+    "Choose" : "Вибрати",
     "The Welcome widget is now enabled for all active users" : "Віджет \"Привітання\" тепер увімкнено для всіх активних користувачів",
     "Failed to enable the Welcome widget" : "Не вдалося увімкнути віджент \"Привітання\".",
     "No welcome content" : "Жодного вітального вмісту",

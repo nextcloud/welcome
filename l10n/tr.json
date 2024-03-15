@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Karşılama yönetici ayarları kaydedildi",
     "Failed to save welcome admin options" : "Karşılama yönetici ayarları kaydedilemedi",
     "Choose markdown welcome content file" : "Karşılama içeriklerinin bulunduğu markdown dosyasını seçin",
+    "Choose" : "Seçin",
     "The Welcome widget is now enabled for all active users" : "Hoş geldiniz pano bileşeni tüm etkin kullanıcılara açıldı",
     "Failed to enable the Welcome widget" : "Hoş geldiniz pano bileşeni açılamadı",
     "No welcome content" : "Herhangi bir karşılama içeriği yok",

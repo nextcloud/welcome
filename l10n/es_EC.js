@@ -17,6 +17,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Opciones de administrador de bienvenida guardadas",
     "Failed to save welcome admin options" : "Error al guardar las opciones de administrador de bienvenida",
     "Choose markdown welcome content file" : "Elegir archivo de contenido de bienvenida en formato Markdown",
+    "Choose" : "Seleccionar",
     "No welcome content" : "Sin contenido de bienvenida",
     "Talk to your support contact ({name})" : "Hablar con tu persona de contacto de soporte ({name})",
     "Talk to {name}" : "Hablar con {name}"

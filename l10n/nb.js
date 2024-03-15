@@ -18,6 +18,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Velkommen-administratoralternativer lagret",
     "Failed to save welcome admin options" : "Kunne ikke lagre velkommen-administratoralternativer",
     "Choose markdown welcome content file" : "Velg velkomst-innholdsfil i markdown",
+    "Choose" : "Velg",
     "The Welcome widget is now enabled for all active users" : "Velkommen-widgeten er nå aktivert for alle aktive brukere",
     "Failed to enable the Welcome widget" : "Aktivering av Velkommen-widgeten feilet",
     "No welcome content" : "Ikke noe velkomstinnhold",

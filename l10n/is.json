@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Valkostir stjórnanda upphafskveðju vistaðir",
     "Failed to save welcome admin options" : "Mistókst að vista valkosti stjórnanda upphafskveðju",
     "Choose markdown welcome content file" : "Veldu skrá með markdown-efni fyrir upphafskveðju",
+    "Choose" : "Velja",
     "The Welcome widget is now enabled for all active users" : "Upphafskveðju-viðmótshlutinn er núna virkjaður fyrir alla virka notendur",
     "Failed to enable the Welcome widget" : "Mistókst að virkja upphafskveðjuhlutann",
     "No welcome content" : "Ekkert upphafskveðjuefni",

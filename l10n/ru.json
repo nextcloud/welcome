@@ -11,6 +11,7 @@
     "Choose a support user" : "Выберите пользователя службы поддержки",
     "Example: Call {name} to get help." : "Пример: Позвоните {name}, чтобы получить помощь.",
     "Choose markdown welcome content file" : "Выберите Markdown файл приветствия",
+    "Choose" : "Выберите",
     "No welcome content" : "Нет контента для приветствия",
     "Talk to your support contact ({name})" : "Поговорите со своим контактным лицом службы поддержки ({name})",
     "Talk to {name}" : "Поговорить с {name}"
