@@ -15,6 +15,7 @@
     "Welcome admin options saved" : "S'han desat les opcions d'administració de benvinguda",
     "Failed to save welcome admin options" : "No s'han pogut desar les opcions d'administrador de benvinguda",
     "Choose markdown welcome content file" : "Trieu el fitxer markdown de contingut de benvinguda",
+    "Choose" : "Tria",
     "No welcome content" : "No hi ha contingut de benvinguda",
     "Talk to your support contact ({name})" : "Parla amb el teu contacte d'assistència ({name})",
     "Talk to {name}" : "Parla amb {name}"

@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "Afáyate",
+    "Choose" : "Escoyer",
     "Failed to enable the Welcome widget" : "Nun se pue activar el widget d'acoyida"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

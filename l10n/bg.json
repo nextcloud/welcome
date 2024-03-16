@@ -15,6 +15,7 @@
     "Welcome admin options saved" : "Опциите на администратора за посрещане са записани",
     "Failed to save welcome admin options" : "Неуспешно записване на администраторските опции за посрещане",
     "Choose markdown welcome content file" : "Избор на markdown файл със съдържание за посрещане",
+    "Choose" : "Изберете",
     "No welcome content" : "Няма съдържание за посрещане",
     "Talk to your support contact ({name})" : "Обърнете се към вашия контакт за поддръжка ({name})",
     "Talk to {name}" : "Обърнете се към {name}"
