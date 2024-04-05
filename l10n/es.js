@@ -18,6 +18,7 @@ OC.L10N.register(
     "Welcome admin options saved" : "Las opciones de administración de bienvenida fueron guardadas",
     "Failed to save welcome admin options" : "Fallo al guardar las opciones de administración de bienvenida",
     "Choose markdown welcome content file" : "Seleccione el archivo markdown con el contenido de bienvenida",
+    "Choose" : "Seleccione",
     "The Welcome widget is now enabled for all active users" : "El widget de Bienvenida está ahora habilitado para todos los usuarios activos",
     "Failed to enable the Welcome widget" : "Fallo al habilitar el widget de Bienvenida",
     "No welcome content" : "Sin contenido de bienvenida",

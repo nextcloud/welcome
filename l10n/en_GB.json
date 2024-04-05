@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Welcome admin options saved",
     "Failed to save welcome admin options" : "Failed to save welcome admin options",
     "Choose markdown welcome content file" : "Choose markdown welcome content file",
+    "Choose" : "Choose",
     "The Welcome widget is now enabled for all active users" : "The Welcome widget is now enabled for all active users",
     "Failed to enable the Welcome widget" : "Failed to enable the Welcome widget",
     "No welcome content" : "No welcome content",

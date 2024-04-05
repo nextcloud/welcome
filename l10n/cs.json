@@ -16,6 +16,7 @@
     "Welcome admin options saved" : "Předvolby pro správu Uvítání uloženy",
     "Failed to save welcome admin options" : "Nepodařilo se uložit předvolby správy pro uvítání",
     "Choose markdown welcome content file" : "Zvolte soubor s uvítacím obsahem v markdown",
+    "Choose" : "Vybrat",
     "The Welcome widget is now enabled for all active users" : "Prvek Uvítání je nyní zapnut pro všechny aktivní uživatele",
     "Failed to enable the Welcome widget" : "Nepodařilo se zapnout ovládací prvek Uvítání",
     "No welcome content" : "Bez uvítacího textu",
