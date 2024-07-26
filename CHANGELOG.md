@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.2.0 – 2024-07-25
+### Changed
+- update psalm workflow @kyteinsky
+- update composer deps @kyteinsky
+- bump max NC version to 30 @kyteinsky
+
+### Added
+- add usage guide in readme @kyteinsky
+
 ## 1.1.0 – 2024-03-14
 ### Changed
 - Update node pkgs (mainly nc/vue8) @kyteinsky
