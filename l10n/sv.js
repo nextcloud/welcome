@@ -2,6 +2,7 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Välkommen",
+    "No file" : "Ingen fil",
     "Support text" : "Supporttext",
     "Choose" : "Välj",
     "No welcome content" : "Inget välkomstinnehåll ",
