@@ -2,6 +2,7 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Добредојде",
+    "No file" : "Нема датотека",
     "Choose" : "Избери",
     "Talk to {name}" : "Разговарај со {name}"
 },
