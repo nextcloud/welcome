@@ -16,7 +16,7 @@
     "Welcome admin options saved" : "تمّ بنجاح حفظ خيارات المدير للترحيب",
     "Failed to save welcome admin options" : "فشل في حفظ خيارات المدير للترحيب",
     "Choose markdown welcome content file" : "إختر ملفاً بصيغة ماركداون يحوي رسالة الترحيب",
-    "Choose" : "إختَر",
+    "Choose" : "إختر",
     "The Welcome widget is now enabled for all active users" : "وَدْجَة الترحيب تمّ تمكينها الآن لجميع المستخدِمين النشطين",
     "Failed to enable the Welcome widget" : "تعذّر تمكين وَدْجَة الترحيب ",
     "No welcome content" : "لا يوجد محتوى للترحيب",
