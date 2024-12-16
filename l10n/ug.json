@@ -10,7 +10,7 @@
     "Support contact" : "ئالاقىلىشىشنى قوللايدۇ",
     "Choose a support user" : "قوللايدىغان ئىشلەتكۈچىنى تاللاڭ",
     "Support text" : "قوللاش تېكىستى",
-    "Example: Call {name} to get help." : "مىسال: ياردەمگە ئېرىشىش ئۈچۈن {name call غا تېلېفون قىلىڭ.",
+    "Example: Call {name} to get help." : "مىسال: ياردەمگە ئېرىشىش ئۈچۈن {name} call غا تېلېفون قىلىڭ.",
     "{name} will be replaced by the support user name" : "{name} قوللايدىغان ئىشلەتكۈچى ئىسمى بىلەن ئالماشتۇرۇلىدۇ",
     "Enable the widget for all users" : "بارلىق ئىشلەتكۈچىلەر ئۈچۈن كىچىك قورالنى قوزغىتىڭ",
     "Welcome admin options saved" : "باشقۇرغۇچى تاللانمىلىرىنى ساقلاڭ",
@@ -21,6 +21,6 @@
     "Failed to enable the Welcome widget" : "Welcome كىچىك قورالىنى قوزغىتالمىدى",
     "No welcome content" : "قارشى ئالىدىغان مەزمۇن يوق",
     "Talk to your support contact ({name})" : "قوللاش ئالاقىڭىز بىلەن سۆزلەڭ ({name})",
-    "Talk to {name}" : "{Name to بىلەن پاراڭلىشىڭ"
+    "Talk to {name}" : "{name} to بىلەن پاراڭلىشىڭ"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
