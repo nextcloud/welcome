@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.2.1 – 2025-01-11
+### Changed
+- bump max supported NC version
+- update node modules @janepie
+
 ## 1.2.0 – 2024-07-25
 ### Changed
 - update psalm workflow @kyteinsky
