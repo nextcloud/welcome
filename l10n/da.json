@@ -1,6 +1,7 @@
 { "translations": {
     "Welcome" : "Velkommen",
     "No file" : "Ingen fil",
-    "Choose" : "Vælg"
+    "Choose" : "Vælg",
+    "Talk to {name}" : "Snak med {name}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
