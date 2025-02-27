@@ -4,6 +4,12 @@ OC.L10N.register(
     "Welcome" : "مرحباً",
     "Dashboard widget to display welcome content" : "ودجة لوحة قيادة dashboard widget لعرض الترحيب",
     "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ وٍدْجَة للوحة القيادة dashoard widget تعرض رسائل بصيغة ماركداون Markdown للترحيب بجميع المستخدمين.\n\n⚙ الإعداد من خلال: `Settings > Administration > Theming > Welcome widget`\n\n📄اختر مستنداً بصيغة ماركداون ليتم عرضه في هذه الودجة\n\n💡 إذا لم يتم اختيار أي ملف، فلن تظهر الودجة.\n\n📝 حرّر ملف الماركداون ليتم تحديث الودجة فوراً.\n\n🖼 تدعم أيضاً عرض الصور.\n\n💬 عيّن بيانات الاتصال بشخصٍ ليمكنك التحادث معه مُباشرةً (هذا يستلزم أن يكون تطبيق نكست كلاود للمحادثة [Nextcloud Talk] (https://apps.nextcloud.com/apps/spreed) مُنصّباً)",
+    "Welcome admin options saved" : "تمّ بنجاح حفظ خيارات المدير للترحيب",
+    "Failed to save welcome admin options" : "فشل في حفظ خيارات المدير للترحيب",
+    "Choose markdown welcome content file" : "إختر ملفاً بصيغة ماركداون يحوي رسالة الترحيب",
+    "Choose" : "إختر",
+    "The Welcome widget is now enabled for all active users" : "وَدْجَة الترحيب تمّ تمكينها الآن لجميع المستخدِمين النشطين",
+    "Failed to enable the Welcome widget" : "تعذّر تمكين وَدْجَة الترحيب ",
     "Welcome widget" : "وِدْجَة الترحيب",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "وِدْجَة الترحيب في لوحة القيادة تظهر لجميع المستخدمين فقط إذا ما تمّ تعيين ملف ماركداون لمحتوى رسالة الترحيب.",
     "Markdown content file" : "ملف محتوى بصيغة ماركداون",
@@ -15,12 +21,6 @@ OC.L10N.register(
     "Example: Call {name} to get help." : "مثال: تحادث مع {name} للحصول على المساعدة",
     "{name} will be replaced by the support user name" : "{name} سيستبدل باسم الشخص الذي سيوفر الدعم",
     "Enable the widget for all users" : "تمكين وَدْجَة الترحيب لجميع المستخدِمين ",
-    "Welcome admin options saved" : "تمّ بنجاح حفظ خيارات المدير للترحيب",
-    "Failed to save welcome admin options" : "فشل في حفظ خيارات المدير للترحيب",
-    "Choose markdown welcome content file" : "إختر ملفاً بصيغة ماركداون يحوي رسالة الترحيب",
-    "Choose" : "إختر",
-    "The Welcome widget is now enabled for all active users" : "وَدْجَة الترحيب تمّ تمكينها الآن لجميع المستخدِمين النشطين",
-    "Failed to enable the Welcome widget" : "تعذّر تمكين وَدْجَة الترحيب ",
     "No welcome content" : "لا يوجد محتوى للترحيب",
     "Talk to your support contact ({name})" : "تحادث مع جهة الدعم ({name})",
     "Talk to {name}" : "تحادث مع {name}"

@@ -1,6 +1,6 @@
 { "translations": {
     "Welcome" : "ようこそ",
-    "No file" : "ファイルがありません",
-    "Choose" : "選択"
+    "Choose" : "選択",
+    "No file" : "ファイルがありません"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
