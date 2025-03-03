@@ -2,6 +2,27 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Καλώς ήλθατε",
-    "Choose" : "Επιλογή"
+    "Dashboard widget to display welcome content" : "Widget πίνακα ελέγχου για την εμφάνιση περιεχομένου υποδοχής",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ Ένα widget πίνακα ελέγχου που αποδίδει Markdown για να καλωσορίζει όλους τους χρήστες.\n\n⚙ Ρυθμίστε μέσω `Ρυθμίσεις > Διαχείριση > Θέμα > Widget υποδοχής`\n\n📄 Επιλέξτε ένα έγγραφο Markdown για να εμφανιστεί στο widget\n\n💡 Αν δεν επιλεγεί κάποιο έγγραφο, το widget δεν θα εμφανιστεί\n\n📝 Επεξεργαστείτε το έγγραφο Markdown για να ενημερώσετε το widget σε πραγματικό χρόνο\n\n🖼 Υποστηρίζονται επίσης εικόνες\n\n💬 Ρυθμίστε ένα άτομο επικοινωνίας για να ξεκινήσετε άμεσα μια συνομιλία (απαιτεί την εγκατάσταση του [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed))",
+    "Welcome admin options saved" : "Οι επιλογές διαχείρισης υποδοχής αποθηκεύτηκαν",
+    "Failed to save welcome admin options" : "Αποτυχία αποθήκευσης των επιλογών διαχείρισης υποδοχής",
+    "Choose markdown welcome content file" : "Επιλέξτε αρχείο περιεχομένου Markdown για υποδοχή",
+    "Choose" : "Επιλογή",
+    "The Welcome widget is now enabled for all active users" : "Το widget υποδοχής είναι πλέον ενεργοποιημένο για όλους τους ενεργούς χρήστες",
+    "Failed to enable the Welcome widget" : "Αποτυχία ενεργοποίησης του widget υποδοχής",
+    "Welcome widget" : "Widget υποδοχής",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Το widget υποδοχής στον πίνακα ελέγχου θα εμφανιστεί για όλους τους χρήστες μόνο αν επιλέξετε ένα αρχείο Markdown.",
+    "Markdown content file" : "Αρχείο περιεχομένου Markdown",
+    "No file" : "Κανένα αρχείο",
+    "Widget title" : "Τίτλος widget",
+    "Support contact" : "Επικοινωνία υποστήριξης",
+    "Choose a support user" : "Επιλέξτε έναν χρήστη υποστήριξης",
+    "Support text" : "Κείμενο υποστήριξης",
+    "Example: Call {name} to get help." : "Παράδειγμα: Καλέστε τον {name} για βοήθεια.",
+    "{name} will be replaced by the support user name" : "Το {name} θα αντικατασταθεί από το όνομα του χρήστη υποστήριξης",
+    "Enable the widget for all users" : "Ενεργοποιήστε το widget για όλους τους χρήστες",
+    "No welcome content" : "Κανένα περιεχόμενο υποδοχής",
+    "Talk to your support contact ({name})" : "Συνομιλήστε με την επαφή υποστήριξής σας ({name})",
+    "Talk to {name}" : "Συνομιλήστε με τον {name}"
 },
 "nplurals=2; plural=(n != 1);");
