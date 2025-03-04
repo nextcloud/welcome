@@ -31,14 +31,10 @@ use OCP\IUserManager;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
-function startsWith(string $haystack, string $needle): bool {
-	$length = mb_strlen($needle);
-	return (mb_substr($haystack, 0, $length) === $needle);
-}
-
 class FileService {
 
-	public function __construct(private IRootFolder $root,
+	public function __construct(
+		private IRootFolder $root,
 		private IConfig $config,
 		private IURLGenerator $urlGenerator,
 		private LoggerInterface $logger,
@@ -47,17 +43,7 @@ class FileService {
 	) {
 	}
 
-	/**
-	 * @return File|null
-	 * @throws NoUserException
-	 * @throws NotFoundException
-	 * @throws NotPermittedException
-	 */
-	private function getWidgetFile(): ?File {
-		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath');
-		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
-		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
-
+	private function getCurrentUserLanguage(): string {
 		// Get current user so we can get settings
 		$sessionUserId = \OC_User::getUser();
 		// Figure out system's default language, default to "en"
@@ -105,6 +91,21 @@ class FileService {
 		} elseif (empty($userLocale)) {
 			$userLocale = 'en_US';
 		}
+
+		return $userLang;
+	}
+
+	/**
+	 * @return File|null
+	 * @throws NoUserException
+	 * @throws NotFoundException
+	 * @throws NotPermittedException
+	 */
+	private function getWidgetFile(): ?File {
+		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath');
+		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
+		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
+		$userLang = $this->getCurrentUserLanguage();
 
 		/**
 		 * Note: For some languagues, and German in particular, Nextcloud uses
@@ -165,7 +166,7 @@ class FileService {
 			$supportUserId = null;
 			$supportText = null;
 		}
-		
+
 
 		$file = $this->getWidgetFile();
 		if ($file !== null) {
