@@ -102,7 +102,7 @@ class FileService {
 				// 'force_locale' is set to true
 				$userLocale = $systemLocale;
 			}
-		} elseif (empty($userLocal)) {
+		} elseif (empty($userLocale)) {
 			$userLocale = 'en_US';
 		}
 

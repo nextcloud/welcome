@@ -30,5 +30,10 @@
 				<referencedClass name="OC\User\NoUserException" />
 			</errorLevel>
 		</UndefinedDocblockClass>
+		<UndefinedClass>
+			<errorLevel type="suppress">
+                <referencedClass name="OC_User" />
+			</errorLevel>
+		</UndefinedClass>
 	</issueHandlers>
 </psalm>
