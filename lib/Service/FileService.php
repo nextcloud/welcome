@@ -15,6 +15,7 @@ namespace OCA\Welcome\Service;
 use Exception;
 use OC\User\NoUserException;
 use OCA\Welcome\AppInfo\Application;
+use OCP\App\IAppManager;
 use OCP\Files\File;
 use OCP\Files\Folder;
 use OCP\Files\InvalidPathException;
@@ -33,7 +34,9 @@ class FileService {
 		private IConfig $config,
 		private IURLGenerator $urlGenerator,
 		private LoggerInterface $logger,
-		private IUserManager $userManager) {
+		private IUserManager $userManager,
+		private IAppManager $appManager,
+	) {
 	}
 
 	/**
@@ -69,9 +72,16 @@ class FileService {
 	public function getWidgetContent(): ?array {
 		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
 		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
-		$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName');
-		$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId');
-		$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText');
+		if ($this->appManager->isEnabledForUser('spreed')) {
+			$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName');
+			$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId');
+			$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText');
+		} else {
+			$supportUserName = null;
+			$supportUserId = null;
+			$supportText = null;
+		}
+		
 
 		$file = $this->getWidgetFile();
 		if ($file !== null) {
