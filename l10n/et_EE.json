@@ -1,5 +1,23 @@
 { "translations": {
+    "Welcome" : "Tere tulemast",
+    "Dashboard widget to display welcome content" : "Tervitusvidin juhtpaneelil, mis näitab sissejutahatavat sisu",
+    "Choose markdown welcome content file" : "Tervitusvidina sisu jaoks vali Markdown-vormingus sisufail",
     "Choose" : "Vali",
-    "No file" : "Faile pole"
+    "The Welcome widget is now enabled for all active users" : "Tervitusvidin on nüüd kasutusel kõikide kasutajate jaoks",
+    "Failed to enable the Welcome widget" : "Tervitusvidina kasutuselevõtmine ei õnnestunud",
+    "Welcome widget" : "Tervitusvidin",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Tervitusvidin juhtpaneelil saab olema kuvatud kõikidele kasutajatele, kui valid sissejuhatava tekstiga Markdown-vormingus faili.",
+    "Markdown content file" : "Markdown-vormingus sisufail",
+    "No file" : "Faile pole",
+    "Widget title" : "Vidina pealkiri",
+    "Support contact" : "Kasutajatoe kontakt",
+    "Choose a support user" : "Vali tugiisik",
+    "Support text" : "Kasutajatoe tekst",
+    "Example: Call {name} to get help." : "Näide: Kasutajatoega aitab sind {name} .",
+    "{name} will be replaced by the support user name" : "{name} asemel saab olema konkreetse tugiisiku nimi",
+    "Enable the widget for all users" : "Lülita vidin kõikide kasutajate jaoks sisse",
+    "No welcome content" : "Tere tulemast sisu pole",
+    "Talk to your support contact ({name})" : "Suhtle oma tugiisikuga ({name})",
+    "Talk to {name}" : "Suhtle: {name}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
