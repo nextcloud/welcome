@@ -9,7 +9,7 @@ OC.L10N.register(
     "Choose markdown welcome content file" : "Markdown-Datei für Willkommensinhalt auswählen",
     "Choose" : "Auswählen",
     "The Welcome widget is now enabled for all active users" : "Das Willkommens-Widget wurde für alle Benutzer aktiviert",
-    "Failed to enable the Welcome widget" : "Fehler beim Aktivieren des Willkommens-Widgets",
+    "Failed to enable the Welcome widget" : "Willkommens-Widgets konnten nicht aktiviert werden",
     "Welcome widget" : "Willkommens-Widget",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Das Willkommens-Widget des Dashboards wird nur dann allen Benutzern angezeigt, wenn du eine Markdown-Datei auswählst.",
     "Markdown content file" : "Markdown-Inhaltsdatei",
