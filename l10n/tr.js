@@ -8,7 +8,7 @@ OC.L10N.register(
     "Failed to save welcome admin options" : "Karşılama yönetici ayarları kaydedilemedi",
     "Choose markdown welcome content file" : "Karşılama içeriklerinin bulunduğu markdown dosyasını seçin",
     "Choose" : "Seçin",
-    "The Welcome widget is now enabled for all active users" : "Hoş geldiniz pano bileşeni kullanıma alınmış tüm kullanıcılara açıldı",
+    "The Welcome widget is now enabled for all active users" : "Hoş geldiniz pano bileşeni etkinleştirilmiş tüm kullanıcılara açıldı",
     "Failed to enable the Welcome widget" : "Hoş geldiniz pano bileşeni açılamadı",
     "Welcome widget" : "Karşılama pano bileşeni",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Karşılama pano bileşeni, yalnızca bir markdown dosyası seçtiğinizde tüm kullanıcılara görüntülenir.",
