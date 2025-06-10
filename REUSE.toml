@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2025 Nextcloud GmbH and Nextcloud contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+version = 1
+SPDX-PackageName = "welcome"
+SPDX-PackageSupplier = "Nextcloud <info@nextcloud.com>"
+SPDX-PackageDownloadLocation = "https://github.com/nextcloud/welcome"
+
+[[annotations]]
+path = ["l10n/**.js", "l10n/**.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2025 Nextcloud translators"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = [".tx/config", "package-lock.json", "package.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021 Nextcloud GmbH and Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["composer.json", "composer.lock", "vendor-bin/cs-fixer/composer.json", "vendor-bin/cs-fixer/composer.lock", "vendor-bin/phpunit/composer.json", "vendor-bin/phpunit/composer.lock", "vendor-bin/psalm/composer.json", "vendor-bin/psalm/composer.lock"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2024 Nextcloud GmbH and Nextcloud contributors"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
+
+[[annotations]]
+path = ["img/app.svg", "img/app-color.svg", "img/app-dark.svg"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2017 Ebrahim <https://commons.wikimedia.org/wiki/User:Ebrahim>, <https://commons.wikimedia.org/wiki/File:Emoji_u1f44b.svg>"
+SPDX-License-Identifier = "Apache-2.0"

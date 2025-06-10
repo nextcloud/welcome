@@ -1,16 +1,8 @@
 <?php
 
 /**
- * Nextcloud - Welcome
- *
- * This file is licensed under the Affero General Public License version 3 or
- * later. See the COPYING file.
- *
- * @author Julien Veyssier
- * @copyright Julien Veyssier 2022
- *
- * Addition of multilingual support by Joaquim Homrighausen
- * 2023-03, github @joho1968
+ * SPDX-FileCopyrightText: 2022 Nextcloud GmbH and Nextcloud contributors
+ * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
 namespace OCA\Welcome\Service;
