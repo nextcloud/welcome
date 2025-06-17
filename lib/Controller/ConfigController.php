@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Nextcloud - welcome
  *
@@ -95,7 +96,7 @@ class ConfigController extends Controller {
 				$this->enableUserWidget($user->getUID());
 			});
 			return new DataResponse([]);
-		} catch (\Exception | \Throwable $e) {
+		} catch (\Exception|\Throwable $e) {
 			return new DataResponse(['error' => $e->getMessage()], Http::STATUS_BAD_REQUEST);
 		}
 	}
