@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @copyright Copyright (c) 2020 Julien Veyssier <julien-nc@posteo.net>
  *
@@ -32,7 +33,8 @@ use OCP\Util;
 
 class WelcomeWidget implements IWidget {
 
-	public function __construct(private IL10N $l10n,
+	public function __construct(
+		private IL10N $l10n,
 		private IURLGenerator $url,
 		private IConfig $config,
 	) {

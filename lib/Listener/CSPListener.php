@@ -35,7 +35,10 @@ use OCP\Security\CSP\AddContentSecurityPolicyEvent;
  */
 class CSPListener implements IEventListener {
 
-	public function __construct(private IRequest $request, private FileService $fileService) {
+	public function __construct(
+		private IRequest $request,
+		private FileService $fileService,
+	) {
 	}
 
 	public function handle(Event $event): void {

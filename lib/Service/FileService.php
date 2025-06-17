@@ -264,7 +264,7 @@ class FileService {
 					return urldecode($match[1]);
 				}, $matches);
 			}
-		} catch (Exception | Throwable $e) {
+		} catch (Exception|Throwable $e) {
 			$this->logger->warning('Failed to get widget http image URLs', ['app' => Application::APP_ID, 'exception' => $e]);
 		}
 		return null;

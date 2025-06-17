@@ -8,3 +8,13 @@ namespace OC\Hooks {
 		public function listen(string $class, string $value, $closure) {}
 	}
 }
+
+
+class OC_User {
+	public static function getUser() {}
+}
+
+
+namespace OC\User {
+	class NoUserException extends \Exception {}
+}
