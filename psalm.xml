@@ -3,6 +3,7 @@
 	findUnusedCode="false"
 	errorLevel="4"
 	resolveFromConfigFile="true"
+	ensureOverrideAttribute="false"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="https://getpsalm.org/schema/config"
 	xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
@@ -24,16 +25,4 @@
 			<directory name="vendor-bin/psalm" />
 		</ignoreFiles>
 	</extraFiles>
-	<issueHandlers>
-		<UndefinedDocblockClass>
-			<errorLevel type="suppress">
-				<referencedClass name="OC\User\NoUserException" />
-			</errorLevel>
-		</UndefinedDocblockClass>
-		<UndefinedClass>
-			<errorLevel type="suppress">
-                <referencedClass name="OC_User" />
-			</errorLevel>
-		</UndefinedClass>
-	</issueHandlers>
 </psalm>
