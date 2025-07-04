@@ -10,13 +10,13 @@
 		</p>
 		<div class="line">
 			<label for="welcome-file-path">
-				<FileIcon :size="20" class="icon" />
+				<FileOutlineIcon :size="20" class="icon" />
 				{{ t('welcome', 'Markdown content file') }}
 			</label>
 			<div>
 				<NcButton @click="selectFile">
 					<template #icon>
-						<FolderIcon :size="20" />
+						<FolderOutlineIcon :size="20" />
 					</template>
 				</NcButton>
 				<input id="welcome-file-path"
@@ -28,7 +28,7 @@
 				<NcButton v-if="state.filePath"
 					@click="clear">
 					<template #icon>
-						<DeleteIcon :size="20" />
+						<DeleteOutlineIcon :size="20" />
 					</template>
 				</NcButton>
 			</div>
@@ -37,7 +37,7 @@
 		<div v-if="state.filePath">
 			<div class="line">
 				<label for="welcome-widget-title">
-					<FileIcon :size="20" class="icon" />
+					<FileOutlineIcon :size="20" class="icon" />
 					{{ t('welcome', 'Widget title') }}
 				</label>
 				<input id="welcome-widget-title"
@@ -49,7 +49,7 @@
 			</div>
 			<div class="line">
 				<label for="welcome-support">
-					<AccountIcon :size="20" class="icon" />
+					<AccountOutlineIcon :size="20" class="icon" />
 					{{ t('welcome', 'Support contact') }}
 				</label>
 				<div v-if="state.supportUserId">
@@ -63,7 +63,7 @@
 					<NcButton
 						@click="clearSupportContact">
 						<template #icon>
-							<DeleteIcon :size="20" />
+							<DeleteOutlineIcon :size="20" />
 						</template>
 					</NcButton>
 				</div>
@@ -83,7 +83,7 @@
 			</div>
 			<div class="line">
 				<label for="welcome-support-text">
-					<FileIcon :size="20" class="icon" />
+					<FileOutlineIcon :size="20" class="icon" />
 					{{ t('welcome', 'Support text') }}
 				</label>
 				<input id="welcome-support-text"
@@ -104,7 +104,7 @@
 				class="line"
 				@click="enableWidget">
 				<template #icon>
-					<ViewDashboardIcon />
+					<ViewDashboardOutlineIcon />
 				</template>
 				{{ t('welcome', 'Enable the widget for all users') }}
 			</NcButton>
@@ -113,12 +113,12 @@
 </template>
 
 <script>
-import AccountIcon from 'vue-material-design-icons/Account.vue'
-import DeleteIcon from 'vue-material-design-icons/Delete.vue'
-import FileIcon from 'vue-material-design-icons/File.vue'
-import FolderIcon from 'vue-material-design-icons/Folder.vue'
+import AccountOutlineIcon from 'vue-material-design-icons/AccountOutline.vue'
+import DeleteOutlineIcon from 'vue-material-design-icons/DeleteOutline.vue'
+import FileOutlineIcon from 'vue-material-design-icons/FileOutline.vue'
+import FolderOutlineIcon from 'vue-material-design-icons/FolderOutline.vue'
 import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
-import ViewDashboardIcon from 'vue-material-design-icons/ViewDashboard.vue'
+import ViewDashboardOutlineIcon from 'vue-material-design-icons/ViewDashboardOutline.vue'
 
 import { getCurrentUser } from '@nextcloud/auth'
 import axios from '@nextcloud/axios'
@@ -141,12 +141,12 @@ export default {
 		NcSelect,
 		NcButton,
 		NcAvatar,
-		DeleteIcon,
-		FolderIcon,
-		AccountIcon,
+		DeleteOutlineIcon,
+		FolderOutlineIcon,
+		AccountOutlineIcon,
 		InformationOutlineIcon,
-		FileIcon,
-		ViewDashboardIcon,
+		FileOutlineIcon,
+		ViewDashboardOutlineIcon,
 	},
 
 	data() {
