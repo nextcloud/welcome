@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.3.0 – 2025-07-16
+### Changed
+- bump max supported NC version @janepie
+- CSP Nonce updated @janepie
+- icons changed to outlined versions @janepie
+- update node modules @janepie
+
+### Fixed
+- don't show Talk link when Tal is not enabled @janepie
+
+### Added
+- multilingual support @joho1968
+
 ## 1.2.1 – 2025-01-11
 ### Changed
 - bump max supported NC version
