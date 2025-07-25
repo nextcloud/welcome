@@ -6,6 +6,8 @@
     "Failed to save welcome admin options" : "Nie udało się zapisać opcji powitania administratora",
     "Choose markdown welcome content file" : "Wybierz plik powitalny Markdown",
     "Choose" : "Wybierz",
+    "The Welcome widget is now enabled for all active users" : "Widżet powitalny został właśnie włączony dla wszystkich aktywnych użytkowników",
+    "Failed to enable the Welcome widget" : "Nie udało się włączyć widżetu powitalnego",
     "Welcome widget" : "Widżet powitalny",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Widżet powitalny pulpitu będzie wyświetlany dla wszystkich użytkowników tylko wtedy, gdy wybierzesz plik Markdown.",
     "Markdown content file" : "Plik zawartości Markdown",
@@ -16,6 +18,7 @@
     "Support text" : "Tekst pomocy technicznej",
     "Example: Call {name} to get help." : "Przykład: Zadzwoń do {name}, aby uzyskać pomoc techniczną.",
     "{name} will be replaced by the support user name" : "{name} zostanie zastąpiony nazwą użytkownika pomocy technicznej",
+    "Enable the widget for all users" : "Włącz widżet dla wszystkich użytkowników",
     "No welcome content" : "Brak treści powitalnej",
     "Talk to your support contact ({name})" : "Porozmawiaj z osobą z pomocy technicznej ({name})",
     "Talk to {name}" : "Porozmawiaj z {name}"
