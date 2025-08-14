@@ -1,4 +1,10 @@
+<!--
+  - SPDX-FileCopyrightText: 2021 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Nextcloud welcome widget
+
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/welcome)](https://api.reuse.software/info/github.com/nextcloud/welcome)
 
 ℹ A Markdown rendering Dashboard widget to welcome all users.
 
