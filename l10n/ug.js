@@ -23,6 +23,6 @@ OC.L10N.register(
     "Enable the widget for all users" : "بارلىق ئىشلەتكۈچىلەر ئۈچۈن كىچىك قورالنى قوزغىتىڭ",
     "No welcome content" : "قارشى ئالىدىغان مەزمۇن يوق",
     "Talk to your support contact ({name})" : "قوللاش ئالاقىڭىز بىلەن سۆزلەڭ ({name})",
-    "Talk to {name}" : "{name} to بىلەن پاراڭلىشىڭ"
+    "Talk to {name}" : "{name} بىلەن پاراڭلىشىڭ"
 },
 "nplurals=2; plural=(n != 1);");
