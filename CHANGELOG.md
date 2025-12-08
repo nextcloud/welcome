@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 1.4.0 – 2025-12-08
+### Changed
+* update npm and composer deps @janepie
+* bump max NC version to 33 @janepie
+
 ## 1.3.0 – 2025-07-16
 ### Changed
 - bump max supported NC version @janepie
