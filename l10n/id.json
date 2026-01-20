@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "Selamat datang",
-    "Choose" : "Pilih"
+    "Choose" : "Pilih",
+    "No file" : "Tidak ada file"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
