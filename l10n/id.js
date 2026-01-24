@@ -2,7 +2,27 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Selamat datang",
+    "Dashboard widget to display welcome content" : "Widget dasbor untuk menampilkan konten sambutan",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ Widget Dasbor dengan perenderan Markdown untuk menyambut semua pengguna.\n\n⚙ Konfigurasikan melalui `Pengaturan > Administrasi > Pemberian tema > Widget sambutan`\n\n📄 Pilih dokumen Markdown yang akan dirender di widget\n\n💡 Jika tidak ada dokumen yang dipilih, widget tidak akan ditampilkan\n\n📝 Edit dokumen Markdown untuk memperbarui widget secara real-time\n\n🖼 Gambar juga didukung\n\n💬 Konfigurasikan orang kontak untuk langsung memulai chat dengan (memerlukan [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) terpasang)",
+    "Welcome admin options saved" : "Opsi admin sambutan berhasil disimpan",
+    "Failed to save welcome admin options" : "Gagal menyimpan opsi admin sambutan",
+    "Choose markdown welcome content file" : "Pilih berkas konten sambutan Markdown",
     "Choose" : "Pilih",
-    "No file" : "Tidak ada file"
+    "The Welcome widget is now enabled for all active users" : "Widget Sambutan sekarang diaktifkan untuk semua pengguna aktif",
+    "Failed to enable the Welcome widget" : "Gagal mengaktifkan Widget Sambutan",
+    "Welcome widget" : "Widget sambutan",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Widget sambutan dasbor akan ditampilkan untuk semua pengguna hanya jika Anda memilih sebuah berkas Markdown.",
+    "Markdown content file" : "Berkas konten Markdown",
+    "No file" : "Tidak ada berkas",
+    "Widget title" : "Judul widget",
+    "Support contact" : "Kontak dukungan",
+    "Choose a support user" : "Pilih pengguna dukungan",
+    "Support text" : "Teks dukungan",
+    "Example: Call {name} to get help." : "Contoh: Hubungi {name} untuk mendapatkan bantuan.",
+    "{name} will be replaced by the support user name" : "{name} akan diganti dengan nama pengguna dukungan",
+    "Enable the widget for all users" : "Aktifkan widget untuk semua pengguna",
+    "No welcome content" : "Tidak ada konten sambutan",
+    "Talk to your support contact ({name})" : "Chat dengan kontak dukungan Anda ({name})",
+    "Talk to {name}" : "Chat dengan {name}"
 },
 "nplurals=1; plural=0;");
