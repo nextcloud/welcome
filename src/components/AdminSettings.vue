@@ -82,7 +82,7 @@
 						:preserve-search="true"
 						:user-select="true"
 						@search="asyncFind"
-						@input="supportContactSelected" />
+						@update:model-value="supportContactSelected" />
 				</div>
 			</div>
 			<div class="line">
@@ -130,9 +130,9 @@ import { getFilePickerBuilder, showError, showSuccess } from '@nextcloud/dialogs
 import { loadState } from '@nextcloud/initial-state'
 import { generateOcsUrl, generateUrl } from '@nextcloud/router'
 
-import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcSelect from '@nextcloud/vue/dist/Components/NcSelect.js'
+import NcAvatar from '@nextcloud/vue/components/NcAvatar'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcSelect from '@nextcloud/vue/components/NcSelect'
 
 import { delay } from '../utils.js'
 import WelcomeIcon from './icons/WelcomeIcon.vue'
@@ -234,7 +234,7 @@ export default {
 				.allowDirectories(false)
 				.addButton({
 					label: t('welcome', 'Choose'),
-					type: 'primary',
+					variant: 'primary',
 					callback: (nodes) => {
 						console.debug('File picked:', nodes[0])
 						const file = nodes[0]
@@ -332,13 +332,13 @@ export default {
 		align-items: center;
 	}
 	.icon {
-		margin-right: 8px;
+		margin-inline-end: 8px;
 	}
 
 	.line {
 		display: flex;
 		align-items: center;
-		margin-left: 30px;
+		margin-inline-start: 30px;
 		margin-top: 4px;
 
 		label {
@@ -347,7 +347,7 @@ export default {
 			line-height: 38px;
 			width: 250px;
 			.icon {
-				margin-right: 4px;
+				margin-inline-end: 4px;
 			}
 		}
 
@@ -380,11 +380,11 @@ export default {
 	display: flex;
 	align-items: center;
 	.icon {
-		margin-right: 4px !important;
+		margin-inline-end: 4px !important;
 	}
 }
 
-::v-deep .support-avatar-option {
-	margin-right: 10px;
+:deep(.support-avatar-option) {
+	margin-inline-end: 10px;
 }
 </style>

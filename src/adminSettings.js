@@ -7,12 +7,12 @@
 
 import { getCSPNonce } from '@nextcloud/auth'
 import { linkTo } from '@nextcloud/router'
-import Vue from 'vue'
-import './bootstrap.js'
+import { createApp } from 'vue'
 import AdminSettings from './components/AdminSettings.vue'
 
 __webpack_nonce__ = getCSPNonce() // eslint-disable-line
 __webpack_public_path__ = linkTo('welcome', 'js/') // eslint-disable-line
 
-const View = Vue.extend(AdminSettings)
-new View().$mount('#welcome_prefs')
+const app = createApp(AdminSettings)
+app.mixin({ methods: { t, n } })
+app.mount('#welcome_prefs')

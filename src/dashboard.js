@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
-import './bootstrap.js'
+import { createApp } from 'vue'
 import Dashboard from './views/Dashboard.vue'
 
 document.addEventListener('DOMContentLoaded', function() {
 
 	OCA.Dashboard.register('welcome', (el, { widget }) => {
-		const View = Vue.extend(Dashboard)
-		new View({
-			propsData: { title: widget.title },
-		}).$mount(el)
+		const app = createApp(Dashboard, {
+			title: widget.title,
+		})
+		app.mixin({ methods: { t, n } })
+		app.mount(el)
 	})
 
 })
