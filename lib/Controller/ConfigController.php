@@ -8,12 +8,12 @@
 namespace OCA\Welcome\Controller;
 
 use OC\User\NoUserException;
-use OCA\Welcome\AppInfo\Application;
 use OCA\Welcome\Service\FileService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataDisplayResponse;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\Files\InvalidPathException;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
@@ -29,6 +29,7 @@ class ConfigController extends Controller {
 		string $appName,
 		IRequest $request,
 		private IConfig $config,
+		private IAppConfig $appConfig,
 		private FileService $fileService,
 		private IUserManager $userManager,
 	) {
@@ -43,7 +44,13 @@ class ConfigController extends Controller {
 	 */
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
-			$this->config->setAppValue(Application::APP_ID, $key, $value);
+			if ($key == 'filePath') { 
+				// do not lazy store filePath as it is needed for dashboard registration
+				$this->appConfig->setAppValueString($key, $value);
+			}
+			else {
+				$this->appConfig->setAppValueString($key, $value, lazy: true);
+			}
 		}
 		return new DataResponse(1);
 	}

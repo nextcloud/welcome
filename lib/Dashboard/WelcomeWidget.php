@@ -8,8 +8,8 @@
 namespace OCA\Welcome\Dashboard;
 
 use OCA\Welcome\AppInfo\Application;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\Dashboard\IWidget;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\Util;
@@ -19,7 +19,7 @@ class WelcomeWidget implements IWidget {
 	public function __construct(
 		private IL10N $l10n,
 		private IURLGenerator $url,
-		private IConfig $config,
+		private IAppConfig $appConfig,
 	) {
 	}
 
@@ -34,7 +34,7 @@ class WelcomeWidget implements IWidget {
 	 * @inheritDoc
 	 */
 	public function getTitle(): string {
-		$widgetTitle = $this->config->getAppValue(Application::APP_ID, 'widgetTitle', $this->l10n->t('Welcome'));
+		$widgetTitle = $this->appConfig->getAppValueString('widgetTitle', $this->l10n->t('Welcome'), lazy: true);
 		return $widgetTitle ?: $this->l10n->t('Welcome');
 	}
 
