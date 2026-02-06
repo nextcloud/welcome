@@ -44,11 +44,10 @@ class ConfigController extends Controller {
 	 */
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
-			if ($key == 'filePath') { 
+			if ($key == 'filePath') {
 				// do not lazy store filePath as it is needed for dashboard registration
 				$this->appConfig->setAppValueString($key, $value);
-			}
-			else {
+			} else {
 				$this->appConfig->setAppValueString($key, $value, lazy: true);
 			}
 		}
