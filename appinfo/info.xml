@@ -35,7 +35,7 @@
 	<bugs>https://github.com/nextcloud/welcome/issues</bugs>
 	<screenshot>https://github.com/nextcloud/welcome/raw/main/img/screenshot1.jpg</screenshot>
 	<dependencies>
-		<nextcloud min-version="29" max-version="33"/>
+		<nextcloud min-version="29" max-version="34"/>
 	</dependencies>
 	<settings>
 		<admin>OCA\Welcome\Settings\Admin</admin>

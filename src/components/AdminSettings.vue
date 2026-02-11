@@ -5,13 +5,12 @@
 <template>
 	<div id="welcome_prefs" class="section">
 		<h2>
-			<WelcomeIcon :size="24" class="icon" />
+			<WelcomeIcon :size="24" />
 			{{ t('welcome', 'Welcome widget') }}
 		</h2>
-		<p class="settings-hint">
-			<InformationOutlineIcon :size="20" class="icon" />
+		<NcNoteCard type="info">
 			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
-		</p>
+		</NcNoteCard>
 		<div class="line">
 			<label for="welcome-file-path">
 				<FileOutlineIcon :size="20" class="icon" />
@@ -98,10 +97,9 @@
 					@input="onTextChange">
 			</div>
 			<div class="line">
-				<div class="settings-hint">
-					<InformationOutlineIcon :size="20" class="icon" />
+				<NcNoteCard type="info">
 					{{ t('welcome', '{name} will be replaced by the support user name') }}
-				</div>
+				</NcNoteCard>
 			</div>
 			<br>
 			<NcButton
@@ -121,7 +119,6 @@ import AccountOutlineIcon from 'vue-material-design-icons/AccountOutline.vue'
 import DeleteOutlineIcon from 'vue-material-design-icons/DeleteOutline.vue'
 import FileOutlineIcon from 'vue-material-design-icons/FileOutline.vue'
 import FolderOutlineIcon from 'vue-material-design-icons/FolderOutline.vue'
-import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
 import ViewDashboardOutlineIcon from 'vue-material-design-icons/ViewDashboardOutline.vue'
 
 import { getCurrentUser } from '@nextcloud/auth'
@@ -133,6 +130,7 @@ import { generateOcsUrl, generateUrl } from '@nextcloud/router'
 import NcAvatar from '@nextcloud/vue/components/NcAvatar'
 import NcButton from '@nextcloud/vue/components/NcButton'
 import NcSelect from '@nextcloud/vue/components/NcSelect'
+import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 
 import { delay } from '../utils.js'
 import WelcomeIcon from './icons/WelcomeIcon.vue'
@@ -145,10 +143,10 @@ export default {
 		NcSelect,
 		NcButton,
 		NcAvatar,
+		NcNoteCard,
 		DeleteOutlineIcon,
 		FolderOutlineIcon,
 		AccountOutlineIcon,
-		InformationOutlineIcon,
 		FileOutlineIcon,
 		ViewDashboardOutlineIcon,
 	},
@@ -327,9 +325,12 @@ export default {
 
 <style scoped lang="scss">
 #welcome_prefs {
+	max-width: 800px;
 	h2 {
 		display: flex;
 		align-items: center;
+		justify-content: start;
+		gap: 8px;
 	}
 	.icon {
 		margin-inline-end: 8px;
@@ -372,15 +373,6 @@ export default {
 			line-height: 40px;
 			margin: 0 10px 0 10px;
 		}
-	}
-}
-
-.settings-hint {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	.icon {
-		margin-inline-end: 4px !important;
 	}
 }
 
