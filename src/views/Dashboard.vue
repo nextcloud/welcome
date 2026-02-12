@@ -16,7 +16,7 @@
 			</template>
 		</NcEmptyContent>
 		<a v-if="supportUserId"
-			v-tooltip.top="{ content: callSupportUserTooltip }"
+			:title="callSupportUserTooltip"
 			class="call-link"
 			:href="callUrl">
 			<NcAvatar :user="supportUserId"
@@ -32,14 +32,10 @@ import CloseIcon from 'vue-material-design-icons/Close.vue'
 import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 
-import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
-import NcEmptyContent from '@nextcloud/vue/dist/Components/NcEmptyContent.js'
-import Tooltip from '@nextcloud/vue/dist/Directives/Tooltip.js'
+import NcAvatar from '@nextcloud/vue/components/NcAvatar'
+import NcEmptyContent from '@nextcloud/vue/components/NcEmptyContent'
 
-import { NcRichText } from '@nextcloud/vue/dist/Components/NcRichText.js'
-
-import Vue from 'vue'
-Vue.directive('tooltip', Tooltip)
+import { NcRichText } from '@nextcloud/vue/components/NcRichText'
 
 export default {
 	name: 'Dashboard',
@@ -150,10 +146,10 @@ export default {
 		}
 		li:before {
 			content: '•';
-			padding-right: 8px;
+			padding-inline-end: 8px;
 		}
 		ul, ol {
-			margin-left: 20px;
+			margin-inline-start: 20px;
 			li:before {
 				content: '∘';
 			}

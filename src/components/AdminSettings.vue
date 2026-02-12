@@ -5,13 +5,12 @@
 <template>
 	<div id="welcome_prefs" class="section">
 		<h2>
-			<WelcomeIcon :size="24" class="icon" />
+			<WelcomeIcon :size="24" />
 			{{ t('welcome', 'Welcome widget') }}
 		</h2>
-		<p class="settings-hint">
-			<InformationOutlineIcon :size="20" class="icon" />
+		<NcNoteCard type="info">
 			{{ t('welcome', 'The dashboard welcome widget will be displayed for all users only if you choose a markdown file.') }}
-		</p>
+		</NcNoteCard>
 		<div class="line">
 			<label for="welcome-file-path">
 				<FileOutlineIcon :size="20" class="icon" />
@@ -82,7 +81,7 @@
 						:preserve-search="true"
 						:user-select="true"
 						@search="asyncFind"
-						@input="supportContactSelected" />
+						@update:model-value="supportContactSelected" />
 				</div>
 			</div>
 			<div class="line">
@@ -98,10 +97,9 @@
 					@input="onTextChange">
 			</div>
 			<div class="line">
-				<div class="settings-hint">
-					<InformationOutlineIcon :size="20" class="icon" />
+				<NcNoteCard type="info">
 					{{ t('welcome', '{name} will be replaced by the support user name') }}
-				</div>
+				</NcNoteCard>
 			</div>
 			<br>
 			<NcButton
@@ -121,7 +119,6 @@ import AccountOutlineIcon from 'vue-material-design-icons/AccountOutline.vue'
 import DeleteOutlineIcon from 'vue-material-design-icons/DeleteOutline.vue'
 import FileOutlineIcon from 'vue-material-design-icons/FileOutline.vue'
 import FolderOutlineIcon from 'vue-material-design-icons/FolderOutline.vue'
-import InformationOutlineIcon from 'vue-material-design-icons/InformationOutline.vue'
 import ViewDashboardOutlineIcon from 'vue-material-design-icons/ViewDashboardOutline.vue'
 
 import { getCurrentUser } from '@nextcloud/auth'
@@ -130,9 +127,10 @@ import { getFilePickerBuilder, showError, showSuccess } from '@nextcloud/dialogs
 import { loadState } from '@nextcloud/initial-state'
 import { generateOcsUrl, generateUrl } from '@nextcloud/router'
 
-import NcAvatar from '@nextcloud/vue/dist/Components/NcAvatar.js'
-import NcButton from '@nextcloud/vue/dist/Components/NcButton.js'
-import NcSelect from '@nextcloud/vue/dist/Components/NcSelect.js'
+import NcAvatar from '@nextcloud/vue/components/NcAvatar'
+import NcButton from '@nextcloud/vue/components/NcButton'
+import NcSelect from '@nextcloud/vue/components/NcSelect'
+import NcNoteCard from '@nextcloud/vue/components/NcNoteCard'
 
 import { delay } from '../utils.js'
 import WelcomeIcon from './icons/WelcomeIcon.vue'
@@ -145,10 +143,10 @@ export default {
 		NcSelect,
 		NcButton,
 		NcAvatar,
+		NcNoteCard,
 		DeleteOutlineIcon,
 		FolderOutlineIcon,
 		AccountOutlineIcon,
-		InformationOutlineIcon,
 		FileOutlineIcon,
 		ViewDashboardOutlineIcon,
 	},
@@ -234,7 +232,7 @@ export default {
 				.allowDirectories(false)
 				.addButton({
 					label: t('welcome', 'Choose'),
-					type: 'primary',
+					variant: 'primary',
 					callback: (nodes) => {
 						console.debug('File picked:', nodes[0])
 						const file = nodes[0]
@@ -327,18 +325,21 @@ export default {
 
 <style scoped lang="scss">
 #welcome_prefs {
+	max-width: 800px;
 	h2 {
 		display: flex;
 		align-items: center;
+		justify-content: start;
+		gap: 8px;
 	}
 	.icon {
-		margin-right: 8px;
+		margin-inline-end: 8px;
 	}
 
 	.line {
 		display: flex;
 		align-items: center;
-		margin-left: 30px;
+		margin-inline-start: 30px;
 		margin-top: 4px;
 
 		label {
@@ -347,7 +348,7 @@ export default {
 			line-height: 38px;
 			width: 250px;
 			.icon {
-				margin-right: 4px;
+				margin-inline-end: 4px;
 			}
 		}
 
@@ -375,16 +376,7 @@ export default {
 	}
 }
 
-.settings-hint {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	.icon {
-		margin-right: 4px !important;
-	}
-}
-
-::v-deep .support-avatar-option {
-	margin-right: 10px;
+:deep(.support-avatar-option) {
+	margin-inline-end: 10px;
 }
 </style>

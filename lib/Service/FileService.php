@@ -11,6 +11,7 @@ use Exception;
 use OC\User\NoUserException;
 use OCA\Welcome\AppInfo\Application;
 use OCP\App\IAppManager;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\Files\File;
 use OCP\Files\Folder;
 use OCP\Files\InvalidPathException;
@@ -28,6 +29,7 @@ class FileService {
 	public function __construct(
 		private IRootFolder $root,
 		private IConfig $config,
+		private IAppConfig $appConfig,
 		private IURLGenerator $urlGenerator,
 		private LoggerInterface $logger,
 		private IUserManager $userManager,
@@ -94,9 +96,9 @@ class FileService {
 	 * @throws NotPermittedException
 	 */
 	private function getWidgetFile(): ?File {
-		$filePath = $this->config->getAppValue(Application::APP_ID, 'filePath');
-		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
-		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
+		$filePath = $this->appConfig->getAppValueString('filePath', lazy: true);
+		$userName = $this->appConfig->getAppValueString('userName', lazy: true);
+		$userId = $this->appConfig->getAppValueString('userId', lazy: true);
 		$userLang = $this->getCurrentUserLanguage();
 
 		/**
@@ -147,12 +149,12 @@ class FileService {
 	 * @throws NoUserException
 	 */
 	public function getWidgetContent(): ?array {
-		$userName = $this->config->getAppValue(Application::APP_ID, 'userName');
-		$userId = $this->config->getAppValue(Application::APP_ID, 'userId');
+		$userName = $this->appConfig->getAppValueString('userName', lazy: true);
+		$userId = $this->appConfig->getAppValueString('userId', lazy: true);
 		if ($this->appManager->isEnabledForUser('spreed')) {
-			$supportUserName = $this->config->getAppValue(Application::APP_ID, 'supportUserName');
-			$supportUserId = $this->config->getAppValue(Application::APP_ID, 'supportUserId');
-			$supportText = $this->config->getAppValue(Application::APP_ID, 'supportText');
+			$supportUserName = $this->appConfig->getAppValueString('supportUserName', lazy: true);
+			$supportUserId = $this->appConfig->getAppValueString('supportUserId', lazy: true);
+			$supportText = $this->appConfig->getAppValueString('supportText', lazy: true);
 		} else {
 			$supportUserName = null;
 			$supportUserId = null;
