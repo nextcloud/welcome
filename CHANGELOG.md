@@ -10,6 +10,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 2.0.0 – 2026-04-24
+### Added
+- Support for NC34
+- lazy config loading
+
+### Changed
+- updated dependencies @janepie
+- updated to Vue3 @janepie
+- dropped support for NC<29
+
 ## 1.4.0 – 2025-12-08
 ### Changed
 * update npm and composer deps @janepie
