@@ -2,7 +2,27 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Sveiki",
+    "Dashboard widget to display welcome content" : "Informacijos suvestinės valdiklis pasveikinimo turiniui rodyti",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ „Markdown“ atvaizdavimo informacijos suvestinės valdiklis, skirtas pasveikinti visus vartotojus.\n\n⚙ Nustatykite per „Nustatymai > Administravimas > Temos > Sveikinimo valdiklis“\n\n📄 Pasirinkite „Markdown“ dokumentą, kuris bus atvaizduojamas valdiklyje\n\n💡 Jei dokumentas nepasirinktas, valdiklis nebus rodomas\n\n📝 Redaguokite „Markdown“ dokumentą, kad valdiklis atsinaujintų realiuoju laiku\n\n🖼 Taip pat palaikomi vaizdai\n\n💬 Nustatykite kontaktinį asmenį, su kuriuo galima tiesiogiai pradėti pokalbį (reikia įdiegti [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed))",
+    "Welcome admin options saved" : "Sveiki, administratoriaus parinktys išsaugotos",
+    "Failed to save welcome admin options" : "Nepavyko išsaugoti administratoriaus pasveikinimo parinkčių",
+    "Choose markdown welcome content file" : "Pasirinkite „Markdown“ pasveikinimo turinio failą",
     "Choose" : "Pasirinkite",
-    "No file" : "Failo nėra"
+    "The Welcome widget is now enabled for all active users" : "Sveikinimo valdiklis dabar įjungtas visiems aktyviems vartotojams",
+    "Failed to enable the Welcome widget" : "Nepavyko įjungti pasveikinimo valdiklio",
+    "Welcome widget" : "Sveikinimo valdiklis",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Informacijos suvestinės pasveikinimo valdiklis bus rodomas visiems vartotojams tik tuo atveju, jei pasirinksite „markdown“ failą.",
+    "Markdown content file" : "„Markdown“ turinio failas",
+    "No file" : "Failo nėra",
+    "Widget title" : "Valdiklio pavadinimas",
+    "Support contact" : "Pagalbos kontaktiniai duomenys",
+    "Choose a support user" : "Pasirinkite pagalbos vartotoją",
+    "Support text" : "Pagalbinis tekstas",
+    "Example: Call {name} to get help." : "Pavyzdys: Skambinkite {name}, jei reikės pagalbos.",
+    "{name} will be replaced by the support user name" : "{name} bus pakeistas į pagalbos tarnybos vartotojo vardą",
+    "Enable the widget for all users" : "Įjunkite šį valdiklį visiems vartotojams",
+    "No welcome content" : "Nėra sveikinimo teksto",
+    "Talk to your support contact ({name})" : "Susisiekite su savo pagalbos tarnybos atstovu ({name})",
+    "Talk to {name}" : "Susisiekite su {name}"
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
