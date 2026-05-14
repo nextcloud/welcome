@@ -14,10 +14,10 @@ use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\DataDisplayResponse;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\AppFramework\Services\IAppConfig;
+use OCP\Config\IUserConfig;
 use OCP\Files\InvalidPathException;
 use OCP\Files\NotFoundException;
 use OCP\Files\NotPermittedException;
-use OCP\IConfig;
 use OCP\IRequest;
 use OCP\IUser;
 use OCP\IUserManager;
@@ -28,7 +28,7 @@ class ConfigController extends Controller {
 	public function __construct(
 		string $appName,
 		IRequest $request,
-		private IConfig $config,
+		private IUserConfig $userConfig,
 		private IAppConfig $appConfig,
 		private FileService $fileService,
 		private IUserManager $userManager,
@@ -103,11 +103,11 @@ class ConfigController extends Controller {
 	}
 
 	private function enableUserWidget(string $userId): void {
-		$rawValue = $this->config->getUserValue($userId, 'dashboard', 'layout', 'recommendations,spreed,mail,calendar');
+		$rawValue = $this->userConfig->getValueString($userId, 'dashboard', 'layout', 'recommendations,spreed,mail,calendar');
 		$layout = explode(',', $rawValue);
 		if (!in_array('welcome', $layout, true)) {
 			$layout[] = 'welcome';
-			$this->config->setUserValue($userId, 'dashboard', 'layout', implode(',', $layout));
+			$this->userConfig->setValueString($userId, 'dashboard', 'layout', implode(',', $layout));
 		}
 	}
 }
