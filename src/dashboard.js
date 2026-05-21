@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 		app.mixin({ methods: { t, n } })
 		app.mount(el)
+		el.classList.add('welcome-mountpoint')
 	})
 
 })

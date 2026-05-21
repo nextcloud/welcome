@@ -92,6 +92,7 @@ export default {
 		getContent() {
 			const url = generateUrl('/apps/welcome/widget-content')
 			axios.get(url).then((response) => {
+				console.error(response)
 				this.content = response.data.content
 				// eslint-disable-next-line
 				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
@@ -187,7 +188,6 @@ export default {
 	.call-link {
 		display: flex;
 		margin-top: 25px;
-		border-radius: var(--border-radius-large);
 		padding: 8px 0;
 		span {
 			margin: auto 0 auto 10px;
@@ -196,5 +196,11 @@ export default {
 			background-color: var(--color-background-hover);
 		}
 	}
+}
+</style>
+
+<style lang="scss">
+.welcome-mountpoint {
+	height: 100%;
 }
 </style>
