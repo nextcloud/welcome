@@ -12,6 +12,7 @@ use OC\User\NoUserException;
 use OCA\Welcome\AppInfo\Application;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Services\IAppConfig;
+use OCP\Config\IUserConfig;
 use OCP\Files\File;
 use OCP\Files\Folder;
 use OCP\Files\InvalidPathException;
@@ -29,6 +30,7 @@ class FileService {
 	public function __construct(
 		private IRootFolder $root,
 		private IConfig $config,
+		private IUserConfig $userConfig,
 		private IAppConfig $appConfig,
 		private IURLGenerator $urlGenerator,
 		private LoggerInterface $logger,
@@ -59,8 +61,8 @@ class FileService {
 		// Figure out if system is configured to force a locale
 		$systemForceLocale = $this->config->getSystemValue('force_locale', false);
 		//Finally, fetch user's lang and locale settings
-		$userLang = $this->config->getUserValue($sessionUserId, 'core', 'lang', 'en');
-		$userLocale = $this->config->getUserValue($sessionUserId, 'core', 'locale', 'en_US');
+		$userLang = $this->userConfig->getValueString($sessionUserId, 'core', 'lang', 'en');
+		$userLocale = $this->userConfig->getValueString($sessionUserId, 'core', 'locale', 'en_US');
 		// Apply defaults
 		if ($systemForceLang !== false && $systemForceLang !== 'false') {
 			if ($systemForceLang !== true && $systemForceLang !== 'true') {
