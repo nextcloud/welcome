@@ -92,7 +92,6 @@ export default {
 		getContent() {
 			const url = generateUrl('/apps/welcome/widget-content')
 			axios.get(url).then((response) => {
-				console.error(response)
 				this.content = response.data.content
 				// eslint-disable-next-line
 				this.content = this.content.replaceAll(/\!\[(.*)\]\(.*\?fileId=(\d+).*/g, (match, p1, p2) => {
@@ -176,7 +175,7 @@ export default {
 }
 
 #welcome-widget {
-	overflow: scroll;
+	overflow: auto;
 	height: 100%;
 	padding: 0 10px 0 10px;
 
