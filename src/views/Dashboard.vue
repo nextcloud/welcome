@@ -175,7 +175,7 @@ export default {
 }
 
 #welcome-widget {
-	overflow: scroll;
+	overflow: auto;
 	height: 100%;
 	padding: 0 10px 0 10px;
 
@@ -187,7 +187,6 @@ export default {
 	.call-link {
 		display: flex;
 		margin-top: 25px;
-		border-radius: var(--border-radius-large);
 		padding: 8px 0;
 		span {
 			margin: auto 0 auto 10px;
@@ -196,5 +195,11 @@ export default {
 			background-color: var(--color-background-hover);
 		}
 	}
+}
+</style>
+
+<style lang="scss">
+.welcome-mountpoint {
+	height: 100%;
 }
 </style>
