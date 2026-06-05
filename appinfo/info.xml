@@ -22,7 +22,7 @@
 
 💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)
     ]]></description>
-	<version>2.0.0</version>
+	<version>3.0.0</version>
 	<licence>agpl</licence>
 	<author>Julien Veyssier</author>
 	<namespace>Welcome</namespace>

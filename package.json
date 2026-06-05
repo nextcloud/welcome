@@ -1,6 +1,6 @@
 {
 	"name": "welcome",
-	"version": "1.4.0",
+	"version": "3.0.0",
 	"description": "Welcome widget",
 	"main": "index.js",
 	"directories": {

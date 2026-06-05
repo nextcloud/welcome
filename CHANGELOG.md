@@ -10,6 +10,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## 3.0.0 - 2026-06-05
+### Added
+- Support for NC35
+
+### Changed
+- updated dependencies
+- dropped support for NC<32
+
+### Fixed
+- scrolling long files
+- widget enabling
+
 ## 2.0.0 – 2026-04-24
 ### Added
 - Support for NC34
