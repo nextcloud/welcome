@@ -6,6 +6,8 @@
     "Failed to save welcome admin options" : "مشکل در ذخیره گزینه‌های خوش‌آمدگویی مدیر",
     "Choose markdown welcome content file" : "پرونده مارک‌داون محتوای خوش‌آمدگیی را انتخاب کنید",
     "Choose" : "انتخاب کنید",
+    "The Welcome widget is now enabled for all active users" : "ابزارک خوشامدگویی اکنون برای همه کاربران فعال، فعال شده است",
+    "Failed to enable the Welcome widget" : "فعال‌سازی ابزارک خوشامدگویی ناموفق بود",
     "Welcome widget" : "ابزارک خوش‌آمد‌گویی",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "ابزارک خوش‌آمد‌گویی پیشخوان فقط وقتی برای همه کاربران نمایش داده می‌شود که شما یک پرونده را مارک‌داون را انتخاب کرده باشد.",
     "Markdown content file" : "پرونده محتوای مارک‌داون",
@@ -16,6 +18,7 @@
     "Support text" : "متن پشتیبانی",
     "Example: Call {name} to get help." : "به عنوان نمونه: جهت دریافت راهنمایی با {name} تماس بگیرید.",
     "{name} will be replaced by the support user name" : "{name} با نام کاربری کاربر پشتیبان شما جایگزین خواهد شد.",
+    "Enable the widget for all users" : "فعال‌سازی ابزارک برای همه کاربران",
     "No welcome content" : "هیچ محتوای خوش‌آمدگویی وجود ندارد",
     "Talk to your support contact ({name})" : "گفت‌و‌گو با مخاطب پشتیبان ({name})",
     "Talk to {name}" : "گفت‌و‌گو با {name}"
