@@ -5,7 +5,7 @@ OC.L10N.register(
     "Choose" : "Välj",
     "No file" : "Ingen fil",
     "Support text" : "Supporttext",
-    "No welcome content" : "Inget välkomstinnehåll ",
+    "No welcome content" : "Inget välkomstinnehåll",
     "Talk to your support contact ({name})" : "Prata med din supportkontakt ({name})",
     "Talk to {name}" : "Prata med {name}"
 },
