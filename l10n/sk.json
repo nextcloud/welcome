@@ -17,7 +17,7 @@
     "Choose a support user" : "Vyberte podporu používateľa",
     "Support text" : "Text o podpore",
     "Example: Call {name} to get help." : "Napríklad: Zavolajte {name} pre získanie podpory.",
-    "{name} will be replaced by the support user name" : "{name} bude nahradený/á menom užívateľa pre support",
+    "{name} will be replaced by the support user name" : "{name} bude nahradený/á menom používateľa technickej podpory",
     "Enable the widget for all users" : "Povoliť miniaplikáciu pre všetkých používateľov",
     "No welcome content" : "Žiadny uvítací obsah",
     "Talk to your support contact ({name})" : "Porozprávajte sa so svojím kontaktom podpory ({name})",
