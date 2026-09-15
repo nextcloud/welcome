@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "კეთილი იყოს თქვენი მობრძანება",
-    "Choose" : "აირჩიეთ"
+    "Choose" : "აირჩიეთ",
+    "Talk to {name}" : "საუბარი მომხმარებელთან {name}"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

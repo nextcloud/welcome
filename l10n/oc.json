@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "La benvenguda",
-    "Choose" : "Causir"
+    "Choose" : "Causir",
+    "Talk to {name}" : "Parlar a {name}"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"
 }

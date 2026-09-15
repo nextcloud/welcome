@@ -1,28 +1,12 @@
 OC.L10N.register(
     "welcome",
     {
-    "Welcome" : "Welcome",
-    "Dashboard widget to display welcome content" : "Dashboard widget to display welcome content",
     "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)",
-    "Welcome admin options saved" : "Welcome admin options saved",
-    "Failed to save welcome admin options" : "Failed to save welcome admin options",
     "Choose markdown welcome content file" : "Choose markdown welcome content file",
-    "Choose" : "Choose",
-    "The Welcome widget is now enabled for all active users" : "The Welcome widget is now enabled for all active users",
-    "Failed to enable the Welcome widget" : "Failed to enable the Welcome widget",
-    "Welcome widget" : "Welcome widget",
-    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "The dashboard welcome widget will be displayed for all users only if you choose a markdown file.",
-    "Markdown content file" : "Markdown content file",
-    "No file" : "No file",
     "Widget title" : "Widget title",
-    "Support contact" : "Support contact",
     "Choose a support user" : "Choose a support user",
     "Support text" : "Support text",
-    "Example: Call {name} to get help." : "Example: Call {name} to get help.",
-    "{name} will be replaced by the support user name" : "{name} will be replaced by the support user name",
     "Enable the widget for all users" : "Enable the widget for all users",
-    "No welcome content" : "No welcome content",
-    "Talk to your support contact ({name})" : "Talk to your support contact ({name})",
-    "Talk to {name}" : "Talk to {name}"
+    "No welcome content" : "No welcome content"
 },
 "nplurals=2; plural=(n != 1);");

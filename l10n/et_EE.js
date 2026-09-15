@@ -1,7 +1,6 @@
 OC.L10N.register(
     "welcome",
     {
-    "Welcome" : "Tere tulemast",
     "Dashboard widget to display welcome content" : "Tervitusvidin juhtpaneelil, mis näitab sissejutahatavat sisu",
     "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "Markdown-vormingus vidin kõikide kasutajate tervitamiseks.\n\n⚙ Seadista siit: „Seadistused“ → „Peakasutaja seadistused“  → „Kujundus“ → „Tervitusvidin“\n\n📄 Vali Markdown-vormingus dokument, mida vidinas kuvatakse\n\n💡 Kui dokumenti pole valitud, siis vidinat ei kuvata\n\n📝 Muutes Markdown-vormingus dokumenti saad vidinat reaalajas kohendada\n\n🖼 Pildid on toetatud\n\n💬 Võid seadistada kontaktisiku, kellelt otse saab abi küsida (eeldab, et paigaldatud on [Nextcloudi kõnerakendus](https://apps.nextcloud.com/apps/spreed))",
     "Welcome admin options saved" : "Tervitusvidina haldusseadistused on salvestatud",
@@ -9,20 +8,14 @@ OC.L10N.register(
     "Choose markdown welcome content file" : "Tervitusvidina sisu jaoks vali Markdown-vormingus sisufail",
     "Choose" : "Vali",
     "The Welcome widget is now enabled for all active users" : "Tervitusvidin on nüüd kasutusel kõikide kasutajate jaoks",
-    "Failed to enable the Welcome widget" : "Tervitusvidina kasutuselevõtmine ei õnnestunud",
-    "Welcome widget" : "Tervitusvidin",
     "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Tervitusvidin juhtpaneelil saab olema kuvatud kõikidele kasutajatele, kui valid sissejuhatava tekstiga Markdown-vormingus faili.",
     "Markdown content file" : "Markdown-vormingus sisufail",
     "No file" : "Faili pole",
     "Widget title" : "Vidina pealkiri",
-    "Support contact" : "Kasutajatoe kontakt",
     "Choose a support user" : "Vali tugiisik",
     "Support text" : "Kasutajatoe tekst",
-    "Example: Call {name} to get help." : "Näide: Kasutajatoega aitab sind {name} .",
-    "{name} will be replaced by the support user name" : "{name} asemel saab olema konkreetse tugiisiku nimi",
     "Enable the widget for all users" : "Lülita vidin kõikide kasutajate jaoks sisse",
     "No welcome content" : "Tere tulemast sisu pole",
-    "Talk to your support contact ({name})" : "Suhtle oma tugiisikuga ({name})",
-    "Talk to {name}" : "Suhtle: {name}"
+    "Talk to your support contact ({name})" : "Suhtle oma tugiisikuga ({name})"
 },
 "nplurals=2; plural=(n != 1);");

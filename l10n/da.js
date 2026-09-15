@@ -1,28 +1,10 @@
 OC.L10N.register(
     "welcome",
     {
-    "Welcome" : "Velkommen",
-    "Dashboard widget to display welcome content" : "Kontrolpanelswidget til at vise velkomstindhold",
-    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ En Markdown-gengivelses kontrolpanelswidget til at byde alle brugere velkommen.\n\n⚙ Konfigurér via `Indstillinger > Administration > Temaer > Velkomstwidget`\n\n📄 Vælg et mMarkdown-dokumentder skal gengives i denne widget\n\n💡 Hvis der ikke er valgt et dokument, så vil denne widget ikke vises\n\n📝 Redigér mMarkdown-dokumentetfor at opdatere denne widget i realtid\n\n🖼 Billeder er også understøttet\n\n💬 Konfigurér en kontaktperson som der direkte kan startes en chat med (kræver at [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) er installeret)",
-    "Welcome admin options saved" : "Velkomst adminindstillinger gemt",
-    "Failed to save welcome admin options" : "Kunne ikke gemmet velkomst adminindstillingerto save welcome admin options",
     "Choose markdown welcome content file" : "Vælg markdown velkomst indholdsfil",
-    "Choose" : "Vælg",
-    "The Welcome widget is now enabled for all active users" : "Velkomst widget'en er nu aktiveret for alle aktive brugere",
-    "Failed to enable the Welcome widget" : "Kunne ikke aktivere velkomst widget'en",
-    "Welcome widget" : "Velkomst widget",
-    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Kontrolpanels velkomstwidget vil kun vises for alle brugere hvis du vælger en markdown fil.",
-    "Markdown content file" : "Markdown indholdsfil",
-    "No file" : "Ingen fil",
     "Widget title" : "Widget titel",
-    "Support contact" : "Support kontakt",
     "Choose a support user" : "Vælg en support bruger",
-    "Support text" : "Support tekst",
-    "Example: Call {name} to get help." : "Eksempel: Ring til {name} for at få hjælp.",
-    "{name} will be replaced by the support user name" : "{name} vil blive erstattet med support brugernavnet",
     "Enable the widget for all users" : "Aktiver denne widget for alle brugere",
-    "No welcome content" : "Intet velkomstindhold",
-    "Talk to your support contact ({name})" : "Tal med din support kontakt ({name})",
-    "Talk to {name}" : "Tal med {name}"
+    "No welcome content" : "Intet velkomstindhold"
 },
 "nplurals=2; plural=(n != 1);");

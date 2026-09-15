@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "Welcome",
-    "Choose" : "Choose"
+    "Choose" : "არჩევა",
+    "Talk to {name}" : "Talk to {name}"
 },"pluralForm" :"nplurals=2; plural=(n!=1);"
 }

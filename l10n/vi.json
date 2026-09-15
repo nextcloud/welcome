@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "Chào mừng",
-    "Choose" : "Chọn"
+    "Choose" : "Chọn",
+    "Talk to {name}" : "Trò chuyện với {name}"
 },"pluralForm" :"nplurals=1; plural=0;"
 }

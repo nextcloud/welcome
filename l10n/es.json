@@ -1,26 +1,10 @@
 { "translations": {
-    "Welcome" : "Bienvenido/a",
-    "Dashboard widget to display welcome content" : "Widget del tablero para mostrar contenido de bienvenida",
     "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ Un widget de tablero para dar la bienvenida a los usuarios usando contenido Markdown.\n\n⚙ Se puede configurar a través de `Configuraciones > Administración > Tematizado > Widget de bienvenida`\n\n📄 Seleccione un documento Markdown que será representado en el widget\n\n💡 Si no se selecciona ninguno, el widget no se mostrará\n\n📝 Edite el documento Markdown para actualizar el widget en tiempo real\n\n🖼 Se soportan imágenes\n\n💬 Configure una persona contacto para iniciar directamente un chat (requiere que [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) este instalado)",
-    "Welcome admin options saved" : "Las opciones de administración de bienvenida fueron guardadas",
-    "Failed to save welcome admin options" : "Fallo al guardar las opciones de administración de bienvenida",
     "Choose markdown welcome content file" : "Seleccione el archivo markdown con el contenido de bienvenida",
-    "Choose" : "Seleccione",
-    "The Welcome widget is now enabled for all active users" : "El widget de Bienvenida está ahora habilitado para todos los usuarios activos",
-    "Failed to enable the Welcome widget" : "Fallo al habilitar el widget de Bienvenida",
-    "Welcome widget" : "Widget de bienvenida",
-    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "El widget de bienvenida del tablero será mostrado a todos los usuarios solo si selecciona un archivo markdown.",
-    "Markdown content file" : "Archivo markdown de contenido",
-    "No file" : "Sin archivo",
     "Widget title" : "Título del widget",
-    "Support contact" : "Contacto de soporte",
     "Choose a support user" : "Seleccione un usuario de soporte",
     "Support text" : "Texto de soporte",
-    "Example: Call {name} to get help." : "Ejemplo: Llame a {name} para obtener ayuda.",
-    "{name} will be replaced by the support user name" : "{name} será reemplazado por el usuario de soporte",
     "Enable the widget for all users" : "Habilitar el widget para todos los usuarios",
-    "No welcome content" : "Sin contenido de bienvenida",
-    "Talk to your support contact ({name})" : "Hable con su contacto de soporte ({name})",
-    "Talk to {name}" : "Hablar con {name}"
+    "No welcome content" : "Sin contenido de bienvenida"
 },"pluralForm" :"nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;"
 }

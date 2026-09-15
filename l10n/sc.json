@@ -1,5 +1,6 @@
 { "translations": {
     "Welcome" : "Ti donamus sa benebènnida",
-    "Choose" : "Sèbera"
+    "Choose" : "Sèbera",
+    "Talk to {name}" : "Faedda cun {name}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
