@@ -1,0 +1,28 @@
+OC.L10N.register(
+    "welcome",
+    {
+    "Welcome" : "Willkommen",
+    "Dashboard widget to display welcome content" : "Dashboard-Widget zum Anzeigen von Begrüßungsinhalten",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ Ein Markdown-Rendering-Dashboard-Widget zur Begrüßung aller Benutzer.\n\n⚙ Konfiguration über \"Einstellungen > Verwaltung > Design > Willkommens-Widget\"\n\n📄 Wähle ein Markdown-Dokument, das im Widget ausgegeben werden soll\n\n💡 Wenn kein Dokument ausgewählt ist, wird das Widget nicht angezeigt\n\n📝 Markdown-Dokument bearbeiten, um das Widget in Echtzeit zu aktualisieren\n\n🖼 Bilder werden auch unterstützt\n\n💬 Kontaktperson einrichten, mit der du direkt einen Chat starten kannst (erfordert die Installation von [Nextcloud Talk] (https://apps.nextcloud.com/apps/spreed))",
+    "Welcome admin options saved" : "Willkommens-Administrationsoptionen gespeichert",
+    "Failed to save welcome admin options" : "Willkommens-Administrationsoptionen konnten nicht gespeichert werden",
+    "Choose markdown welcome content file" : "Markdown-Willkommensinhaltsdatei auswählen",
+    "Choose" : "Auswählen",
+    "The Welcome widget is now enabled for all active users" : "Das Willkommens-Widget wurde für alle Benutzer aktiviert",
+    "Failed to enable the Welcome widget" : "Willkommens-Widgets konnten nicht aktiviert werden",
+    "Welcome widget" : "Willkommens-Widget",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Das Willkommens-Widget des Dashboards wird nur dann allen Benutzern angezeigt, wenn du eine Markdown-Datei auswählst.",
+    "Markdown content file" : "Markdown-Inhaltsdatei",
+    "No file" : "Keine Datei",
+    "Widget title" : "Widget-Titel",
+    "Support contact" : "Support-Kontakt",
+    "Choose a support user" : "Einen Support-Benutzer auswählen",
+    "Support text" : "Support-Text",
+    "Example: Call {name} to get help." : "Beispiel: Rufe {name} an, um Hilfe zu erhalten.",
+    "{name} will be replaced by the support user name" : "{name} wird durch den Support-Benutzernamen ersetzt",
+    "Enable the widget for all users" : "Widget für alle Benutzer aktivieren",
+    "No welcome content" : "Kein Willkommensinhalt",
+    "Talk to your support contact ({name})" : "Spreche mit deinem Support-Kontakt ({name})",
+    "Talk to {name}" : "Spreche mit {name}"
+},
+"nplurals=2; plural=(n != 1);");

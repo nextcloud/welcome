@@ -1,6 +1,7 @@
 OC.L10N.register(
     "welcome",
     {
-    "Choose" : "தெரிவுசெய்க "
+    "Choose" : "Elekti",
+    "Talk to {name}" : "Paroli al {name}"
 },
 "nplurals=2; plural=(n != 1);");

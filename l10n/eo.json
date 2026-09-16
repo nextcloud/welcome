@@ -1,4 +1,5 @@
 { "translations": {
-    "Choose" : "Ընտրել"
+    "Choose" : "Elekti",
+    "Talk to {name}" : "Paroli al {name}"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
