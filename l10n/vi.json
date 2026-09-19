@@ -1,6 +1,15 @@
 { "translations": {
     "Welcome" : "Chào mừng",
     "Choose" : "Chọn",
+    "The Welcome widget is now enabled for all active users" : "Tiện ích chào mừng đã được kích hoạt cho toàn bộ người dùng đang hoạt động",
+    "Failed to enable the Welcome widget" : "Không thể kích hoạt tiện ích chào mừng",
+    "Welcome widget" : "Tiện ích chào mừng",
+    "No file" : "Không có tệp tin",
+    "Support contact" : "Liên hệ hỗ trợ",
+    "Choose a support user" : "Chọn người dùng hỗ trợ",
+    "{name} will be replaced by the support user name" : "{name}sẽ được thay thế bởi tên người dùng được hỗ trợ",
+    "Enable the widget for all users" : "Kích hoạt tiện ích cho toàn bộ người dùng",
+    "No welcome content" : "Không nội dung chào mừng",
     "Talk to {name}" : "Trò chuyện với {name}"
 },"pluralForm" :"nplurals=1; plural=0;"
 }
