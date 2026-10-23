@@ -2,8 +2,27 @@ OC.L10N.register(
     "welcome",
     {
     "Welcome" : "Bun venit",
+    "Dashboard widget to display welcome content" : "Widget pentru tabloul de bord care afișează un mesaj de bun venit",
+    "ℹ A Markdown rendering Dashboard widget to welcome all users.\n\n⚙ Configure via `Settings > Administration > Theming > Welcome widget`\n\n📄 Pick a Markdown document to be rendered in the widget\n\n💡 If no document is chosen, the widget won't be shown\n\n📝 Edit the Markdown document to update the widget in real-time\n\n🖼 Images are also supported\n\n💬 Configure a contact person to directly start a chat with (requires [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed) to be installed)" : "ℹ Un widget pentru tabloul de bord care afișează conținut Markdown pentru a le ura bun venit tuturor utilizatorilor.\n\n⚙ Configurare din `Setări > Administrare > Personalizare aspect > Widgetul de bun venit`\n\n📄 Alege un document Markdown care să fie afișat în widget\n\n💡 Dacă nu este ales niciun document, widgetul nu va fi afișat\n\n📝 Editează documentul Markdown pentru a actualiza widgetul în timp real\n\n🖼 Sunt acceptate și imagini\n\n💬 Configurează o persoană de contact cu care utilizatorii pot începe direct o conversație (necesită instalarea [Nextcloud Talk](https://apps.nextcloud.com/apps/spreed))",
+    "Welcome admin options saved" : "Opțiunile de administrare pentru Bun venit au fost salvate",
+    "Failed to save welcome admin options" : "Opțiunile de administrare pentru Bun venit nu au putut fi salvate",
+    "Choose markdown welcome content file" : "Alege fișierul Markdown cu conținutul de bun venit",
     "Choose" : "Alege",
+    "The Welcome widget is now enabled for all active users" : "Widgetul de bun venit este acum activat pentru toți utilizatorii activi",
+    "Failed to enable the Welcome widget" : "Widgetul de bun venit nu a putut fi activat",
+    "Welcome widget" : "Widgetul de bun venit",
+    "The dashboard welcome widget will be displayed for all users only if you choose a markdown file." : "Widgetul de bun venit din tabloul de bord va fi afișat tuturor utilizatorilor doar dacă alegi un fișier Markdown.",
+    "Markdown content file" : "Fișierul de conținut Markdown",
     "No file" : "Niciun fișier",
-    "Talk to {name}" : "Conversați cu {name}"
+    "Widget title" : "Titlul widgetului",
+    "Support contact" : "Contact pentru asistență",
+    "Choose a support user" : "Alege un utilizator pentru asistență",
+    "Support text" : "Textul pentru asistență",
+    "Example: Call {name} to get help." : "Exemplu: Pentru ajutor, contactează {name}.",
+    "{name} will be replaced by the support user name" : "{name} va fi înlocuit cu numele utilizatorului pentru asistență",
+    "Enable the widget for all users" : "Activează widgetul pentru toți utilizatorii",
+    "No welcome content" : "Niciun conținut de bun venit",
+    "Talk to your support contact ({name})" : "Discută cu persoana de contact pentru asistență ({name})",
+    "Talk to {name}" : "Discută cu {name}"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
